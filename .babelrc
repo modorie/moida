@@ -4,7 +4,10 @@
     [
       "styled-components",
       {
-        "ssr": true
+        "ssr": true,
+        "fileName": true,
+        "displayName": true,
+        "pure": true
       }
     ]
   ]
