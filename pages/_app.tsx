@@ -1,10 +1,14 @@
-import type { AppProps } from "next/app";
+import { NextComponentType } from "next";
+import { AppContext, AppInitialProps, AppProps } from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@/styles/theme";
 import GlobalStyle from "@/styles/global";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
+  Component,
+  pageProps,
+}) => {
   return (
     <>
       <Head>
@@ -17,6 +21,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       </ThemeProvider>
     </>
   );
-}
+};
 
 export default MyApp;
