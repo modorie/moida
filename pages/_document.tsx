@@ -49,6 +49,16 @@ class MyDocument extends Document {
           <meta property="og:url" content="//" />
           <meta name="description" content="" />
           <meta name="keywords" content="" />
+          <link
+            href="https//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+            rel="preload"
+            as="style"
+          />
+          <link
+            href="https//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+            rel="stylesheet"
+            type="text/css"
+          />
         </Head>
 
         <body>
