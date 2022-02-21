@@ -50,14 +50,32 @@ class MyDocument extends Document {
           <meta name="description" content="" />
           <meta name="keywords" content="" />
           <link
-            href="https//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
-            rel="preload"
-            as="style"
+            rel="prefetch"
+            href="/fonts/SpoqaHanSansNeoBold.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
           />
           <link
-            href="https//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
-            rel="stylesheet"
-            type="text/css"
+            rel="prefetch"
+            href="/fonts/SpoqaHanSansNeoLight.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="prefetch"
+            href="/fonts/SpoqaHanSansNeoMedium.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="prefetch"
+            href="/fonts/SpoqaHanSansNeoRegular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
           />
         </Head>
 
