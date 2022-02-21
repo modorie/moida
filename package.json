@@ -5,7 +5,7 @@
   "scripts": {
     "next-config": "tsc next.config.ts --skipLibCheck --module commonjs --target esnext --esModuleInterop true --allowSyntheticDefaultImports true --moduleResolution node",
     "dev": "yarn next-config && start http://localhost:3000 && next dev",
-    "build": "next build",
+    "build": "yarn next-config next build",
     "start": "next start",
     "lint": "next lint"
   },
