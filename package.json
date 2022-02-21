@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "start http://localhost:3000 && next dev",
+    "next-config": "tsc next.config.ts --skipLibCheck --module commonjs --target esnext --esModuleInterop true --allowSyntheticDefaultImports true --moduleResolution node",
+    "dev": "yarn next-config && start http://localhost:3000 && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -24,6 +25,7 @@
     "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "file-loader": "^6.2.0",
     "prettier": "^2.5.1",
     "typescript": "4.5.5"
   }
