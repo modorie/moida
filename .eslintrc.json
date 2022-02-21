@@ -4,6 +4,7 @@
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
+    "plugin:storybook/recommended",
     "prettier/@typescript-eslint"
   ],
   "plugins": ["@typescript-eslint", "prettier"],
