@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "start http://localhost:3000 && next dev",
-    "build": "next build",
+    "next-config": "tsc next.config.ts --skipLibCheck --module commonjs --target esnext --esModuleInterop true --allowSyntheticDefaultImports true --moduleResolution node",
+    "dev": "yarn next-config && start http://localhost:3000 && next dev",
+    "build": "yarn next-config next build",
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
@@ -12,6 +13,7 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.23",
+    "file-loader": "^6.2.0",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
