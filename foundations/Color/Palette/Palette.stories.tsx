@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import Palette from "./";
+// TODO : Storybook alias
+import { FontWeight } from "../../FontWeight";
 
 export default {
   title: "Foundations/Color",
@@ -52,13 +54,13 @@ const ColorTile = styled.div<PaletteProps>`
 const ColorName = styled.span`
   color: ${Palette.gray900};
   font-size: 14px;
-  font-weight: 700;
+  font-weight: ${FontWeight.bold};
   letter-spacing: 0.03rem;
 `;
 
 const ColorCode = styled.span`
   color: ${Palette.gray500};
   font-size: 12px;
-  font-weight: 700;
+  font-weight: ${FontWeight.bold};
   letter-spacing: 0.03rem;
 `;
