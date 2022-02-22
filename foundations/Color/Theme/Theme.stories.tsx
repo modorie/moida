@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import Theme from "./Theme";
+// TODO : Storybook alias
+import { FontWeight } from "../../FontWeight";
+import { FontSize } from "../../FontSize";
 
 export default {
   title: "Foundations/Color",
@@ -70,14 +73,14 @@ const ColorTile = styled.div<PaletteProps>`
 
 const ColorName = styled.span`
   color: ${Theme.textColor.darkest};
-  font-size: 14px;
-  font-weight: 700;
+  font-size: ${FontSize.body2}px;
+  font-weight: ${FontWeight.bold};
   letter-spacing: 0.03rem;
 `;
 
 const ColorCode = styled.span`
   color: ${Theme.textColor.lighter};
-  font-size: 12px;
-  font-weight: 700;
+  font-size: ${FontSize.cap1}px;
+  font-weight: ${FontWeight.bold};
   letter-spacing: 0.03rem;
 `;
