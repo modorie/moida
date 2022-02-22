@@ -15,7 +15,8 @@ interface PaletteProps {
   color: string;
 }
 
-const title = {
+// TODO : any -> 적절한 타입으로 변경
+const title: any = {
   bgColor: "배경",
   selectBgColor: "선택",
   borderColor: "테두리",

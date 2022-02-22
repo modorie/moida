@@ -1,6 +1,7 @@
 import PaletteType from "./Palette.types";
 
-const Palette: PaletteType = {
+// TODO : any -> 적절한 타입으로 변경
+const Palette: PaletteType | any = {
   // Blue
   blue50: "#E7F8FF",
   blue100: "#34B6EA",

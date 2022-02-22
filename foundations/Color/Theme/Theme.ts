@@ -1,7 +1,8 @@
 import { Palette } from "../";
 import ThemeType from "./Theme.types";
 
-const Theme: ThemeType = {
+// TODO : any -> 적절한 타입으로 변경
+const Theme: ThemeType | any = {
   bgColor: {
     white: Palette.white,
     lighter: Palette.gray100,

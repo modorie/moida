@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+// TODO : Storybook alias
 import { FontWeight } from "./";
 import { FontSize } from "../FontSize";
 

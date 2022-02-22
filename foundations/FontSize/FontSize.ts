@@ -1,6 +1,7 @@
 import FontSizeType from "./FontSize.types";
 
-const FontSize: FontSizeType = {
+// TODO : any -> 적절한 타입으로 변경
+const FontSize: FontSizeType | any = {
   h1: 26,
   h2: 22,
   sub1: 18,
