@@ -19,7 +19,7 @@ Default.args = {
   children: "약속은 간편하게 모임은 한방에",
 };
 
-export const FontWeightTemplate = () =>
+export const Examples = () =>
   // TODO: any 타입 제거하기
   Object.keys(FontSize).map((size: any) =>
     Object.keys(FontWeight).map((weight: any) => (
@@ -45,8 +45,6 @@ export const FontWeightTemplate = () =>
       </Layout>
     ))
   );
-
-FontWeightTemplate.storyName = "Typography";
 
 const Layout = styled.div`
   display: flex;
