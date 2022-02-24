@@ -1,22 +1,22 @@
-type bgColor =
+export type bgColor =
   | "white"
   | "lighter"
   | "light"
   | "primary"
   | "badge";
 
-type selectBgColor =
+export type selectBgColor =
   | "lighter"
   | "light"
   | "dark";
 
-type borderColor =
+export type borderColor =
   | "lighter"
   | "light"
   | "primary"
   | "warning";
 
-type textColor =
+export type textColor =
   | "lightest"
   | "lighter"
   | "light"

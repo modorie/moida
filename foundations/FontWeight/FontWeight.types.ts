@@ -1,4 +1,4 @@
-type FontWeightKey =
+export type FontWeightKey =
   | "light"
   | "regular"
   | "medium"
