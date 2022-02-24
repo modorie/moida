@@ -1,4 +1,4 @@
-type FontSizeKey =
+export type FontSizeKey =
   | "h1"
   | "h2"
   | "sub1"
