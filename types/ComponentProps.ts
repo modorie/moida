@@ -1,5 +1,5 @@
 import React from "react";
 
-export interface ChildrenProps<Childern = React.ReactNode> {
-  children?: Childern;
+export interface ChildrenProps<Children = React.ReactNode> {
+  children?: Children;
 }
