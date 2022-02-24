@@ -1,5 +1,5 @@
 import { Palette } from "../";
-import ThemeType from "./Theme.types";
+import type ThemeType from "./Theme.types";
 
 // TODO : any -> 적절한 타입으로 변경
 const Theme: ThemeType | any = {

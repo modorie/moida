@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import TypoProps from "./Typography.types";
 import { FontSize, FontWeight, Theme } from "@/foundations";
+
+import type TypoProps from "./Typography.types";
 
 const Text = styled.span<TypoProps>`
   font-family: "Spoqa Han Sans Neo", sans-serif;

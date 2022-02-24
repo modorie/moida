@@ -1,7 +1,9 @@
 import React from "react";
+
 import TextView from "./Typography.styled";
-import TypoProps from "./Typography.types";
 import { FontSize, FontWeight, Theme } from "@/foundations";
+
+import type TypoProps from "./Typography.types";
 
 const Typography = ({
   weight = FontWeight.regular,

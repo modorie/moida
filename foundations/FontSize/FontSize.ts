@@ -1,4 +1,4 @@
-import FontSizeType from "./FontSize.types";
+import type FontSizeType from "./FontSize.types";
 
 // TODO : any -> 적절한 타입으로 변경
 const FontSize: FontSizeType | any = {

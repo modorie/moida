@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { Story } from "@storybook/react";
 
 import Typography from "./Typography";
-import TypoProps from "./Typography.types";
 import { FontSize, FontWeight } from "@/foundations";
+
+import type TypoProps from "./Typography.types";
 
 export default {
   title: "Components/Typography",
