@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { FontSize, FontWeight, Theme } from "@/foundations";
 
 import type TypoProps from "./Typography.types";
 
-const Text = styled.span<TypoProps>`
+export const TypoStyle = css<TypoProps>`
   font-family: "Spoqa Han Sans Neo", sans-serif;
   font-size: ${({ size }) => size && FontSize[size]}px;
   font-weight: ${({ weight }) => weight && FontWeight[weight]};
@@ -12,4 +12,8 @@ const Text = styled.span<TypoProps>`
   letter-spacing: -0.03rem;
 `;
 
-export default Text;
+const Typography = styled.span<TypoProps>`
+  ${TypoStyle}
+`;
+
+export default Typography;

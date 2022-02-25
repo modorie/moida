@@ -1,6 +1,6 @@
 import React from "react";
 
-import TextView from "./Typography.styled";
+import TypoView from "./Typography.styled";
 import { FontSize, FontWeight, Theme } from "@/foundations";
 
 import type TypoProps from "./Typography.types";
@@ -12,9 +12,9 @@ const Typography = ({
   children,
 }: TypoProps) => {
   return (
-    <TextView weight={weight} size={size} color={color}>
+    <TypoView weight={weight} size={size} color={color}>
       {children}
-    </TextView>
+    </TypoView>
   );
 };
 
