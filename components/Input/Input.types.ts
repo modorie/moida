@@ -1,12 +1,11 @@
 import type { FormProps } from "@/types/FormProps";
 
-enum InputType {
-  Text = "text",
-  Search = "search",
-  Email = "email",
-  Password = "password",
-  Number = "number",
-}
+type InputType =
+  | "text"
+  | "search"
+  | "email"
+  | "password"
+  | "number";
 
 interface InputOptions {
   type?: InputType;

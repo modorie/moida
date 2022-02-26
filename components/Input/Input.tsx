@@ -11,7 +11,7 @@ import type { InputProps } from "./Input.types";
 
 const Input = ({
   label,
-  type,
+  type = "text",
   hasError,
   required = true,
   disabled,
