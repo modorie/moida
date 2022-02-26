@@ -59,14 +59,7 @@ export const Label = styled.span<LabelProps & TypoProps>`
   margin-bottom: 9px;
   ${TypoStyle}
 
-  ${({ required }) =>
-    !required &&
-    css`
-      ::after {
-        content: " (선택사항)";
-        font-weight: ${FontWeight.regular};
-      }
-    `}
+  ${({ required }) => !required && optionalLabelStyle}
 `;
 
 export const ErrorMsg = styled.span`
@@ -96,5 +89,12 @@ const disabledTextFieldStyle = css`
 
   ::placeholder {
     color: ${Theme.textColor.lighter};
+  }
+`;
+
+const optionalLabelStyle = css`
+  ::after {
+    content: " (선택사항)";
+    font-weight: ${FontWeight.regular};
   }
 `;
