@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Palette from "./";
+import Palette, { paletteList } from "./Palette";
 import { FontSize, FontWeight } from "@/foundations";
 
 export default {
@@ -15,7 +15,7 @@ interface PaletteProps {
 
 export const PaletteTemplate = () => (
   <Layout>
-    {Object.keys(Palette).map((paletteKey) => (
+    {paletteList.map((paletteKey) => (
       <ColorChip>
         <ColorTile color={Palette[paletteKey]} />
         <ColorName>{paletteKey}</ColorName>

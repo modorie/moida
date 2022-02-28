@@ -33,7 +33,7 @@ type ColorfulPaletteKey =
   | `${BasePaletteKey.Coral}100`
   | `${BasePaletteKey.Coral}200`;
 
-type PaletteKey =
+export type PaletteKey =
   | ColorfulPaletteKey
   | GrayPaletteKey
   | BasePaletteKey.White

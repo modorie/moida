@@ -1,7 +1,7 @@
-import type PaletteType from "./Palette.types";
+import PaletteType, { PaletteKey } from "./Palette.types";
 
 // TODO : any -> 적절한 타입으로 변경
-const Palette: PaletteType | any = {
+const Palette: PaletteType = {
   // Blue
   blue50: "#E7F8FF",
   blue100: "#34B6EA",
@@ -35,5 +35,7 @@ const Palette: PaletteType | any = {
   // Black
   black: "#000000",
 };
+
+export const paletteList: PaletteKey[] = Object.keys(Palette) as PaletteKey[];
 
 export default Palette;
