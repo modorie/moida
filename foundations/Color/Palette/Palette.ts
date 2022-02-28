@@ -1,6 +1,5 @@
 import PaletteType, { PaletteKey } from "./Palette.types";
 
-// TODO : any -> 적절한 타입으로 변경
 const Palette: PaletteType = {
   // Blue
   blue50: "#E7F8FF",
