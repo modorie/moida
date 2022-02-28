@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Theme from "./Theme";
+import Theme, { ThemeKey } from "./Theme";
 import { FontSize, FontWeight } from "@/foundations";
 
 export default {
@@ -13,8 +13,7 @@ interface PaletteProps {
   color: string;
 }
 
-// TODO : any -> 적절한 타입으로 변경
-const title: any = {
+const title: { [index: string]: string } = {
   bgColor: "배경",
   selectBgColor: "선택",
   borderColor: "테두리",
