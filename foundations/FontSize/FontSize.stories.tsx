@@ -26,9 +26,6 @@ FontWeightTemplate.storyName = "Font Size";
 const Layout = styled.div<FontWeightProps>`
   display: flex;
   align-items: center;
-
-  // TODO : 폰트 패밀리는 글로벌 스타일로 적용해야해요.
-  font-family: "Spoqa Han Sans Neo", sans-serif;
   font-weight: ${FontWeight.regular};
   font-size: ${({ fontSize }) => fontSize}px;
 `;
