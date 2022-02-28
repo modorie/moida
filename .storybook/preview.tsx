@@ -1,6 +1,5 @@
 import { addDecorator } from "@storybook/react";
-// TODO : Alias 코드 동작은 하나 빨간 줄 출력
-import GlobalStyle from "@/styles/global";
+import GlobalStyle from "../styles/global";
 
 addDecorator((story) => (
   <>
