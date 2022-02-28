@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Story } from "@storybook/react";
 
 import Icon from "./Icon";
-import icons from "./assets";
+import { iconList } from "./assets";
 import { FontSize, Palette } from "@/foundations";
 
 import type IconProps from "./Icon.types";
@@ -20,10 +20,9 @@ Default.args = {
 };
 
 export const Examples = () => (
-  // TODO: any 타입 제거하기
   <Layout>
-    {Object.keys(icons).map((icon: any) => (
-      <IconChip>
+    {iconList.map((icon) => (
+      <IconChip key={icon}>
         <Icon name={icon} />
         <IconName>{icon}</IconName>
       </IconChip>

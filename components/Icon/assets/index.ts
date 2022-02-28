@@ -31,4 +31,6 @@ const icons = {
 
 export type IconName = keyof typeof icons;
 
+export const iconList: IconName[] = Object.keys(icons) as IconName[];
+
 export default icons;
