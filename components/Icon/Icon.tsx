@@ -10,8 +10,7 @@ const Icon = ({
   width = "30",
   height = "30",
   color = "darkest",
-}: IconProps) => {
-  return <Svg as={icons[name]} width={width} height={height} color={color} />;
-};
-
+}: IconProps) => (
+  <Svg as={icons[name]} width={width} height={height} color={color} />
+);
 export default Icon;
