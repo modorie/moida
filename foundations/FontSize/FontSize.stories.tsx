@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { FontSize, FontWeight } from "@/foundations";
-import { fontSizeList } from "@/foundations/FontSize/FontSize";
+import FontSize, { fontSizeList } from "./FontSize";
 
 export default {
   title: "Foundations/Font Size",
@@ -27,7 +26,6 @@ FontWeightTemplate.storyName = "Font Size";
 const Layout = styled.div<FontWeightProps>`
   display: flex;
   align-items: center;
-  font-weight: ${FontWeight.regular};
   font-size: ${({ fontSize }) => fontSize}px;
 `;
 

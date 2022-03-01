@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import { fontWeightList } from "@/foundations/FontWeight/FontWeight";
-import { FontSize, FontWeight } from "@/foundations";
+import FontWeight, { fontWeightList } from "./FontWeight";
+import { FontSize } from "@/foundations";
 
 export default {
   title: "Foundations/Font Weight",
