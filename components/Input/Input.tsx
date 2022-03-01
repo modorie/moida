@@ -24,7 +24,7 @@ const Input = ({
   const ControlRender = (control: ControlType) => {
     switch (control) {
       case "clear":
-        return !disabled ? <Clear /> : null;
+        return !disabled && <Clear />;
       case "manage":
         return <Manage />;
       case "search":
