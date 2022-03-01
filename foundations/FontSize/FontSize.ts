@@ -1,7 +1,6 @@
-import type FontSizeType from "./FontSize.types";
+import FontSizeType, { FontSizeKey } from "./FontSize.types";
 
-// TODO : any -> 적절한 타입으로 변경
-const FontSize: FontSizeType | any = {
+const FontSize: FontSizeType = {
   h1: 26,
   h2: 22,
   sub1: 18,
@@ -13,5 +12,9 @@ const FontSize: FontSizeType | any = {
   cap1: 12,
   cap2: 10,
 };
+
+export const fontSizeList: FontSizeKey[] = Object.keys(
+  FontSize
+) as FontSizeKey[];
 
 export default FontSize;
