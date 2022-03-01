@@ -36,14 +36,4 @@ const Theme: ThemeType = {
   },
 };
 
-export type ThemeKey =
-  | "bgColor"
-  | "selectBgColor"
-  | "borderColor"
-  | "textColor";
-
-// export const themeList: ThemeType = Object.fromEntries(
-//   Object.entries(Theme).map(([key, value]) => [key, Object.keys(value)])
-// );
-
 export default Theme;
