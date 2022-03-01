@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Palette, { paletteList } from "./Palette";
-import { FontSize, FontWeight } from "@/foundations";
+import { Typography } from "@/components";
 
 export default {
   title: "Foundations/Color",
@@ -18,8 +18,12 @@ export const PaletteTemplate = () => (
     {paletteList.map((paletteKey) => (
       <ColorChip>
         <ColorTile color={Palette[paletteKey]} />
-        <ColorName>{paletteKey}</ColorName>
-        <ColorCode>{Palette[paletteKey]}</ColorCode>
+        <Typography size="body2" weight="bold" color="darkest">
+          {paletteKey}
+        </Typography>
+        <Typography size="cap1" color="lighter">
+          {Palette[paletteKey]}
+        </Typography>
       </ColorChip>
     ))}
   </Layout>
@@ -48,18 +52,4 @@ const ColorTile = styled.div<PaletteProps>`
   margin-bottom: 4px;
   border-radius: 12px;
   background-color: ${({ color }) => color};
-`;
-
-const ColorName = styled.span`
-  color: ${Palette.gray900};
-  font-size: ${FontSize.body2}px;
-  font-weight: ${FontWeight.bold};
-  letter-spacing: 0.03rem;
-`;
-
-const ColorCode = styled.span`
-  color: ${Palette.gray500};
-  font-size: ${FontSize.cap1}px;
-  font-weight: ${FontWeight.bold};
-  letter-spacing: 0.03rem;
 `;

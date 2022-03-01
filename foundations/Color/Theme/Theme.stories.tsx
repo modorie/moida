@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Theme, { ThemeKey } from "./Theme";
-import { FontSize, FontWeight } from "@/foundations";
+import Theme from "./Theme";
+import { Typography } from "@/components";
 
 export default {
   title: "Foundations/Color",
@@ -29,8 +29,12 @@ export const ThemeTemplate = () => (
           {Object.keys(Theme[themeType]).map((paletteKey) => (
             <ColorChip>
               <ColorTile color={Theme[themeType][paletteKey]} />
-              <ColorName>{paletteKey}</ColorName>
-              <ColorCode>{Theme[themeType][paletteKey]}</ColorCode>
+              <Typography size="body2" weight="bold" color="darkest">
+                {paletteKey}
+              </Typography>
+              <Typography size="cap1" color="lighter">
+                {Theme[themeType][paletteKey]}
+              </Typography>
             </ColorChip>
           ))}
         </Layout>
@@ -67,18 +71,4 @@ const ColorTile = styled.div<PaletteProps>`
   margin-bottom: 4px;
   border-radius: 12px;
   background-color: ${({ color }) => color};
-`;
-
-const ColorName = styled.span`
-  color: ${Theme.textColor.darkest};
-  font-size: ${FontSize.body2}px;
-  font-weight: ${FontWeight.bold};
-  letter-spacing: 0.03rem;
-`;
-
-const ColorCode = styled.span`
-  color: ${Theme.textColor.lighter};
-  font-size: ${FontSize.cap1}px;
-  font-weight: ${FontWeight.bold};
-  letter-spacing: 0.03rem;
 `;
