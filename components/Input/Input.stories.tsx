@@ -14,6 +14,15 @@ export const Default = ({ ...args }) => <Input {...args} />;
 export const Examples = () => (
   <Layout>
     <Typography size="sub1" weight="bold">
+      Input Controls
+    </Typography>
+    <Input />
+    <Input control="manage" />
+    <Input control="search" />
+
+    <br />
+
+    <Typography size="sub1" weight="bold">
       타이틀이 없는 경우
     </Typography>
     <Input />

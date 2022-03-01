@@ -7,7 +7,9 @@ import {
   ErrorMsg,
   Description,
 } from "./Input.styled";
-import type { InputProps } from "./Input.types";
+import { Clear, Manage, Search } from "./controls";
+
+import type { InputProps, ControlType } from "./Input.types";
 
 const Input = ({
   label,
@@ -17,7 +19,19 @@ const Input = ({
   disabled,
   errorMsg,
   description,
+  control = "clear",
 }: InputProps) => {
+  const ControlRender = (control: ControlType) => {
+    switch (control) {
+      case "clear":
+        return !disabled ? <Clear /> : null;
+      case "manage":
+        return <Manage />;
+      case "search":
+        return <Search />;
+    }
+  };
+
   return (
     <div>
       {label && (
@@ -37,6 +51,7 @@ const Input = ({
           disabled={disabled}
           required={required}
         />
+        {control && ControlRender(control)}
       </Layout>
       {hasError && (
         <ErrorMsg color="warning" size="cap1" weight="bold">
