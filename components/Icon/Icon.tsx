@@ -5,8 +5,13 @@ import icons from "./assets";
 
 import type IconProps from "./Icon.types";
 
-const Icon = ({ name, width = "30", height = "30" }: IconProps) => {
-  return <Svg as={icons[name]} width={width} height={height} />;
+const Icon = ({
+  name,
+  width = "30",
+  height = "30",
+  color = "darkest",
+}: IconProps) => {
+  return <Svg as={icons[name]} width={width} height={height} color={color} />;
 };
 
 export default Icon;

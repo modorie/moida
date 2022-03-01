@@ -1,6 +1,7 @@
 import React from "react";
 
-const Search = (props: React.SVGProps<SVGSVGElement>) => {
+// TODO : any 타입 제거
+const Search = (props: React.SVGProps<SVGSVGElement> | any) => {
   return (
     <svg
       viewBox="0 0 30 30"
