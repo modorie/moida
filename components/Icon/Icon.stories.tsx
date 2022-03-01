@@ -4,7 +4,7 @@ import { Story } from "@storybook/react";
 
 import Icon from "./Icon";
 import { iconList } from "./assets";
-import { FontSize, Palette } from "@/foundations";
+import { Typography } from "@/components";
 
 import type IconProps from "./Icon.types";
 
@@ -24,7 +24,7 @@ export const Examples = () => (
     {iconList.map((icon) => (
       <IconChip key={icon}>
         <Icon name={icon} />
-        <IconName>{icon}</IconName>
+        <Typography size="cap1">{icon}</Typography>
       </IconChip>
     ))}
   </Layout>
@@ -43,10 +43,4 @@ const IconChip = styled.div`
 
   width: 100px;
   height: 100px;
-`;
-
-const IconName = styled.span`
-  color: ${Palette.black};
-  font-size: ${FontSize.cap1}px;
-  letter-spacing: 0.03rem;
 `;

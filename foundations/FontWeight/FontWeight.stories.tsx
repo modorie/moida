@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import { FontSize, FontWeight } from "@/foundations";
+import FontWeight, { fontWeightList } from "./FontWeight";
+import { FontSize } from "@/foundations";
 
 export default {
   title: "Foundations/Font Weight",
@@ -13,7 +14,7 @@ interface FontWeightProps {
 }
 
 export const FontWeightTemplate = () =>
-  Object.keys(FontWeight).map((fontWeightKey) => (
+  fontWeightList.map((fontWeightKey) => (
     <Layout fontWeight={FontWeight[fontWeightKey]}>
       <Name>{fontWeightKey}</Name>
       <Number>{FontWeight[fontWeightKey]}</Number>
@@ -26,9 +27,6 @@ FontWeightTemplate.storyName = "Font Weight";
 const Layout = styled.div<FontWeightProps>`
   display: flex;
   align-items: center;
-
-  // TODO : 폰트 패밀리는 글로벌 스타일로 적용해야해요.
-  font-family: "Spoqa Han Sans Neo", sans-serif;
   font-weight: ${({ fontWeight }) => fontWeight};
   font-size: ${FontSize.h1}px;
 `;

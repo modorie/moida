@@ -28,6 +28,7 @@ export type textColor =
   | "warning";
 
 interface ThemeType {
+  [category: string]: { [color: string]: string };
   bgColor: Record<bgColor, string>;
   selectBgColor: Record<selectBgColor, string>;
   borderColor: Record<borderColor, string>;

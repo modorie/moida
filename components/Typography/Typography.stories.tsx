@@ -3,7 +3,9 @@ import styled from "styled-components";
 import { Story } from "@storybook/react";
 
 import Typography from "./Typography";
-import { FontSize, FontWeight } from "@/foundations";
+import { FontSize } from "@/foundations";
+import { fontSizeList } from "@/foundations/FontSize/FontSize";
+import { fontWeightList } from "@/foundations/FontWeight/FontWeight";
 
 import type TypoProps from "./Typography.types";
 
@@ -21,9 +23,8 @@ Default.args = {
 };
 
 export const Examples = () =>
-  // TODO: any 타입 제거하기
-  Object.keys(FontSize).map((size: any) =>
-    Object.keys(FontWeight).map((weight: any) => (
+  fontSizeList.map((size) =>
+    fontWeightList.map((weight) => (
       <Layout key={weight}>
         <Info>
           <Typography size={size} weight={weight}>
