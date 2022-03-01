@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import { fontWeightList } from "@/foundations/FontWeight/FontWeight";
 import { FontSize, FontWeight } from "@/foundations";
 
 export default {
@@ -13,7 +14,7 @@ interface FontWeightProps {
 }
 
 export const FontWeightTemplate = () =>
-  Object.keys(FontWeight).map((fontWeightKey) => (
+  fontWeightList.map((fontWeightKey) => (
     <Layout fontWeight={FontWeight[fontWeightKey]}>
       <Name>{fontWeightKey}</Name>
       <Number>{FontWeight[fontWeightKey]}</Number>
