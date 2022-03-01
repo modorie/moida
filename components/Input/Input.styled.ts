@@ -20,7 +20,7 @@ export const Layout = styled.div<LayoutProps>`
   align-items: center;
 
   height: 46px;
-  padding: 0 16px;
+  padding: 0 14px 0 16px;
   border-radius: 4px;
   box-sizing: border-box;
 
