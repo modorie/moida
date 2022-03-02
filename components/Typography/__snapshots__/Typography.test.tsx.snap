@@ -3,9 +3,7 @@
 exports[`matches snapshot 1`] = `
 <div>
   <span
-    class="sc-bdvvtL fDozR"
-    color="#000000"
-    size="14"
+    class="sc-gsDKAQ kuNrAb"
   />
 </div>
 `;
