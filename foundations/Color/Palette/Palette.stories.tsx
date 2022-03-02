@@ -41,14 +41,14 @@ const ColorChip = styled.div`
   flex-direction: column;
   align-items: center;
 
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 120px;
   margin: 10px;
 `;
 
 const ColorTile = styled.div<PaletteProps>`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 4px;
   border-radius: 12px;
   background-color: ${({ color }) => color};
