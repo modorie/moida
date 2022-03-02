@@ -4,8 +4,8 @@ import { Story } from "@storybook/react";
 
 import Typography from "./Typography";
 import { FontSize } from "@/foundations";
-import { fontSizeList } from "@/foundations/FontSize/FontSize";
-import { fontWeightList } from "@/foundations/FontWeight/FontWeight";
+import { fontSizeList } from "@/foundations/FontSize";
+import { fontWeightList } from "@/foundations/FontWeight";
 
 import type TypoProps from "./Typography.types";
 

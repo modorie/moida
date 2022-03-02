@@ -1,9 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { Theme, FontWeight } from "@/foundations";
-import { TypoStyle } from "@/components/Typography/Typography.styled";
-
-import type TypoProps from "@/components/Typography/Typography.types";
+import { TypoStyle, TypoProps } from "@/components/Typography";
 
 interface LayoutProps {
   hasError?: boolean;

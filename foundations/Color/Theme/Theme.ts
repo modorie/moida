@@ -1,4 +1,4 @@
-import { Palette } from "../";
+import { Palette } from "@/foundations";
 import type ThemeType from "./Theme.types";
 
 const Theme: ThemeType = {
