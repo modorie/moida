@@ -1,3 +1,4 @@
+import { Configuration } from "webpack";
 import path from "path";
 
 module.exports = {
@@ -12,7 +13,7 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
-  webpackFinal: async (config) => {
+  webpackFinal: async (config: Configuration) => {
     config.resolve.alias["@"] = path.resolve(__dirname, "../");
     return config;
   },
