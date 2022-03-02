@@ -25,5 +25,6 @@ export const Layout = styled.div<LayoutProps>`
 export const LineNumber = styled.span<LayoutProps>`
   font-size: ${(props) => (/^\d/.test(props.text) ? 12.5 : 10)}px;
   font-weight: ${FontWeight.bold};
+  line-height: 130%;
   color: ${Palette.white};
 `;
