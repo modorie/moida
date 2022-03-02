@@ -1,5 +1,5 @@
 import type LineColorType from "./LineColor.types";
-import type { LineName } from "../StationInfo.types";
+import type { LineName } from "@/components/StationInfo";
 
 // prettier-ignore
 const LineColor: LineColorType = {

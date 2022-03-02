@@ -1,1 +1,2 @@
-export { default as StationInfo } from "./StationInfo";
+export { default } from "./StationInfo";
+export type { LineName } from "./StationInfo.types";

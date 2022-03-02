@@ -2,7 +2,7 @@ import React from "react";
 import { Story } from "@storybook/react";
 
 import LineSymbol from "./LineSymbol";
-import { lineList } from "../LineColor/LineColor";
+import { lineList } from "../LineColor";
 
 import type LineType from "./LineSymbol.types";
 

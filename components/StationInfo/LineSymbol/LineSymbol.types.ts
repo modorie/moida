@@ -1,4 +1,4 @@
-import { LineName } from "../StationInfo.types";
+import type { LineName } from "@/components/StationInfo";
 
 export interface LineType {
   name: LineName;

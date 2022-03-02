@@ -1,8 +1,8 @@
 import { ChildrenProps } from "@/types/ComponentProps";
 
-import type { FontSizeKey } from "@/foundations/FontSize/FontSize.types";
-import type { FontWeightKey } from "@/foundations/FontWeight/FontWeight.types";
-import type { textColor } from "@/foundations/Color/Theme/Theme.types";
+import type { FontSizeKey } from "@/foundations/FontSize";
+import type { FontWeightKey } from "@/foundations/FontWeight";
+import type { textColor } from "@/foundations/Color/Theme";
 
 interface TypoOptions {
   size?: FontSizeKey;

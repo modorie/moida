@@ -1,1 +1,3 @@
-export { default as FontWeight } from "./FontWeight";
+export { default } from "./FontWeight";
+export { fontWeightList } from "./FontWeight";
+export type { FontWeightKey } from "./FontWeight.types";

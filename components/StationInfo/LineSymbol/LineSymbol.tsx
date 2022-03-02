@@ -3,7 +3,7 @@ import React from "react";
 import { Layout, LineNumber } from "./LineSymbol.styled";
 
 import type { LineType } from "./LineSymbol.types";
-import type { LineName } from "../StationInfo.types";
+import type { LineName } from "@/components/StationInfo";
 
 const LineSymbol = ({ name = "01호선" }: LineType) => {
   // prettier-ignore

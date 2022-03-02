@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { LineColor } from "../LineColor";
 import { FontWeight, Palette } from "@/foundations";
 
-import type { LineName } from "../StationInfo.types";
+import type { LineName } from "@/components/StationInfo";
 
 interface LayoutProps {
   text: LineName;
