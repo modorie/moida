@@ -16,6 +16,10 @@ export const Default: Story<StationType> = ({ ...args }) => (
   <StationInfo {...args} />
 );
 
+Default.args = {
+  name: "강남역",
+};
+
 export const Examples = () => (
   <Layout>
     {Object.keys(stations).map((name) => (
