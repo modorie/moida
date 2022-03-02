@@ -12,7 +12,7 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
-  webpackFinal: async (config) => {
+  webpackFinal: async (config: any) => {
     config.resolve.alias["@"] = path.resolve(__dirname, "../");
     return config;
   },

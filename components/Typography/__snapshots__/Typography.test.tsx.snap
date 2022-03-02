@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <span
+    class="sc-bdvvtL fDozR"
+    color="#000000"
+    size="14"
+  />
+</div>
+`;
