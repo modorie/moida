@@ -1,1 +1,4 @@
-export { default } from "./Typography";
+import { TypoStyle } from "./Typography.styled";
+
+export { default as Typography } from "./Typography";
+export { TypoStyle };

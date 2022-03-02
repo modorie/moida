@@ -1,3 +1,4 @@
-export { default as Icon } from "./Icon";
-export { default as Input } from "./Input";
-export { default as Typography } from "./Typography";
+export * from "./Icon";
+export * from "./Input";
+export * from "./StationInfo";
+export * from "./Typography";
