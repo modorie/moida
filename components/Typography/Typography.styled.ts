@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { FontSize, FontWeight, Theme } from "@/foundations";
 
+import { TitleList } from "@/foundations/FontSize";
 import type TypoProps from "./Typography.types";
 
 export const TypoStyle = css<TypoProps>`
@@ -8,7 +9,8 @@ export const TypoStyle = css<TypoProps>`
   font-weight: ${({ weight }) => weight && FontWeight[weight]};
   color: ${({ color }) => color && Theme.textColor[color]};
   line-height: 130%;
-  letter-spacing: -0.03rem;
+  letter-spacing: ${({ size }: any) =>
+    TitleList.includes(size) ? "-0.03rem" : "-0.02rem"};
 `;
 
 const Typography = styled.span<TypoProps>`
