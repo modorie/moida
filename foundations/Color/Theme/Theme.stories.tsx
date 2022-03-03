@@ -21,33 +21,30 @@ const title: { [index: string]: string } = {
   textColor: "텍스트",
 };
 
-export const ThemeTemplate = () => (
-  <>
-    {Object.keys(Theme).map((themeType) => (
-      <>
-        <TitleBox>
-          <Typography size="h2" weight="bold" color="darkest">
-            {title[themeType]}
-          </Typography>{" "}
-          <Typography color="light">{themeType}</Typography>
-        </TitleBox>
-        <Layout>
-          {Object.keys(Theme[themeType]).map((paletteKey) => (
-            <ColorChip>
-              <ColorTile color={Theme[themeType][paletteKey]} />
-              <Typography size="body2" weight="bold" color="darkest">
-                {paletteKey}
-              </Typography>
-              <Typography size="cap1" color="lighter">
-                {Theme[themeType][paletteKey]}
-              </Typography>
-            </ColorChip>
-          ))}
-        </Layout>
-      </>
-    ))}
-  </>
-);
+export const ThemeTemplate = () =>
+  Object.keys(Theme).map((themeType) => (
+    <React.Fragment key={themeType}>
+      <TitleBox>
+        <Typography size="h2" weight="bold" color="darkest">
+          {title[themeType]}
+        </Typography>{" "}
+        <Typography color="light">{themeType}</Typography>
+      </TitleBox>
+      <Layout>
+        {Object.keys(Theme[themeType]).map((paletteKey) => (
+          <ColorChip key={paletteKey}>
+            <ColorTile color={Theme[themeType][paletteKey]} />
+            <Typography size="body2" weight="bold" color="darkest">
+              {paletteKey}
+            </Typography>
+            <Typography size="cap1" color="lighter">
+              {Theme[themeType][paletteKey]}
+            </Typography>
+          </ColorChip>
+        ))}
+      </Layout>
+    </React.Fragment>
+  ));
 
 ThemeTemplate.storyName = "Theme";
 

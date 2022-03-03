@@ -12,7 +12,7 @@ const StationInfo = ({ name }: StationType) => {
     <Layout>
       <SymbolBox>
         {stations[name]?.map((lineName) => (
-          <LineSymbol name={lineName} />
+          <LineSymbol name={lineName} key={lineName} />
         ))}
       </SymbolBox>
       <NameBox color={stations[name]?.[0]}>
