@@ -1,3 +1,4 @@
 export { default } from "./FontSize";
 export { fontSizeList } from "./FontSize";
-export type { FontSizeKey } from "./FontSize.types";
+export { TitleList, TextList } from "./FontSize.types";
+export type { TitleKey, TextKey, FontSizeKey } from "./FontSize.types";
