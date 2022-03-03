@@ -14,7 +14,7 @@ interface FontWeightProps {
 
 export const FontWeightTemplate = () =>
   fontSizeList.map((fontSizeKey) => (
-    <Layout fontSize={FontSize[fontSizeKey]}>
+    <Layout fontSize={FontSize[fontSizeKey]} key={fontSizeKey}>
       <Name>{fontSizeKey}</Name>
       <Number>{FontSize[fontSizeKey]}</Number>
       <Text>약속은 간편하게 모임은 한방에</Text>

@@ -23,7 +23,7 @@ Default.args = {
 export const Examples = () => (
   <Layout>
     {Object.keys(stations).map((name) => (
-      <StationInfo name={name} />
+      <StationInfo name={name} key={name} />
     ))}
   </Layout>
 );

@@ -16,7 +16,7 @@ interface colorProps {
 export const LineColorTemplate = () => (
   <Layout>
     {lineList.map((colorKey) => (
-      <ColorChip>
+      <ColorChip key={colorKey}>
         <ColorTile color={LineColor[colorKey]} />
         <Typography size="body2" weight="bold" color="darkest">
           {colorKey}

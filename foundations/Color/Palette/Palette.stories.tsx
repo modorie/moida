@@ -16,7 +16,7 @@ interface PaletteProps {
 export const PaletteTemplate = () => (
   <Layout>
     {paletteList.map((paletteKey) => (
-      <ColorChip>
+      <ColorChip key={paletteKey}>
         <ColorTile color={Palette[paletteKey]} />
         <Typography size="body2" weight="bold" color="darkest">
           {paletteKey}

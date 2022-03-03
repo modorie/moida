@@ -14,8 +14,8 @@ const Stack = (props: React.SVGProps<SVGSVGElement>) => {
         width="18"
         height="6"
         stroke="currentColor"
-        stroke-width="1.8"
-        stroke-linejoin="round"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
       />
       <rect
         x="6"
@@ -23,8 +23,8 @@ const Stack = (props: React.SVGProps<SVGSVGElement>) => {
         width="18"
         height="6"
         stroke="currentColor"
-        stroke-width="1.8"
-        stroke-linejoin="round"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
       />
     </svg>
   );

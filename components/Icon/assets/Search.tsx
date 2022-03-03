@@ -16,7 +16,7 @@ const Search = (props: React.SVGProps<SVGSVGElement> | any) => {
         height="17"
         rx="8.5"
         stroke="currentColor"
-        stroke-width="1.8"
+        strokeWidth="1.8"
       />
       <line
         x1="20.2728"
@@ -24,9 +24,9 @@ const Search = (props: React.SVGProps<SVGSVGElement> | any) => {
         x2="24.5355"
         y2="24.2627"
         stroke="currentColor"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

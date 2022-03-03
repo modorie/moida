@@ -16,4 +16,4 @@ export const Default: Story<LineType> = ({ ...args }) => (
 );
 
 export const Examples = () =>
-  lineList.map((name) => <LineSymbol name={name} />);
+  lineList.map((name) => <LineSymbol name={name} key={name} />);
