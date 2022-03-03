@@ -16,10 +16,14 @@ interface BoxProps {
 
 export const TransitionTemplate = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const onClick = () => {
+    setIsClicked(!isClicked);
+  };
+
   return (
     <Layout>
       <TransitionBox isClicked={isClicked} />
-      <Button onClick={() => setIsClicked(!isClicked)}>
+      <Button onClick={onClick}>
         <Typography>Click Me</Typography>
       </Button>
     </Layout>
