@@ -11,7 +11,10 @@ export type selectBgColor =
   | "light"
   | "dark";
 
-export type badgeColor = "ongoing" | "closed";
+// prettier-ignore
+export type badgeColor = 
+  | "ongoing"
+  | "closed";
 
 // prettier-ignore
 export type borderColor =
