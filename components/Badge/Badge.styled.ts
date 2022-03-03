@@ -15,7 +15,7 @@ export const Layout = styled.div<BadgeProps & TypoProps>`
   height: 20px;
   border-radius: 20px;
   background-color: ${({ isOngoing }) =>
-    isOngoing ? Theme.badgeColor.ongoing : Theme.badgeColor.closed};
+    Theme.badgeColor[isOngoing ? "ongoing" : "closed"]};
 
   ${TypoStyle}
   color: ${Palette.white};
