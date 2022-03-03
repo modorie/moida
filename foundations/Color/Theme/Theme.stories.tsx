@@ -16,6 +16,7 @@ interface PaletteProps {
 const title: { [index: string]: string } = {
   bgColor: "배경",
   selectBgColor: "선택",
+  badgeColor: "뱃지",
   borderColor: "테두리",
   textColor: "텍스트",
 };
@@ -24,7 +25,12 @@ export const ThemeTemplate = () => (
   <>
     {Object.keys(Theme).map((themeType) => (
       <>
-        <TypeTitle>{title[themeType]}</TypeTitle>
+        <TitleBox>
+          <Typography size="h2" weight="bold" color="darkest">
+            {title[themeType]}
+          </Typography>{" "}
+          <Typography color="light">{themeType}</Typography>
+        </TitleBox>
         <Layout>
           {Object.keys(Theme[themeType]).map((paletteKey) => (
             <ColorChip>
@@ -51,9 +57,8 @@ const Layout = styled.div`
   margin-bottom: 40px;
 `;
 
-const TypeTitle = styled.h3`
+const TitleBox = styled.div`
   padding-left: 20px;
-  margin-bottom: 0;
 `;
 
 const ColorChip = styled.div`
