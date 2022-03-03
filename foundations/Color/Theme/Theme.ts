@@ -7,13 +7,17 @@ const Theme: ThemeType = {
     lighter: Palette.gray100,
     light: Palette.gray200,
     primary: Palette.blue100,
-    badge: Palette.coral200,
   },
 
   selectBgColor: {
     lighter: Palette.green50,
     light: Palette.green100,
     dark: Palette.green200,
+  },
+
+  badgeColor: {
+    ongoing: Palette.coral200,
+    closed: Palette.gray400,
   },
 
   borderColor: {
