@@ -15,16 +15,16 @@ const Clear = () => (
     <path
       d="M12 12L18 18"
       stroke={Theme.textColor.light}
-      stroke-width="1.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M12 18L18 12"
       stroke={Theme.textColor.light}
-      stroke-width="1.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </Svg>
 );
