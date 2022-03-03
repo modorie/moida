@@ -16,9 +16,7 @@ interface BoxProps {
 
 export const TransitionTemplate = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const onClick = () => {
-    setIsClicked(!isClicked);
-  };
+  const onClick = () => setIsClicked(!isClicked);
 
   return (
     <Layout>
