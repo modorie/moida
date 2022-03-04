@@ -9,15 +9,10 @@ const Theme: ThemeType = {
     primary: Palette.blue100,
   },
 
-  selectBgColor: {
+  selectColor: {
     lighter: Palette.green50,
     light: Palette.green100,
     dark: Palette.green200,
-  },
-
-  badgeColor: {
-    ongoing: Palette.coral200,
-    closed: Palette.gray400,
   },
 
   borderColor: {
@@ -28,6 +23,7 @@ const Theme: ThemeType = {
   },
 
   textColor: {
+    white: Palette.white,
     lightest: Palette.gray400,
     lighter: Palette.gray500,
     light: Palette.gray600,
@@ -37,6 +33,21 @@ const Theme: ThemeType = {
     black: Palette.black,
     primary: Palette.blue100,
     warning: Palette.coral100,
+  },
+
+  badgeColor: {
+    ongoing: Palette.coral200,
+    closed: Palette.gray400,
+  },
+
+  helperBgColor: {
+    light: Palette.blue100,
+    dark: Palette.blue400,
+  },
+
+  helperBorderColor: {
+    light: Palette.blue200,
+    dark: Palette.blue500,
   },
 };
 

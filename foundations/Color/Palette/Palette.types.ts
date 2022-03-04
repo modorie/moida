@@ -27,6 +27,7 @@ type ColorfulPaletteKey =
   | `${BasePaletteKey.Blue}200`
   | `${BasePaletteKey.Blue}300`
   | `${BasePaletteKey.Blue}400`
+  | `${BasePaletteKey.Blue}500`
   | `${BasePaletteKey.Green}50`
   | `${BasePaletteKey.Green}100`
   | `${BasePaletteKey.Green}200`
