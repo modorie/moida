@@ -11,6 +11,10 @@ export default {
 
 export const Default: Story<BadgeProps> = ({ ...args }) => <Badge {...args} />;
 
+Default.args = {
+  isOngoing: true,
+};
+
 export const Examples = () => (
   <>
     <Badge isOngoing={true} /> <Badge isOngoing={false} />

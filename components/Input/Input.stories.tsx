@@ -11,6 +11,18 @@ export default {
 
 export const Default = ({ ...args }) => <Input {...args} />;
 
+Default.args = {
+  disabled: false,
+  hasError: false,
+  required: true,
+  readonly: false,
+  type: "text",
+  label: "",
+  errorMsg: "",
+  description: "",
+  control: "clear",
+};
+
 export const Examples = () => (
   <Layout>
     <Typography size="sub1" weight="bold">

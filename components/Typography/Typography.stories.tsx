@@ -20,6 +20,9 @@ export const Default: Story<TypoProps> = ({ ...args }) => (
 
 Default.args = {
   children: "약속은 간편하게 모임은 한방에",
+  size: "body2",
+  weight: "regular",
+  color: "black",
 };
 
 export const Examples = () =>
