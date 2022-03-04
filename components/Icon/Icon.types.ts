@@ -3,8 +3,8 @@ import type { textColor } from "@/foundations/Color/Theme";
 
 interface IconOptions {
   name: IconName;
-  width?: string;
-  height?: string;
+  width?: number;
+  height?: number;
   color?: textColor;
 }
 
