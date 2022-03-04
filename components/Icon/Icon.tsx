@@ -7,10 +7,11 @@ import type IconProps from "./Icon.types";
 
 const Icon = ({
   name,
-  width = "30",
-  height = "30",
+  width = 30,
+  height = 30,
   color = "darkest",
-}: IconProps) => (
-  <Svg as={icons[name]} width={width} height={height} color={color} />
-);
+}: IconProps) =>
+  icons[name] && (
+    <Svg as={icons[name]} width={width} height={height} color={color} />
+  );
 export default Icon;
