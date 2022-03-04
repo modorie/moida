@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { LineColor } from "../LineColor";
-import { FontWeight, Palette } from "@/foundations";
+import { FontWeight, Theme } from "@/foundations";
 
 import type { LineName } from "@/components/StationInfo";
 
@@ -26,5 +26,5 @@ export const LineNumber = styled.span<LayoutProps>`
   font-size: ${(props) => (/^\d/.test(props.text) ? 12.5 : 10)}px;
   font-weight: ${FontWeight.bold};
   line-height: 130%;
-  color: ${Palette.white};
+  color: ${Theme.textColor.white};
 `;
