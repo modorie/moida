@@ -16,7 +16,6 @@ export const Layout = styled.div<HelperProps & TypoProps>`
   padding: 0 10px;
   border-radius: 4px;
   border: 1px solid ${({ color }) => Theme.helperBorderColor[color]};
-
   background-color: ${({ color }) => Theme.helperBgColor[color]};
 
   ${TypoStyle}
@@ -33,7 +32,7 @@ export const ArrowBox = styled.div`
 
 export const Arrow = styled.div<HelperProps>`
   position: relative;
-  bottom: 5.5px;
+  bottom: 6px;
 
   width: 9px;
   height: 9px;
