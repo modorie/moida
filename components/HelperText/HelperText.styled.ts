@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 import { Theme } from "@/foundations";
-import { TypoStyle } from "@/components/Typography";
+import { TypoStyle, TypoProps } from "@/components/Typography";
 
-import type { TypoProps } from "@/components/Typography";
 import type HelperProps from "./HelperText.types";
 
 export const Layout = styled.div<HelperProps & TypoProps>`
