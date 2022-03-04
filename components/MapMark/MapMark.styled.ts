@@ -3,8 +3,7 @@ import { Theme } from "@/foundations";
 
 export const Layout = styled.div`
   position: relative;
-  top: 13px;
-  left: 13px;
+  transform: translate(13px, 13px);
 
   width: 19px;
   height: 19px;
@@ -14,8 +13,7 @@ export const Layout = styled.div`
   ::after {
     content: "";
     position: absolute;
-    top: -13px;
-    left: -13px;
+    transform: translate(-13px, -13px);
 
     width: 45px;
     height: 45px;
