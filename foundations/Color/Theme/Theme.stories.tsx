@@ -15,10 +15,12 @@ interface PaletteProps {
 
 const title: { [index: string]: string } = {
   bgColor: "배경",
-  selectBgColor: "선택",
+  selectColor: "선택",
   badgeColor: "뱃지",
   borderColor: "테두리",
   textColor: "텍스트",
+  helperBgColor: "도움말 배경",
+  helperBorderColor: "도움말 테두리",
 };
 
 export const ThemeTemplate = () =>

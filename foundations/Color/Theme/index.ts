@@ -1,7 +1,7 @@
 export { default } from "./Theme";
 export type {
   bgColor,
-  selectBgColor,
+  selectColor,
   borderColor,
   textColor,
 } from "./Theme.types";

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { TypoStyle } from "@/components/Typography";
-import { Palette, Theme } from "@/foundations";
+import { Theme } from "@/foundations";
 
 import type { TypoProps } from "@/components/Typography";
 import type { BadgeProps } from "./Badge.types";
@@ -18,6 +18,6 @@ export const Layout = styled.div<BadgeProps & TypoProps>`
     Theme.badgeColor[isOngoing ? "ongoing" : "closed"]};
 
   ${TypoStyle}
-  color: ${Palette.white};
+  color: ${Theme.textColor.white};
   user-select: none;
 `;
