@@ -17,6 +17,12 @@ export const Default: Story<IconProps> = ({ ...args }) => <Icon {...args} />;
 
 Default.args = {
   name: "edit",
+  size: 30,
+  color: "darkest",
+};
+
+Default.argTypes = {
+  size: { control: { type: "range", min: 30, max: 100, step: 10 } },
 };
 
 export const Examples = () => (
