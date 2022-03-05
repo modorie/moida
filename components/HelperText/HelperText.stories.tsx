@@ -9,6 +9,9 @@ import type HelperProps from "./HelperText.types";
 export default {
   title: "Components/HelperText",
   component: HelperText,
+  parameters: {
+    layout: "centered",
+  },
 };
 
 export const Default: Story<HelperProps> = ({ ...args }) => (

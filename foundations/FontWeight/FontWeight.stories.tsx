@@ -7,6 +7,11 @@ import { FontSize } from "@/foundations";
 export default {
   title: "Foundations/Font Weight",
   component: FontWeight,
+  parameters: {
+    viewport: {
+      defaultViewport: "responsive",
+    },
+  },
 };
 
 interface FontWeightProps {

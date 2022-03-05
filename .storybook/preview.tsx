@@ -1,4 +1,5 @@
 import { addDecorator } from "@storybook/react";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import GlobalStyle from "../styles/global";
 
 addDecorator((story) => (
@@ -20,5 +21,9 @@ export const parameters = {
     storySort: {
       order: ["Foundations", "Components", "*"],
     },
+  },
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+    defaultViewport: "iphone12mini",
   },
 };

@@ -31,6 +31,12 @@ export const LineColorTemplate = () => (
 
 LineColorTemplate.storyName = "LineColor";
 
+LineColorTemplate.parameters = {
+  viewport: {
+    defaultViewport: "responsive",
+  },
+};
+
 const Layout = styled.div`
   display: flex;
   flex-wrap: wrap;

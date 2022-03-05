@@ -20,6 +20,10 @@ Default.args = {
   name: "강남역",
 };
 
+Default.parameters = {
+  layout: "centered",
+};
+
 export const Examples = () => (
   <Layout>
     {Object.keys(stations).map((name) => (
@@ -27,6 +31,12 @@ export const Examples = () => (
     ))}
   </Layout>
 );
+
+Examples.parameters = {
+  viewport: {
+    defaultViewport: "responsive",
+  },
+};
 
 const Layout = styled.div`
   display: flex;

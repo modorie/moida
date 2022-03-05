@@ -7,6 +7,9 @@ import type { BadgeProps } from "./Badge.types";
 export default {
   title: "Components/Badge",
   component: Badge,
+  parameters: {
+    layout: "centered",
+  },
 };
 
 export const Default: Story<BadgeProps> = ({ ...args }) => <Badge {...args} />;
@@ -17,6 +20,7 @@ Default.args = {
 
 export const Examples = () => (
   <>
-    <Badge isOngoing={true} /> <Badge isOngoing={false} />
+    <Badge isOngoing={true} />
+    <Badge isOngoing={false} />
   </>
 );
