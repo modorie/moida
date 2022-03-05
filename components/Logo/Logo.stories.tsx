@@ -10,18 +10,21 @@ import type LogoProps from "./Logo.types";
 export default {
   title: "Components/Logo",
   component: Logo,
+  parameters: {
+    layout: "centered",
+  },
 };
 
 export const Default: Story<LogoProps> = ({ ...args }) => <Logo {...args} />;
 
 Default.args = {
-  height: 160,
+  height: 40,
   wordmark: true,
   symbol: false,
 };
 
 Default.argTypes = {
-  height: { control: { type: "range", min: 20, max: 200, step: 20 } },
+  height: { control: { type: "range", min: 10, max: 70, step: 10 } },
 };
 
 export const Examples = () => (

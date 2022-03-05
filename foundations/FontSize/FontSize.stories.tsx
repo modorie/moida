@@ -6,6 +6,11 @@ import FontSize, { fontSizeList } from "./FontSize";
 export default {
   title: "Foundations/Font Size",
   component: FontSize,
+  parameters: {
+    viewport: {
+      defaultViewport: "responsive",
+    },
+  },
 };
 
 interface FontWeightProps {

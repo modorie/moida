@@ -25,6 +25,10 @@ Default.argTypes = {
   size: { control: { type: "range", min: 30, max: 100, step: 10 } },
 };
 
+Default.parameters = {
+  layout: "centered",
+};
+
 export const Examples = () => (
   <Layout>
     {iconList.map((icon) => (
@@ -35,6 +39,12 @@ export const Examples = () => (
     ))}
   </Layout>
 );
+
+Examples.parameters = {
+  viewport: {
+    defaultViewport: "responsive",
+  },
+};
 
 const Layout = styled.div`
   display: flex;

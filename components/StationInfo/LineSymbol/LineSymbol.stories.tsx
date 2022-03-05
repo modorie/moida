@@ -9,6 +9,9 @@ import type LineType from "./LineSymbol.types";
 export default {
   title: "Components/StationInfo/LineSymbol",
   component: LineSymbol,
+  parameters: {
+    layout: "centered",
+  },
 };
 
 export const Default: Story<LineType> = ({ ...args }) => (

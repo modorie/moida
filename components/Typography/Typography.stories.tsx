@@ -25,6 +25,10 @@ Default.args = {
   color: "black",
 };
 
+Default.parameters = {
+  layout: "centered",
+};
+
 export const Examples = () =>
   fontSizeList.map((size) =>
     fontWeightList.map((weight) => (
@@ -50,6 +54,12 @@ export const Examples = () =>
       </Layout>
     ))
   );
+
+Examples.parameters = {
+  viewport: {
+    defaultViewport: "responsive",
+  },
+};
 
 const Layout = styled.div`
   display: flex;

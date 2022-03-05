@@ -4,8 +4,11 @@ import Manage from "./Manage";
 export default {
   title: "Components/Input/Controls",
   component: Manage,
+  parameters: {
+    layout: "centered",
+  },
 };
 
-export const ManageItem = () => <Manage />;
+export const ManageItem = ({ ...args }) => <Manage {...args} />;
 
 ManageItem.storyName = "Manage";

@@ -8,6 +8,12 @@ import { FontWeight, Theme } from "@/foundations";
 export default {
   title: "Foundations/Transition",
   component: Transition,
+  parameters: {
+    layout: "centered",
+    viewport: {
+      defaultViewport: "responsive",
+    },
+  },
 };
 
 interface BoxProps {
