@@ -19,6 +19,7 @@ const Input = ({
   disabled,
   errorMsg,
   description,
+  placeholder = "Placeholder",
   control = "clear",
 }: InputProps) => {
   const ControlRender = (control: ControlType) => {
@@ -46,7 +47,7 @@ const Input = ({
       )}
       <Layout hasError={hasError} disabled={disabled}>
         <TextField
-          placeholder="Placeholder"
+          placeholder={placeholder}
           type={type}
           disabled={disabled}
           required={required}
