@@ -1,9 +1,7 @@
 import styled, { css } from "styled-components";
 
-import { Theme, FontWeight } from "@/foundations";
-import { TypoStyle } from "@/components/Typography/Typography.styled";
-
-import type TypoProps from "@/components/Typography/Typography.types";
+import { Theme, FontWeight, Transition } from "@/foundations";
+import { TypoStyle, TypoProps } from "@/components/Typography";
 
 interface LayoutProps {
   hasError?: boolean;
@@ -25,7 +23,7 @@ export const Layout = styled.div<LayoutProps>`
   box-sizing: border-box;
 
   border: 1px solid ${Theme.borderColor.light};
-  transition: 0.3s;
+  transition: ${Transition};
 
   :focus-within,
   :hover {
@@ -38,9 +36,11 @@ export const Layout = styled.div<LayoutProps>`
 `;
 
 export const TextField = styled.input`
-  border: none;
   width: 100%;
   padding: 0;
+  border: none;
+  background-color: transparent;
+
   ${TypoStyle}
 
   ::placeholder {

@@ -4,9 +4,10 @@ const Palette: PaletteType = {
   // Blue
   blue50: "#E7F8FF",
   blue100: "#34B6EA",
-  blue200: "#1DB1EC",
+  blue200: "#00A4E5",
   blue300: "#1786FF",
-  blue400: "#35506F",
+  blue400: "#104270",
+  blue500: "#00305B",
 
   // Green
   green50: "#DBFAB5",

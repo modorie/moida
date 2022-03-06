@@ -1,6 +1,7 @@
 import ChevronLeft from "./ChevronLeft";
 import ChevronRight from "./ChevronRight";
 import Edit from "./Edit";
+import Gps from "./Gps";
 import List from "./List";
 import MapPin from "./MapPin";
 import Menu from "./Menu";
@@ -16,6 +17,7 @@ import X from "./X";
 const icons = {
   "chevron-left": ChevronLeft,
   "chevron-right": ChevronRight,
+  "gps": Gps,
   "edit": Edit,
   "list": List,
   "map-pin": MapPin,
