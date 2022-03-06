@@ -1,5 +1,6 @@
 import type { FormProps } from "@/types/FormProps";
 
+// prettier-ignore
 type InputType =
   | "text"
   | "search"
@@ -7,6 +8,7 @@ type InputType =
   | "password"
   | "number";
 
+// prettier-ignore
 export type ControlType =
   | "clear"
   | "manage"
@@ -18,7 +20,7 @@ interface InputOptions {
   errorMsg?: string;
   description?: string;
   control?: ControlType;
+  placeholder?: string;
 }
 
-// prettier-ignore
 export interface InputProps extends FormProps, InputOptions {}
