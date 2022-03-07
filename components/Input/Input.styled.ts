@@ -12,7 +12,7 @@ interface LabelProps {
   required?: boolean;
 }
 
-export const Layout = styled.div<LayoutProps>`
+export const Layout = styled.label<LayoutProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
