@@ -7,4 +7,5 @@ export { default as Input } from "./Input";
 export { default as Logo } from "./Logo";
 export { default as MapMark } from "./MapMark";
 export { default as StationInfo } from "./StationInfo";
+export { default as Tabs } from "./Tabs";
 export { default as Typography } from "./Typography";
