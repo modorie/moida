@@ -13,6 +13,7 @@ export type selectColor =
 
 // prettier-ignore
 export type borderColor =
+  | "lightest"
   | "lighter"
   | "light"
   | "primary"

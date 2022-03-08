@@ -16,6 +16,7 @@ const Theme: ThemeType = {
   },
 
   borderColor: {
+    lightest: Palette.gray100,
     lighter: Palette.gray200,
     light: Palette.gray300,
     primary: Palette.blue100,
