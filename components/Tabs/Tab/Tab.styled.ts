@@ -17,5 +17,6 @@ export const Layout = styled.div<TabProps>`
   color: ${({ active }) => Theme.textColor[active ? "primary" : "lighter"]};
   font-weight: ${({ active }) => FontWeight[active ? "bold" : "regular"]};
 
+  cursor: pointer;
   transition: ${Transition};
 `;
