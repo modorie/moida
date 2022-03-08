@@ -7,6 +7,11 @@ import { Typography } from "@/components";
 export default {
   title: "Foundations/Color",
   component: Palette,
+  parameters: {
+    viewport: {
+      defaultViewport: "responsive",
+    },
+  },
 };
 
 interface PaletteProps {

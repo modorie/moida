@@ -4,7 +4,7 @@ import { Symbol, Spacing, Wordmark } from "./";
 
 import type LogoProps from "./Logo.types";
 
-const Logo = ({ symbol, wordmark = true, height = 160 }: LogoProps) => {
+const Logo = ({ symbol, wordmark = true, height = 40 }: LogoProps) => {
   return (
     <div>
       {symbol && <Symbol height={height} />}
