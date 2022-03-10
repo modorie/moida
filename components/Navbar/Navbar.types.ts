@@ -12,10 +12,14 @@ export interface NavHeaderProps {
   user?: UserProps;
 }
 
-interface NavOptions {
+export interface NavBodyProps {
+  isLogin: LoginType;
   topItemsLogin: itemOptions[];
   topItemsLogout: itemOptions[];
+}
+
+interface NavOptions {
   bottomItems: itemOptions[];
 }
 
-export interface NavProps extends NavHeaderProps, NavOptions {}
+export interface NavProps extends NavHeaderProps, NavBodyProps, NavOptions {}
