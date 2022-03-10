@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Story } from "@storybook/react";
+import { Story, Meta } from "@storybook/react";
 
 import HelperText from "./HelperText";
 
@@ -12,11 +12,9 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-export const Default: Story<HelperProps> = ({ ...args }) => (
-  <HelperText {...args} />
-);
+export const Default: Story<HelperProps> = (args) => <HelperText {...args} />;
 
 Default.args = {
   children: "텍스트",

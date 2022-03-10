@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Story } from "@storybook/react";
+import { Story, Meta } from "@storybook/react";
 
 import Typography from "./Typography";
 import { FontSize } from "@/foundations";
@@ -12,11 +12,9 @@ import type TypoProps from "./Typography.types";
 export default {
   title: "Components/Typography",
   component: Typography,
-};
+} as Meta;
 
-export const Default: Story<TypoProps> = ({ ...args }) => (
-  <Typography {...args} />
-);
+export const Default: Story<TypoProps> = (args) => <Typography {...args} />;
 
 Default.args = {
   children: "약속은 간편하게 모임은 한방에",

@@ -10,7 +10,7 @@ export default {
   component: ButtonGroup,
 } as Meta;
 
-export const Default: Story<ButtonGroupProps> = ({ ...args }) => (
+export const Default: Story<ButtonGroupProps> = (args) => (
   <ButtonGroup {...args} />
 );
 

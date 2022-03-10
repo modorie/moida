@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Story } from "@storybook/react";
+import { Story, Meta } from "@storybook/react";
 
 import StationInfo from "./StationInfo";
 import stations from "./assets/stations";
@@ -10,11 +10,9 @@ import type StationType from "./StationInfo.types";
 export default {
   title: "Components/StationInfo",
   component: StationInfo,
-};
+} as Meta;
 
-export const Default: Story<StationType> = ({ ...args }) => (
-  <StationInfo {...args} />
-);
+export const Default: Story<StationType> = (args) => <StationInfo {...args} />;
 
 Default.args = {
   name: "강남역",

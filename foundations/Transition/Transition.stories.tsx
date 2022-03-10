@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Meta } from "@storybook/react";
 
 import Transition from "./Transition";
 import { Typography } from "@/components";
@@ -7,14 +8,13 @@ import { FontWeight, Theme } from "@/foundations";
 
 export default {
   title: "Foundations/Transition",
-  component: Transition,
   parameters: {
     layout: "centered",
     viewport: {
       defaultViewport: "responsive",
     },
   },
-};
+} as Meta;
 
 interface BoxProps {
   isClicked: boolean;

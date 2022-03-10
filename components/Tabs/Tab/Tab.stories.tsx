@@ -10,7 +10,7 @@ export default {
   component: Tab,
 } as Meta;
 
-export const Default: Story<TabProps> = ({ ...args }) => <Tab {...args} />;
+export const Default: Story<TabProps> = (args) => <Tab {...args} />;
 
 Default.args = {
   active: true,

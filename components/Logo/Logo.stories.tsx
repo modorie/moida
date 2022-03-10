@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Story } from "@storybook/react";
+import { Story, Meta } from "@storybook/react";
 
 import Logo from "./Logo";
 import { Typography } from "@/components";
@@ -13,9 +13,9 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-export const Default: Story<LogoProps> = ({ ...args }) => <Logo {...args} />;
+export const Default: Story<LogoProps> = (args) => <Logo {...args} />;
 
 Default.args = {
   height: 40,

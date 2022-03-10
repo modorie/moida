@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Story } from "@storybook/react";
+import { Story, Meta } from "@storybook/react";
 
 import Icon from "./Icon";
 import { iconList } from "./assets";
@@ -11,9 +11,9 @@ import type IconProps from "./Icon.types";
 export default {
   title: "Components/Icon",
   component: Icon,
-};
+} as Meta;
 
-export const Default: Story<IconProps> = ({ ...args }) => <Icon {...args} />;
+export const Default: Story<IconProps> = (args) => <Icon {...args} />;
 
 Default.args = {
   name: "edit",

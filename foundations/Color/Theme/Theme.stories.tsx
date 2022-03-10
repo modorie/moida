@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { Meta } from "@storybook/react";
 
 import Theme from "./Theme";
 import { Typography } from "@/components";
 
 export default {
   title: "Foundations/Color",
-  component: Theme,
   parameters: {
     viewport: {
       defaultViewport: "responsive",
     },
   },
-};
+} as Meta;
 
 interface PaletteProps {
   color: string;

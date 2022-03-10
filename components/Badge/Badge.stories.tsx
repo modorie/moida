@@ -1,5 +1,5 @@
 import React from "react";
-import { Story } from "@storybook/react";
+import { Story, Meta } from "@storybook/react";
 
 import Badge from "./Badge";
 import type { BadgeProps } from "./Badge.types";
@@ -10,9 +10,9 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-export const Default: Story<BadgeProps> = ({ ...args }) => <Badge {...args} />;
+export const Default: Story<BadgeProps> = (args) => <Badge {...args} />;
 
 Default.args = {
   isOngoing: true,

@@ -1,15 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { Story, Meta } from "@storybook/react";
 
 import Input from "./Input";
 import { Typography } from "@/components";
 
+import type { InputProps } from "./Input.types";
+
 export default {
   title: "Components/Input",
   component: Input,
-};
+} as Meta;
 
-export const Default = ({ ...args }) => <Input {...args} />;
+export const Default: Story<InputProps> = (args) => <Input {...args} />;
 
 Default.args = {
   disabled: false,

@@ -1,4 +1,6 @@
 import React from "react";
+import { Story, Meta } from "@storybook/react";
+
 import Search from "./Search";
 
 export default {
@@ -7,8 +9,8 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-export const SearchItem = ({ ...args }) => <Search {...args} />;
+export const SearchItem: Story = (args) => <Search {...args} />;
 
 SearchItem.storyName = "Search";

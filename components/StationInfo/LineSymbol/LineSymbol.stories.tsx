@@ -14,9 +14,7 @@ export default {
   },
 };
 
-export const Default: Story<LineType> = ({ ...args }) => (
-  <LineSymbol {...args} />
-);
+export const Default: Story<LineType> = (args) => <LineSymbol {...args} />;
 
 Default.args = {
   name: "01호선",

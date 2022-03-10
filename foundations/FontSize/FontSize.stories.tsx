@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { Meta } from "@storybook/react";
 
 import FontSize, { fontSizeList } from "./FontSize";
 
 export default {
   title: "Foundations/Font Size",
-  component: FontSize,
   parameters: {
     viewport: {
       defaultViewport: "responsive",
     },
   },
-};
+} as Meta;
 
 interface FontWeightProps {
   fontSize: number;

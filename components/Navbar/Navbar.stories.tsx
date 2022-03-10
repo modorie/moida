@@ -13,7 +13,7 @@ export default {
   },
 } as Meta;
 
-export const Default: Story<NavProps> = ({ ...args }) => <Navbar {...args} />;
+export const Default: Story<NavProps> = (args) => <Navbar {...args} />;
 
 Default.args = {
   isLogin: false,
