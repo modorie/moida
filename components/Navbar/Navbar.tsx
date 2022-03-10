@@ -26,7 +26,7 @@ const Navbar = ({
           topItemsLogin={topItemsLogin}
           topItemsLogout={topItemsLogout}
         />
-        <NavFooter />
+        <NavFooter isLogin={isLogin} bottomItems={bottomItems} />
       </Layout>
     </>
   );

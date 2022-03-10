@@ -4,20 +4,24 @@ import { Layout, Title, ItemBox, Logout } from "./NavFooter.styled";
 import { NavItem } from "@/components/Navbar";
 import { Typography } from "@/components";
 
-const NavFooter = () => {
+import type { NavFooterProps } from "@/components/Navbar/Navbar.types";
+
+const NavFooter = ({ isLogin, bottomItems }: NavFooterProps) => {
   return (
     <Layout>
       <Title size="cap1" color="lighter">
         고객센터
       </Title>
       <ItemBox>
-        <NavItem>이용방법</NavItem>
-        <NavItem>피드백</NavItem>
-        <NavItem>이용약관</NavItem>
+        {bottomItems.map(({ name }) => (
+          <NavItem>{name}</NavItem>
+        ))}
       </ItemBox>
-      <Logout size="body2" weight="bold" color="lighter" href="">
-        로그아웃
-      </Logout>
+      {isLogin && (
+        <Logout size="body2" weight="bold" color="lighter" href="">
+          로그아웃
+        </Logout>
+      )}
     </Layout>
   );
 };
