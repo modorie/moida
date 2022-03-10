@@ -1,3 +1,5 @@
+import React from "react";
+
 import { UserProps } from "@/types/UserProps";
 
 interface itemOptions {
@@ -23,7 +25,12 @@ export interface NavFooterProps {
   bottomItems: itemOptions[];
 }
 
+interface NavOptions {
+  onClickClose?: React.MouseEventHandler;
+}
+
 export interface NavProps
   extends NavHeaderProps,
     NavBodyProps,
-    NavFooterProps {}
+    NavFooterProps,
+    NavOptions {}
