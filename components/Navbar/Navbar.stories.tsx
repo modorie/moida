@@ -11,7 +11,7 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
-};
+} as Meta;
 
 export const Default: Story<NavProps> = ({ ...args }) => <Navbar {...args} />;
 
