@@ -21,7 +21,11 @@ const Navbar = ({
           <Icon name="x" />
         </CloseBox>
         <NavHeader isLogin={isLogin} user={user} />
-        <NavBody />
+        <NavBody
+          isLogin={isLogin}
+          topItemsLogin={topItemsLogin}
+          topItemsLogout={topItemsLogout}
+        />
         <NavFooter />
       </Layout>
     </>

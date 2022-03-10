@@ -3,10 +3,14 @@ import React from "react";
 import { Layout } from "./NavBody.styled";
 import { NavItem } from "@/components/Navbar";
 
-const NavBody = () => {
+import type { NavBodyProps } from "../Navbar.types";
+
+const NavBody = ({ isLogin, topItemsLogin, topItemsLogout }: NavBodyProps) => {
   return (
     <Layout>
-      <NavItem>모임 관리</NavItem>
+      {isLogin
+        ? topItemsLogin.map(({ name }) => <NavItem>{name}</NavItem>)
+        : topItemsLogout.map(({ name }) => <NavItem>{name}</NavItem>)}
     </Layout>
   );
 };
