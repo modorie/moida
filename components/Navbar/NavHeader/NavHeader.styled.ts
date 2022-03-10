@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { TypoStyle } from "@/components/Typography";
 import { Theme, FontWeight } from "@/foundations";
 
-export const Header = styled.header`
+export const Header = styled.div`
   border-bottom: 1px solid ${Theme.borderColor.lightest};
 `;
 
