@@ -1,22 +1,28 @@
 import styled from "styled-components";
 
-import { Theme } from "@/foundations";
+import { Theme, Transition, Keyframe } from "@/foundations";
 
 export const Overlay = styled.div`
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
 `;
 
 export const Layout = styled.nav`
-  position: fixed;
+  position: absolute;
+  top: 0;
   right: 0;
 
   width: 300px;
   height: 100vh;
   padding: 20px 30px;
   background-color: ${Theme.bgColor.white};
+
+  animation: ${Keyframe.slideInLeft} ${Transition};
 `;
 
 export const CloseBox = styled.div`
