@@ -1,14 +1,17 @@
 import React from "react";
 
+import { Layout, MenuBox } from "./Header.styled";
 import { Logo, Icon } from "@/components";
 
-import { Layout } from "./Header.styled";
+import type { HeaderProps } from "./Header.types";
 
-const Header = () => {
+const Header = ({ onClickMenu }: HeaderProps) => {
   return (
     <Layout>
       <Logo height={21} />
-      <Icon name="menu" color="black" />
+      <MenuBox onClick={onClickMenu}>
+        <Icon name="menu" color="black" />
+      </MenuBox>
     </Layout>
   );
 };
