@@ -5,6 +5,12 @@ export const Layout = styled.li`
   justify-content: space-between;
   align-items: center;
 
-  height: 40px;
+  height: 50px;
   list-style: none;
+  cursor: pointer;
+
+  svg {
+    position: relative;
+    right: -5px;
+  }
 `;

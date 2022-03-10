@@ -8,7 +8,7 @@ import type { NavItemProps } from "./NavItem.types";
 const NavItem = ({ children }: NavItemProps) => {
   return (
     <Layout>
-      <Typography size="body1" weight="bold" color="darkest">
+      <Typography size="sub3" weight="bold" color="darkest">
         {children}
       </Typography>
       <Icon name="chevron-right" size={18} color="darkest" />
