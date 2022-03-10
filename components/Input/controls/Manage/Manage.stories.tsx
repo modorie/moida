@@ -1,4 +1,6 @@
 import React from "react";
+import { Story, Meta } from "@storybook/react";
+
 import Manage from "./Manage";
 
 export default {
@@ -7,8 +9,8 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-export const ManageItem = ({ ...args }) => <Manage {...args} />;
+export const ManageItem: Story = (args) => <Manage {...args} />;
 
 ManageItem.storyName = "Manage";

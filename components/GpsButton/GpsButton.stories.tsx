@@ -1,4 +1,5 @@
 import React from "react";
+import { Story, Meta } from "@storybook/react";
 
 import GpsButton from "./GpsButton";
 
@@ -8,6 +9,6 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-export const Default = ({ ...args }) => <GpsButton {...args} />;
+export const Default: Story = () => <GpsButton />;

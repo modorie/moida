@@ -1,4 +1,6 @@
 import React from "react";
+import { Story, Meta } from "@storybook/react";
+
 import MapMark from "./MapMark";
 
 export default {
@@ -7,6 +9,6 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-export const Default = ({ ...args }) => <MapMark {...args} />;
+export const Default: Story = () => <MapMark />;

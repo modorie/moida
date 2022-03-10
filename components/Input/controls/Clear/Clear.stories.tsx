@@ -1,4 +1,6 @@
 import React from "react";
+import { Story, Meta } from "@storybook/react";
+
 import Clear from "./Clear";
 
 export default {
@@ -7,8 +9,8 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-export const ClearItem = ({ ...args }) => <Clear {...args} />;
+export const ClearItem: Story = () => <Clear />;
 
 ClearItem.storyName = "Clear";
