@@ -12,7 +12,7 @@ export const Hgroup = styled.hgroup`
   flex-direction: column;
   justify-content: flex-end;
 
-  // TODO: 크로스 브라우징 이슈 체크
+  /* TODO: 크로스 브라우징 이슈 체크 */
   gap: 20px;
   height: 112px;
 `;
