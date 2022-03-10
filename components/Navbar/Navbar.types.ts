@@ -18,8 +18,12 @@ export interface NavBodyProps {
   topItemsLogout: itemOptions[];
 }
 
-interface NavOptions {
+export interface NavFooterProps {
+  isLogin: LoginType;
   bottomItems: itemOptions[];
 }
 
-export interface NavProps extends NavHeaderProps, NavBodyProps, NavOptions {}
+export interface NavProps
+  extends NavHeaderProps,
+    NavBodyProps,
+    NavFooterProps {}
