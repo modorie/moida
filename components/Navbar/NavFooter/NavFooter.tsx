@@ -2,7 +2,6 @@ import React from "react";
 
 import { Layout, Title, ItemBox, Logout } from "./NavFooter.styled";
 import { NavItem } from "@/components/Navbar";
-import { Typography } from "@/components";
 
 import type { NavFooterProps } from "@/components/Navbar/Navbar.types";
 
