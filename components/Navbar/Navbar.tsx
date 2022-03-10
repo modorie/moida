@@ -12,12 +12,13 @@ const Navbar = ({
   topItemsLogin,
   topItemsLogout,
   bottomItems,
+  onClickClose,
 }: NavProps) => {
   return (
     <>
       <Overlay />
       <Layout>
-        <CloseBox>
+        <CloseBox onClick={onClickClose}>
           <Icon name="x" />
         </CloseBox>
         <NavHeader isLogin={isLogin} user={user} />

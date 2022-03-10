@@ -16,8 +16,8 @@ export const Layout = styled.header`
     align-items: baseline;
     padding-left: 6px;
   }
+`;
 
-  svg {
-    cursor: pointer;
-  }
+export const MenuBox = styled.div`
+  cursor: pointer;
 `;
