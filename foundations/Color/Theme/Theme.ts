@@ -49,6 +49,19 @@ const Theme: ThemeType = {
     light: Palette.blue200,
     dark: Palette.blue500,
   },
+
+  // 기능에 맞게 네이밍할지, primary, light로 할지 고민중
+  ButtonBgColor: {
+    white: Palette.white,
+    default: Palette.blue100,
+    active: Palette.blue200,
+    disable: Palette.gray200,
+  },
+
+  ButtonBorderColor: {
+    default: Palette.blue100,
+    disable: Palette.gray300,
+  },
 };
 
 export default Theme;
