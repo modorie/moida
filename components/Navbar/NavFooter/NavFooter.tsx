@@ -8,7 +8,7 @@ import type { NavFooterProps } from "@/components/Navbar/Navbar.types";
 const NavFooter = ({ isLogin, bottomItems }: NavFooterProps) => {
   return (
     <Layout>
-      <Title size="cap1" color="lighter">
+      <Title size="cap1" weight="regular" color="lighter">
         고객센터
       </Title>
       <ItemBox>
