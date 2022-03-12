@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { TypoStyle } from "@/components/Typography";
-import { Theme, FontWeight } from "@/foundations";
+import { Palette, Theme, FontWeight, Transition } from "@/foundations";
 
 export const Header = styled.div`
   border-bottom: 1px solid ${Theme.borderColor.lightest};
@@ -53,5 +53,11 @@ export const Button = styled.button`
   border: none;
 
   background-color: ${Theme.bgColor.primary};
+  transition: ${Transition};
   cursor: pointer;
+
+  // TODO 버튼 팔레트 추가시 수정 필요
+  :hover {
+    background-color: ${Palette.blue200};
+  }
 `;
