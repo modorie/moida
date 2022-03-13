@@ -3,8 +3,7 @@ import styled, { css } from "styled-components";
 import { FontWeight, Theme, Transition } from "@/foundations";
 
 import type { ButtonProps } from "./Button.types";
-
-import { TypoProps } from "@/components/Typography";
+import type { TypoProps } from "@/components/Typography";
 
 export const Layout = styled.div<ButtonProps & TypoProps>`
   display: flex;
