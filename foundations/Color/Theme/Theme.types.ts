@@ -98,6 +98,7 @@ interface ThemeType {
   borderColor: Record<borderColor, string>;
   textColor: Record<textColor, string>;
   helperBgColor: Record<helperBgColor, string>;
+  helperBorderColor: Record<helperBorderColor, string>;
   ButtonBgColor: Record<ButtonBgColor, string>;
   ButtonTextColor: Record<ButtonTextColor, string>;
   ButtonBorderColor: Record<ButtonBorderColor, string>;
