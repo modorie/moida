@@ -11,9 +11,10 @@ export default {
   },
 } as Meta;
 
-const Template: Story<FixedButtonProps> = (args) => <FixedButton {...args} />;
+export const Default: Story<FixedButtonProps> = (args) => (
+  <FixedButton {...args} />
+);
 
-export const Default = Template.bind({});
 Default.args = {
   styleVariant: "primary",
   disabled: false,
