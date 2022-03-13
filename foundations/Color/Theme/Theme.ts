@@ -50,17 +50,49 @@ const Theme: ThemeType = {
     dark: Palette.blue500,
   },
 
-  // 기능에 맞게 네이밍할지, primary, light로 할지 고민중
   ButtonBgColor: {
-    white: Palette.white,
-    default: Palette.blue100,
-    active: Palette.blue200,
-    disable: Palette.gray200,
+    primary: Palette.blue100,
+    secondary: Palette.white,
+  },
+
+  ButtonTextColor: {
+    primary: Palette.white,
+    secondary: Palette.blue100,
   },
 
   ButtonBorderColor: {
-    default: Palette.blue100,
-    disable: Palette.gray300,
+    primary: Palette.blue100,
+    secondary: Palette.white,
+  },
+
+  ButtonActiveBgColor: {
+    primary: Palette.blue200,
+    secondary: Palette.white,
+  },
+
+  ButtonActiveTextColor: {
+    primary: Palette.white,
+    secondary: Palette.blue200,
+  },
+
+  ButtonActiveBorderColor: {
+    primary: Palette.blue200,
+    secondary: Palette.white,
+  },
+
+  ButtonDisableBgColor: {
+    primary: Palette.gray200,
+    secondary: Palette.white,
+  },
+
+  ButtonDisableTextColor: {
+    primary: Palette.gray400,
+    secondary: Palette.gray400,
+  },
+
+  ButtonDisableBorderColor: {
+    primary: Palette.gray200,
+    secondary: Palette.gray300,
   },
 };
 
