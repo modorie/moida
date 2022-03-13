@@ -2,26 +2,26 @@ import React from "react";
 
 const Edit = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
-    viewBox="0 0 30 30"
+    viewBox="0 0 20 20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M21.2035 13.4418L11.1453 23.5H6.503L6.5 18.8547L16.5582 8.79651L21.2035 13.4418Z"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M15.2438 8.30854L7.55225 16.0001H4.00229L4 12.4479L11.6916 4.75628L15.2438 8.30854Z"
+      stroke="#333333"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
     <path
-      d="M16.5582 8.79655L18.2903 7.06447C19.0429 6.31184 20.2632 6.31184 21.0158 7.06447L22.9355 8.98421C23.6882 9.73684 23.6882 10.9571 22.9355 11.7097L21.2034 13.4418V13.4418"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      d="M11.6914 4.75619L13.0159 3.43166C13.5915 2.85611 14.5246 2.85611 15.1002 3.43166L16.5682 4.89969C17.1437 5.47523 17.1437 6.40837 16.5682 6.98391L15.2437 8.30844V8.30844"
+      stroke="#333333"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </svg>
 );
