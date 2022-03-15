@@ -60,11 +60,6 @@ const Theme: ThemeType = {
     secondary: Palette.blue100,
   },
 
-  ButtonBorderColor: {
-    primary: Palette.blue100,
-    secondary: Palette.blue100,
-  },
-
   ButtonActiveBgColor: {
     primary: Palette.blue200,
     secondary: Palette.white,
@@ -75,19 +70,9 @@ const Theme: ThemeType = {
     secondary: Palette.blue200,
   },
 
-  ButtonActiveBorderColor: {
-    primary: Palette.blue200,
-    secondary: Palette.blue200,
-  },
-
   ButtonDisableBgColor: {
     primary: Palette.gray200,
     secondary: Palette.white,
-  },
-
-  ButtonDisableTextColor: {
-    primary: Palette.gray400,
-    secondary: Palette.gray400,
   },
 
   ButtonDisableBorderColor: {

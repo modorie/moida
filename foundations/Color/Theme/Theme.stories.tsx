@@ -28,12 +28,9 @@ const title: { [index: string]: string } = {
   helperBorderColor: "도움말 테두리",
   ButtonBgColor: "버튼 배경",
   ButtonTextColor: "버튼 텍스트",
-  ButtonBorderColor: "버튼 테두리",
   ButtonActiveBgColor: "버튼 활성화 배경",
   ButtonActiveTextColor: "버튼 활성화 텍스트",
-  ButtonActiveBorderColor: "버튼 활성화 테두리",
   ButtonDisableBgColor: "버튼 비활성화 배경",
-  ButtonDisableTextColor: "버튼 비활성화 텍스트",
   ButtonDisableBorderColor: "버튼 비활성화 테두리",
 };
 

@@ -56,11 +56,6 @@ export type ButtonTextColor =
 |  "secondary"
 
 // prettier-ignore
-export type ButtonBorderColor = 
-|  "primary" 
-|  "secondary"
-
-// prettier-ignore
 export type ButtonActiveBgColor = 
 |  "primary" 
 |  "secondary"
@@ -71,17 +66,7 @@ export type ButtonActiveTextColor =
 |  "secondary"
 
 // prettier-ignore
-export type ButtonActiveBorderColor = 
-|  "primary" 
-|  "secondary"
-
-// prettier-ignore
 export type ButtonDisableBgColor = 
-|  "primary" 
-|  "secondary"
-
-// prettier-ignore
-export type ButtonDisableTextColor = 
 |  "primary" 
 |  "secondary"
 
@@ -101,12 +86,9 @@ interface ThemeType {
   helperBorderColor: Record<helperBorderColor, string>;
   ButtonBgColor: Record<ButtonBgColor, string>;
   ButtonTextColor: Record<ButtonTextColor, string>;
-  ButtonBorderColor: Record<ButtonBorderColor, string>;
   ButtonActiveBgColor: Record<ButtonActiveBgColor, string>;
   ButtonActiveTextColor: Record<ButtonActiveTextColor, string>;
-  ButtonActiveBorderColor: Record<ButtonActiveBorderColor, string>;
   ButtonDisableBgColor: Record<ButtonDisableBgColor, string>;
-  ButtonDisableTextColor: Record<ButtonDisableTextColor, string>;
   ButtonDisableBorderColor: Record<ButtonDisableBorderColor, string>;
 }
 
