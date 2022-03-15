@@ -19,3 +19,11 @@ Default.args = {
   children: "시간 수정",
   disabled: false,
 };
+
+export const Examples = () => (
+  <>
+    <FloatingButton>시간 수정</FloatingButton>
+    <br />
+    <FloatingButton disabled>시간 수정</FloatingButton>
+  </>
+);
