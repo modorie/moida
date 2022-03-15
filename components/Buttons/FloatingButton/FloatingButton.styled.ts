@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { Palette, Theme, Transition } from "@/foundations";
+import { Theme, Transition } from "@/foundations";
 
 import type { FloatingButtonProps } from "./FloatingButton.types";
 import { TypoProps, TypoStyle } from "@/components/Typography";

@@ -1,9 +1,11 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
-import FixedButton from "./FixedButton";
-import type { FixedButtonProps } from "./FixedButton.types";
-import Typography from "./../../Typography/Typography";
 import styled from "styled-components";
+
+import Typography from "@/components/Typography";
+import FixedButton from "./FixedButton";
+
+import type { FixedButtonProps } from "./FixedButton.types";
 
 export default {
   title: "Components/Buttons/FixedButton",

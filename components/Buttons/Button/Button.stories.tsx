@@ -2,9 +2,10 @@ import React from "react";
 import { Story, Meta } from "@storybook/react";
 import styled from "styled-components";
 
-import Button from "./Button";
-import type { ButtonProps } from "./Button.types";
 import Typography from "@/components/Typography";
+import Button from "./Button";
+
+import type { ButtonProps } from "./Button.types";
 
 export default {
   title: "Components/Buttons/Button",
