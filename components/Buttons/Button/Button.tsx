@@ -11,7 +11,7 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <Layout
-      size="cap2"
+      size="sub2"
       styleVariant={styleVariant}
       disabled={disabled}
       loading={loading}

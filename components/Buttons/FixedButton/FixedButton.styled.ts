@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 
 import { FontWeight, Theme, Transition } from "@/foundations";
 
+import { TypoProps, TypoStyle } from "@/components/Typography";
 import type { FixedButtonProps } from "./FixedButton.types";
-import type { TypoProps } from "@/components/Typography";
 
 export const Layout = styled.div<FixedButtonProps & TypoProps>`
   display: flex;
@@ -15,6 +15,8 @@ export const Layout = styled.div<FixedButtonProps & TypoProps>`
 
   width: 100%;
   height: 70px;
+
+  ${TypoStyle}
 
   cursor: pointer;
 
