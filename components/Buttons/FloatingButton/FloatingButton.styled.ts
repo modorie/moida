@@ -8,12 +8,12 @@ import { TypoProps, TypoStyle } from "@/components/Typography";
 export const Layout = styled.div<FloatingButtonProps & TypoProps>`
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 6px;
 
   border: 1px solid ${Theme.textColor.primary};
   border-radius: 130px;
 
-  padding: 13px 17px 13px 14px;
+  padding: 10px 16px 10px 14px;
 
   box-shadow: 0px 2px 10px rgba(143, 178, 230, 0.3);
 
