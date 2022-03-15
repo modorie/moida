@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { Palette, Transition } from "@/foundations";
+import { Palette, Theme, Transition } from "@/foundations";
 
 import type { FloatingButtonProps } from "./FloatingButton.types";
 import { TypoProps, TypoStyle } from "@/components/Typography";
@@ -10,7 +10,7 @@ export const Layout = styled.div<FloatingButtonProps & TypoProps>`
   align-items: center;
   gap: 9px;
 
-  border: 1px solid ${Palette.blue100};
+  border: 1px solid ${Theme.textColor.primary};
   border-radius: 130px;
 
   padding: 13px 17px 13px 14px;

@@ -23,7 +23,7 @@ export const Layout = styled.div<FixedButtonProps & TypoProps>`
     css`
       background-color: ${Theme.ButtonBgColor[styleVariant]};
       color: ${Theme.ButtonTextColor[styleVariant]};
-      border: 1px solid ${Theme.ButtonBorderColor[styleVariant]};
+      border: 1px solid ${Theme.borderColor.primary};
       font-weight: ${styleVariant === "primary"
         ? FontWeight.bold
         : FontWeight.regular};
@@ -32,7 +32,7 @@ export const Layout = styled.div<FixedButtonProps & TypoProps>`
       :active {
         background-color: ${Theme.ButtonActiveBgColor[styleVariant]};
         color: ${Theme.ButtonActiveTextColor[styleVariant]};
-        border: 1px solid ${Theme.ButtonActiveBorderColor[styleVariant]};
+        border: 1px solid ${Theme.borderColor.active};
         transition: ${Transition};
       }
     `}
@@ -42,7 +42,7 @@ export const Layout = styled.div<FixedButtonProps & TypoProps>`
     disabled &&
     css`
       background-color: ${Theme.ButtonDisableBgColor[styleVariant]};
-      color: ${Theme.ButtonDisableTextColor[styleVariant]};
+      color: ${Theme.textColor.lightest};
       border: 1px solid ${Theme.ButtonDisableBorderColor[styleVariant]};
       pointer-events: none;
     `}
