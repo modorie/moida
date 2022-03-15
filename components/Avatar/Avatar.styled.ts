@@ -23,6 +23,10 @@ export const Layout = styled.div<LayoutProps>`
 `;
 
 export const Emoji = styled.span`
+  display: inline-block;
+  position: relative;
+  top: 1px;
+
   font-family: emoji;
   ${TypoStyle}
 `;
