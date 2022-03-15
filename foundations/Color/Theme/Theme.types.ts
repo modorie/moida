@@ -16,6 +16,7 @@ export type borderColor =
   | "lighter"
   | "light"
   | "primary"
+  | "active"
   | "warning";
 
 export type textColor =

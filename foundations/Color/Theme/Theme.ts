@@ -19,6 +19,7 @@ const Theme: ThemeType = {
     lighter: Palette.gray200,
     light: Palette.gray300,
     primary: Palette.blue100,
+    active: Palette.blue200,
     warning: Palette.coral100,
   },
 
