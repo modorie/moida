@@ -10,12 +10,11 @@ export const Layout = styled.div<FloatingButtonProps & TypoProps>`
   align-items: center;
   gap: 6px;
 
+  padding: 10px 16px 10px 14px;
+  box-shadow: 0px 2px 10px rgba(143, 178, 230, 0.3);
+
   border: 1px solid ${Theme.textColor.primary};
   border-radius: 130px;
-
-  padding: 10px 16px 10px 14px;
-
-  box-shadow: 0px 2px 10px rgba(143, 178, 230, 0.3);
 
   ${TypoStyle}
 
@@ -23,10 +22,10 @@ export const Layout = styled.div<FloatingButtonProps & TypoProps>`
 
   :hover,
   :active {
-    background-color: ${Palette.blue100};
-    color: ${Palette.white};
+    background-color: ${Theme.bgColor.primary};
+    color: ${Theme.textColor.white};
     path {
-      stroke: ${Palette.white};
+      stroke: ${Theme.textColor.white};
     }
     transition: ${Transition};
   }
@@ -34,10 +33,10 @@ export const Layout = styled.div<FloatingButtonProps & TypoProps>`
   ${({ disabled }) =>
     disabled &&
     css`
-      border: 1px solid ${Palette.gray300};
-      color: ${Palette.gray600};
+      border: 1px solid ${Theme.borderColor.light};
+      color: ${Theme.textColor.light};
       path {
-        stroke: ${Palette.gray600};
+        stroke: ${Theme.textColor.light};
       }
       pointer-events: none;
     `}

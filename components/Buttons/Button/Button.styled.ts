@@ -19,18 +19,18 @@ export const Layout = styled.div<ButtonProps & TypoProps>`
   ${({ styleVariant }) =>
     styleVariant &&
     css`
+      border: 1px solid ${Theme.borderColor.primary};
       background-color: ${Theme.ButtonBgColor[styleVariant]};
       color: ${Theme.ButtonTextColor[styleVariant]};
-      border: 1px solid ${Theme.borderColor.primary};
       font-weight: ${styleVariant === "primary"
         ? FontWeight.bold
         : FontWeight.regular};
 
       :hover,
       :active {
+        border: 1px solid ${Theme.borderColor.active};
         background-color: ${Theme.ButtonActiveBgColor[styleVariant]};
         color: ${Theme.ButtonActiveTextColor[styleVariant]};
-        border: 1px solid ${Theme.borderColor.active};
         transition: ${Transition};
       }
     `}
@@ -39,9 +39,9 @@ export const Layout = styled.div<ButtonProps & TypoProps>`
     styleVariant &&
     disabled &&
     css`
+      border: 1px solid ${Theme.ButtonDisableBorderColor[styleVariant]};
       background-color: ${Theme.ButtonDisableBgColor[styleVariant]};
       color: ${Theme.textColor.lightest};
-      border: 1px solid ${Theme.ButtonDisableBorderColor[styleVariant]};
       pointer-events: none;
     `}
 `;
