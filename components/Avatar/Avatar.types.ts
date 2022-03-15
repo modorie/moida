@@ -52,6 +52,7 @@ export type EmojiKey =
 
 interface AvatarOptions {
   emoji: EmojiKey;
+  isHost?: boolean;
 }
 
 export default interface AvatarProps extends AvatarOptions {}

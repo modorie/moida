@@ -13,6 +13,7 @@ export const Layout = styled.div<LayoutProps>`
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   width: 45px;
   height: 45px;
@@ -22,6 +23,10 @@ export const Layout = styled.div<LayoutProps>`
 `;
 
 export const Emoji = styled.span`
+  display: inline-block;
+  position: relative;
+  top: 1px;
+
   font-family: emoji;
   ${TypoStyle}
 `;

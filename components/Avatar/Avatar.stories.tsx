@@ -17,6 +17,7 @@ export const Default: Story<AvatarProps> = (args) => <Avatar {...args} />;
 
 Default.args = {
   emoji: "🐥",
+  isHost: false,
 };
 
 export const Examples = () =>
