@@ -1,5 +1,6 @@
 import React from "react";
-import { Layout, LoadingBar } from "./Button.styled";
+import { Layout } from "./Button.styled";
+import LoadingDots from "../LoadingDots";
 
 import type { ButtonProps } from "./Button.types";
 
@@ -16,7 +17,7 @@ const Button = ({
       disabled={disabled}
       loading={loading}
     >
-      {loading ? <LoadingBar /> : children}
+      {loading ? <LoadingDots /> : children}
     </Layout>
   );
 };

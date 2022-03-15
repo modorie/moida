@@ -1,5 +1,6 @@
 import React from "react";
-import { Layout, LoadingBar } from "./FixedButton.styled";
+import { Layout } from "./FixedButton.styled";
+import LoadingDots from "../LoadingDots";
 
 import type { FixedButtonProps } from "./FixedButton.types";
 
@@ -16,7 +17,7 @@ const FixedButton = ({
       disabled={disabled}
       loading={loading}
     >
-      {loading ? <LoadingBar /> : children}
+      {loading ? <LoadingDots /> : children}
     </Layout>
   );
 };

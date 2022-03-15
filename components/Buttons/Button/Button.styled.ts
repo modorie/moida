@@ -47,10 +47,3 @@ export const Layout = styled.div<ButtonProps & TypoProps>`
       pointer-events: none;
     `}
 `;
-
-export const LoadingBar = styled.div`
-  width: 10px;
-  height: 10px;
-  border: 1px solid red;
-  border-radius: 50%;
-`;
