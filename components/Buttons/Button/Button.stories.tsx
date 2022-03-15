@@ -11,6 +11,7 @@ export default {
 export const Default: Story<ButtonProps> = (args) => <Button {...args} />;
 
 Default.args = {
+  children: "text",
   styleVariant: "primary",
   disabled: false,
   loading: false,

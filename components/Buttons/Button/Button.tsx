@@ -7,7 +7,7 @@ const Button = ({
   styleVariant = "primary",
   disabled,
   loading = false,
-  children = "text",
+  children,
 }: ButtonProps) => {
   return (
     <Layout
@@ -16,7 +16,6 @@ const Button = ({
       disabled={disabled}
       loading={loading}
     >
-      {/* TODO - Content, Icon을 따로 빼서 위에서 로직 처리 */}
       {loading ? <LoadingBar /> : children}
     </Layout>
   );

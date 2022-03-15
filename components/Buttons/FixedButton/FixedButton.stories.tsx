@@ -16,6 +16,7 @@ export const Default: Story<FixedButtonProps> = (args) => (
 );
 
 Default.args = {
+  children: "text",
   styleVariant: "primary",
   disabled: false,
   loading: false,

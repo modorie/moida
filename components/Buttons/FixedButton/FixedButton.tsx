@@ -7,7 +7,7 @@ const FixedButton = ({
   styleVariant = "primary",
   disabled,
   loading = false,
-  children = "text",
+  children,
 }: FixedButtonProps) => {
   return (
     <Layout
