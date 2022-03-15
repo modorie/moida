@@ -13,6 +13,7 @@ export const Layout = styled.div<LayoutProps>`
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   width: 45px;
   height: 45px;
