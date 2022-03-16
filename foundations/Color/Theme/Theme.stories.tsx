@@ -26,6 +26,12 @@ const title: { [index: string]: string } = {
   textColor: "텍스트",
   helperBgColor: "도움말 배경",
   helperBorderColor: "도움말 테두리",
+  ButtonBgColor: "버튼 배경",
+  ButtonTextColor: "버튼 텍스트",
+  ButtonActiveBgColor: "버튼 활성화 배경",
+  ButtonActiveTextColor: "버튼 활성화 텍스트",
+  ButtonDisableBgColor: "버튼 비활성화 배경",
+  ButtonDisableBorderColor: "버튼 비활성화 테두리",
 };
 
 export const ThemeTemplate = () =>
