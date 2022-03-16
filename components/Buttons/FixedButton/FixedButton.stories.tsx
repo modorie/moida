@@ -58,7 +58,7 @@ const Layout = styled.div`
   gap: 1rem;
 
   div {
-    position: static;
+    position: relative;
   }
 
   span {
