@@ -11,4 +11,8 @@ export default {
   },
 } as Meta;
 
-export const Default: Story = () => <MapMark />;
+export const Default: Story = (args) => <MapMark {...args} />;
+
+Default.args = {
+  children: "중간장소",
+};
