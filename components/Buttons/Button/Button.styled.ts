@@ -5,7 +5,7 @@ import { FontWeight, Theme, Transition } from "@/foundations";
 import type { ButtonProps } from "./Button.types";
 import { TypoProps, TypoStyle } from "@/components/Typography";
 
-export const Layout = styled.div<ButtonProps & TypoProps>`
+export const Layout = styled.button<ButtonProps & TypoProps>`
   display: flex;
   justify-content: center;
   align-items: center;
