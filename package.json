@@ -10,7 +10,8 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --watchAll=false --coverage"
   },
   "dependencies": {
     "@storybook/addon-a11y": "^6.4.19",
