@@ -12,11 +12,20 @@ export default {
   component: Button,
 } as Meta;
 
-export const Default: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-Default.args = {
+export const Primary = Template.bind({});
+Primary.args = {
   children: "text",
   styleVariant: "primary",
+  disabled: false,
+  loading: false,
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  children: "text",
+  styleVariant: "secondary",
   disabled: false,
   loading: false,
 };
