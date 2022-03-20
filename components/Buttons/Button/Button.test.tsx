@@ -1,18 +1,23 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
+
+import { FontWeight, Theme } from "@/foundations";
 import Button from "./Button";
 import { Primary, Secondary } from "./Button.stories";
 
-test("Primary 버튼 렌더링", () => {
-  render(<Button {...Primary.args} />);
-  expect(screen.getByRole("button")).toHaveTextContent("text");
-});
+describe("Button Test >", () => {
+  it("Primary Button >", () => {
+    const { getByRole } = render(<Button {...Primary.args} />);
+    const primaryButton = getByRole("button");
 
-test("Secondary 버튼 렌더링", () => {
-  render(<Button {...Secondary.args} />);
-  expect(screen.getByRole("button")).toHaveTextContent("text");
-});
-
-test("Disable 버튼 렌더링", () => {
-  render(<Button {...Secondary.args} />);
-  expect(screen.getByRole("button")).toHaveTextContent("text");
+    expect(primaryButton).toHaveStyle(
+      `color: ${Theme.ButtonTextColor.primary}`
+    );
+    expect(primaryButton).toHaveStyle(
+      `background-color: ${Theme.ButtonBgColor.primary};`
+    );
+    expect(primaryButton).toHaveStyle(
+      `border: 1px solid ${Theme.borderColor.primary}`
+    );
+    expect(primaryButton).toHaveStyle(`font-weight: ${FontWeight.bold}`);
+  });
 });
