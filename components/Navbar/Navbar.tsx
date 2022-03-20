@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Overlay, Layout, CloseBox } from "./Navbar.styled";
+import { Overlay, Layout, CloseBox, IconBox } from "./Navbar.styled";
 import { NavHeader, NavBody, NavFooter } from "./";
 import { Icon } from "@/components";
 
@@ -16,10 +16,12 @@ const Navbar = ({
 }: NavProps) => {
   return (
     <>
-      <Overlay />
+      <Overlay onClick={onClickClose} />
       <Layout>
-        <CloseBox onClick={onClickClose}>
-          <Icon name="x" />
+        <CloseBox>
+          <IconBox onClick={onClickClose}>
+            <Icon name="x" />
+          </IconBox>
         </CloseBox>
         <NavHeader isLogin={isLogin} user={user} />
         <NavBody
