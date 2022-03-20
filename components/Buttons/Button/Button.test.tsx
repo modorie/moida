@@ -41,8 +41,8 @@ describe("Button Test >", () => {
     });
 
     it("Loading >", () => {
-      const button = render(<Button {...Primary.args} loading={true} />);
-      const primaryLoadingButton = button.getByRole("button");
+      const { getByRole } = render(<Button {...Primary.args} loading={true} />);
+      const primaryLoadingButton = getByRole("button");
 
       expect(primaryLoadingButton).toHaveStyle(
         `background-color: ${Theme.ButtonBgColor.primary};`
@@ -87,6 +87,21 @@ describe("Button Test >", () => {
         `border: 1px solid ${Theme.ButtonDisableBorderColor.secondary}`
       );
       expect(secondaryDisabledButton).toHaveStyle("pointer-events: none");
+    });
+
+    it("Loading >", () => {
+      const { getByRole } = render(
+        <Button {...Secondary.args} loading={true} />
+      );
+      const secondaryLoadingButton = getByRole("button");
+
+      expect(secondaryLoadingButton).toHaveStyle(
+        `background-color: ${Theme.ButtonBgColor.secondary};`
+      );
+      expect(secondaryLoadingButton).toHaveStyle(
+        `border: 1px solid ${Theme.borderColor.primary}`
+      );
+      expect(secondaryLoadingButton.firstChild?.nodeName).toBe("DIV");
     });
   });
 });
