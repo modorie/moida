@@ -90,18 +90,9 @@ interface ThemeType {
   ButtonBgColor: Record<ButtonBgColor, string>;
   ButtonTextColor: Record<ButtonTextColor, string>;
   ButtonActiveBgColor: Record<ButtonActiveBgColor, string>;
-  ButtonActiveTextColor: Record<
-    ButtonActiveTextColor,
-    string
-  >;
-  ButtonDisableBgColor: Record<
-    ButtonDisableBgColor,
-    string
-  >;
-  ButtonDisableBorderColor: Record<
-    ButtonDisableBorderColor,
-    string
-  >;
+  ButtonActiveTextColor: Record<ButtonActiveTextColor, string>;
+  ButtonDisableBgColor: Record<ButtonDisableBgColor, string>;
+  ButtonDisableBorderColor: Record<ButtonDisableBorderColor, string>;
 }
 
 export default ThemeType;
