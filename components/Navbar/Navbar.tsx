@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  Overlay,
-  Layout,
-  CloseBox,
-  IconBox,
-} from "./Navbar.styled";
+import { Overlay, Layout, CloseBox, IconBox } from "./Navbar.styled";
 import { NavHeader, NavBody, NavFooter } from "./";
 import { Icon } from "@/components";
 
@@ -34,10 +29,7 @@ const Navbar = ({
           topItemsLogin={topItemsLogin}
           topItemsLogout={topItemsLogout}
         />
-        <NavFooter
-          isLogin={isLogin}
-          bottomItems={bottomItems}
-        />
+        <NavFooter isLogin={isLogin} bottomItems={bottomItems} />
       </Layout>
     </>
   );
