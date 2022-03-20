@@ -26,16 +26,18 @@ describe("Button Test >", () => {
       const { getByRole } = render(
         <Button {...Primary.args} disabled={true} />
       );
-      const disabledButton = getByRole("button");
+      const primaryDisabledButton = getByRole("button");
 
-      expect(disabledButton).toHaveStyle(`color: ${Theme.textColor.lightest}`);
-      expect(disabledButton).toHaveStyle(
+      expect(primaryDisabledButton).toHaveStyle(
+        `color: ${Theme.textColor.lightest}`
+      );
+      expect(primaryDisabledButton).toHaveStyle(
         `background-color: ${Theme.ButtonDisableBgColor.primary}`
       );
-      expect(disabledButton).toHaveStyle(
+      expect(primaryDisabledButton).toHaveStyle(
         `border: 1px solid ${Theme.ButtonDisableBorderColor.primary}`
       );
-      expect(disabledButton).toHaveStyle("pointer-events: none");
+      expect(primaryDisabledButton).toHaveStyle("pointer-events: none");
     });
   });
 
@@ -54,6 +56,24 @@ describe("Button Test >", () => {
         `border: 1px solid ${Theme.borderColor.primary}`
       );
       expect(secondaryButton).toHaveStyle(`font-weight: ${FontWeight.regular}`);
+    });
+
+    it("Disabled >", () => {
+      const { getByRole } = render(
+        <Button {...Secondary.args} disabled={true} />
+      );
+      const secondaryDisabledButton = getByRole("button");
+
+      expect(secondaryDisabledButton).toHaveStyle(
+        `color: ${Theme.textColor.lightest}`
+      );
+      expect(secondaryDisabledButton).toHaveStyle(
+        `background-color: ${Theme.ButtonDisableBgColor.secondary}`
+      );
+      expect(secondaryDisabledButton).toHaveStyle(
+        `border: 1px solid ${Theme.ButtonDisableBorderColor.secondary}`
+      );
+      expect(secondaryDisabledButton).toHaveStyle("pointer-events: none");
     });
   });
 });
