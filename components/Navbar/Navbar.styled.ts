@@ -32,8 +32,8 @@ export const CloseBox = styled.div`
   right: -11px;
 
   margin-bottom: 66px;
+`;
 
-  svg {
-    cursor: pointer;
-  }
+export const IconBox = styled.div`
+  cursor: pointer;
 `;
