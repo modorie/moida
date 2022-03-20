@@ -7,6 +7,7 @@ const Theme: ThemeType = {
     lighter: Palette.gray100,
     light: Palette.gray200,
     primary: Palette.blue100,
+    point: Palette.blue300,
   },
 
   selectColor: {

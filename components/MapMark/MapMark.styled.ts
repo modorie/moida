@@ -1,30 +1,29 @@
 import styled from "styled-components";
 
 import { TypoStyle } from "@/components/Typography";
-import { Theme, Palette } from "@/foundations";
+import { Theme } from "@/foundations";
 
 export const Layout = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  height: 80px;
+  position: relative;
+  width: 45px;
+  height: 45px;
 `;
 
 export const Text = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  top: -48px;
+  left: -20px;
 
   height: 35px;
   padding: 0 16px;
   border-radius: 8px;
 
-  /* TODO : Theme.bgColor에 추가 */
-  background-color: ${Palette.blue300};
+  background-color: ${Theme.bgColor.point};
   ${TypoStyle}
+  white-space: nowrap;
 
   ::before {
     content: "";
@@ -34,12 +33,14 @@ export const Text = styled.div`
 
     height: 65px;
     width: 0px;
-    border-left: 2px solid ${Palette.blue300};
+    border-left: 2px solid ${Theme.bgColor.point};
   }
 `;
 
 export const Mark = styled.div`
-  position: relative;
+  position: absolute;
+  top: 13px;
+  left: 13px;
 
   width: 19px;
   height: 19px;

@@ -4,6 +4,7 @@ export type bgColor =
   | "lighter"
   | "light"
   | "primary"
+  | "point"
 
 // prettier-ignore
 export type selectColor =
