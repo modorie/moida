@@ -21,7 +21,7 @@ const Navbar = ({
 }: NavProps) => {
   return (
     <>
-      <Overlay />
+      <Overlay onClick={onClickClose} />
       <Layout>
         <CloseBox>
           <IconBox onClick={onClickClose}>
