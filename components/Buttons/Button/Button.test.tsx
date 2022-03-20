@@ -37,7 +37,7 @@ describe("Button Test >", () => {
       expect(primaryDisabledButton).toHaveStyle(
         `border: 1px solid ${Theme.ButtonDisableBorderColor.primary}`
       );
-      expect(primaryDisabledButton).toHaveStyle("pointer-events: none");
+      expect(primaryDisabledButton).toBeDisabled();
     });
 
     it("Loading >", () => {
@@ -86,7 +86,7 @@ describe("Button Test >", () => {
       expect(secondaryDisabledButton).toHaveStyle(
         `border: 1px solid ${Theme.ButtonDisableBorderColor.secondary}`
       );
-      expect(secondaryDisabledButton).toHaveStyle("pointer-events: none");
+      expect(secondaryDisabledButton).toBeDisabled();
     });
 
     it("Loading >", () => {
