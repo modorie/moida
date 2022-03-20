@@ -39,6 +39,19 @@ describe("Button Test >", () => {
       );
       expect(primaryDisabledButton).toHaveStyle("pointer-events: none");
     });
+
+    it("Loading >", () => {
+      const button = render(<Button {...Primary.args} loading={true} />);
+      const primaryLoadingButton = button.getByRole("button");
+
+      expect(primaryLoadingButton).toHaveStyle(
+        `background-color: ${Theme.ButtonBgColor.primary};`
+      );
+      expect(primaryLoadingButton).toHaveStyle(
+        `border: 1px solid ${Theme.borderColor.primary}`
+      );
+      expect(primaryLoadingButton.firstChild?.nodeName).toBe("DIV");
+    });
   });
 
   describe("Secondary Button >", () => {
