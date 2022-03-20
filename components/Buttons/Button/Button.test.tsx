@@ -21,6 +21,22 @@ describe("Button Test >", () => {
       );
       expect(primaryButton).toHaveStyle(`font-weight: ${FontWeight.bold}`);
     });
+
+    it("Disabled >", () => {
+      const { getByRole } = render(
+        <Button {...Primary.args} disabled={true} />
+      );
+      const disabledButton = getByRole("button");
+
+      expect(disabledButton).toHaveStyle(`color: ${Theme.textColor.lightest}`);
+      expect(disabledButton).toHaveStyle(
+        `background-color: ${Theme.ButtonDisableBgColor.primary}`
+      );
+      expect(disabledButton).toHaveStyle(
+        `border: 1px solid ${Theme.ButtonDisableBorderColor.primary}`
+      );
+      expect(disabledButton).toHaveStyle("pointer-events: none");
+    });
   });
 
   describe("Secondary Button >", () => {
