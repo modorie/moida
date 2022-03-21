@@ -13,3 +13,4 @@ export { default as Navbar } from "./Navbar";
 export { default as StationInfo } from "./StationInfo";
 export { default as Tabs } from "./Tabs";
 export { default as Typography } from "./Typography";
+export { default as CheckBox } from "./CheckBox";
