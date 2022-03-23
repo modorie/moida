@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { AvatarColor } from "./AvatarColor";
-import { TypoStyle } from "../Typography";
+import { TypoStyle } from "@/components/Typography";
 
 import type AvatarColorType from "./Avatar.types";
 
