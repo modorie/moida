@@ -3,7 +3,10 @@ import styled from "styled-components";
 import { FontSize } from "@/foundations";
 import { TypoStyle } from "@/components/Typography";
 
-export const EmojiText = styled.i`
+import type EmojiProps from "./Emoji.types";
+import type TypoProps from "@/components/Typography/Typography.types";
+
+export const EmojiText = styled.i<EmojiProps & TypoProps>`
   ${TypoStyle}
   font-family: emoji;
   font-style: normal;
