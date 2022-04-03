@@ -7,7 +7,7 @@ import type { ButtonGroupProps } from "./ButtonGroup.types";
 
 const ButtonGroup = ({ name, label, options }: ButtonGroupProps) => {
   return (
-    <>
+    <div>
       {label && (
         <Label color="darker" weight="bold">
           {label}
@@ -25,7 +25,7 @@ const ButtonGroup = ({ name, label, options }: ButtonGroupProps) => {
           />
         ))}
       </Layout>
-    </>
+    </div>
   );
 };
 
