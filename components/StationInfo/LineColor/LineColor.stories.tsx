@@ -1,8 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 
+import { Text } from "@/components";
+
 import LineColor, { lineList } from "./LineColor";
-import { Typography } from "@/components";
 
 export default {
   title: "Components/StationInfo/LineColor",
@@ -18,12 +18,12 @@ export const LineColorTemplate = () => (
     {lineList.map((colorKey) => (
       <ColorChip key={colorKey}>
         <ColorTile color={LineColor[colorKey]} />
-        <Typography size="body2" weight="bold" color="darkest">
+        <Text size="body2" weight="bold" color="gray900">
           {colorKey}
-        </Typography>
-        <Typography size="cap1" color="lighter">
+        </Text>
+        <Text size="cap1" color="gray500">
           {LineColor[colorKey]}
-        </Typography>
+        </Text>
       </ColorChip>
     ))}
   </Layout>

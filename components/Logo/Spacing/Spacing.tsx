@@ -1,5 +1,3 @@
-import React from "react";
-
 const Spacing = ({ ...props }) => (
   <svg
     viewBox="0 0 62 160"

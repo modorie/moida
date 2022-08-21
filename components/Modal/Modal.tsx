@@ -1,14 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-import {
-  Overlay,
-  LayoutBox,
-  Layout,
-  Content,
-  Footer,
-  Button,
-} from "./Modal.styled";
+import { Text } from "@/components";
 
+import { Overlay, LayoutBox, Layout, Footer, Button } from "./Modal.styled";
 import type ModalProps from "./Modal.types";
 
 const Modal = ({ children }: ModalProps) => {
@@ -21,17 +15,20 @@ const Modal = ({ children }: ModalProps) => {
       <Overlay />
       <LayoutBox>
         <Layout>
-          <Content size="sub3" weight="bold" color="darkest">
+          <Text
+            as="div"
+            size="sub3"
+            weight="bold"
+            color="gray900"
+            whiteSpace="pre-wrap"
+          >
             {children}
-          </Content>
+          </Text>
           <Footer>
-            <Button
-              size="sub2"
-              weight="bold"
-              color="primary"
-              onClick={onClickClose}
-            >
-              확인
+            <Button onClick={onClickClose}>
+              <Text size="sub2" weight="bold" color="blue200">
+                확인
+              </Text>
             </Button>
           </Footer>
         </Layout>

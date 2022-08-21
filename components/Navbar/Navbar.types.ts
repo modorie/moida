@@ -1,5 +1,3 @@
-import React from "react";
-
 import { UserProps } from "@/types/UserProps";
 
 interface itemOptions {

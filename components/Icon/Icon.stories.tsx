@@ -1,11 +1,10 @@
-import React from "react";
 import styled from "styled-components";
 import { Story, Meta } from "@storybook/react";
 
+import { Text } from "@/components";
+
 import Icon from "./Icon";
 import { iconList } from "./assets";
-import { Typography } from "@/components";
-
 import type IconProps from "./Icon.types";
 
 export default {
@@ -18,7 +17,7 @@ export const Default: Story<IconProps> = (args) => <Icon {...args} />;
 Default.args = {
   name: "edit",
   size: 30,
-  color: "darkest",
+  color: "gray900",
 };
 
 Default.argTypes = {
@@ -34,7 +33,7 @@ export const Examples = () => (
     {iconList.map((icon) => (
       <IconChip key={icon}>
         <Icon name={icon} />
-        <Typography size="cap1">{icon}</Typography>
+        <Text size="cap1">{icon}</Text>
       </IconChip>
     ))}
   </Layout>

@@ -1,12 +1,11 @@
-import React from "react";
 import styled from "styled-components";
 import { Story, Meta } from "@storybook/react";
 
-import Typography from "./Typography";
 import { FontSize } from "@/foundations";
 import { fontSizeList } from "@/foundations/FontSize";
 import { fontWeightList } from "@/foundations/FontWeight";
 
+import Typography from "./Typography";
 import type TypoProps from "./Typography.types";
 
 export default {
@@ -50,7 +49,7 @@ export const Examples = () =>
           약속은 간편하게 모임은 한방에
         </Typography>
       </Layout>
-    ))
+    )),
   );
 
 Examples.parameters = {

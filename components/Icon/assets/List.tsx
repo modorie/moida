@@ -1,5 +1,3 @@
-import React from "react";
-
 const List = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 30 30"

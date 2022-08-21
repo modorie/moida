@@ -1,10 +1,8 @@
-import React from "react";
+import { Text } from "@/components";
 
 import { Layout, SymbolBox, NameBox } from "./StationInfo.styled";
 import { LineSymbol } from "./LineSymbol";
-import { Typography } from "@/components";
 import stations from "./assets/stations";
-
 import type StationType from "./StationInfo.types";
 
 const StationInfo = ({ name }: StationType) => (
@@ -15,7 +13,7 @@ const StationInfo = ({ name }: StationType) => (
       ))}
     </SymbolBox>
     <NameBox color={stations[name]?.[0]}>
-      <Typography>{name.slice(0, -1)}</Typography>
+      <Text>{name.slice(0, -1)}</Text>
     </NameBox>
   </Layout>
 );

@@ -1,10 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 import { Story, Meta } from "@storybook/react";
 
 import StationInfo from "./StationInfo";
 import stations from "./assets/stations";
-
 import type StationType from "./StationInfo.types";
 
 export default {

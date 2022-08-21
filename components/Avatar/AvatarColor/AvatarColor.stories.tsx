@@ -1,8 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 
+import { Text } from "@/components";
+
 import AvatarColor, { AvatarColorList } from "./AvatarColor";
-import { Typography } from "@/components";
 
 export default {
   title: "Components/Avatar/AvatarColor",
@@ -17,12 +17,12 @@ export const AvatarColorTemplate = () => (
     {AvatarColorList.map((colorKey) => (
       <ColorChip key={colorKey}>
         <ColorTile color={AvatarColor[colorKey]} />
-        <Typography size="body2" weight="bold" color="darkest">
+        <Text size="body2" weight="bold" color="gray900">
           {colorKey}
-        </Typography>
-        <Typography size="cap1" color="lighter">
+        </Text>
+        <Text size="cap1" color="gray500">
           {AvatarColor[colorKey]}
-        </Typography>
+        </Text>
       </ColorChip>
     ))}
   </Layout>

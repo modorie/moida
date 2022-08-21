@@ -1,17 +1,7 @@
-import React from "react";
-
-import {
-  Header,
-  Hgroup,
-  Greeting,
-  Username,
-  Email,
-  Message,
-  Button,
-} from "./NavHeader.styled";
-import { Icon, Typography, Logo } from "@/components";
-
+import { Icon, Text, Logo } from "@/components";
 import type { NavHeaderProps } from "@/components/Navbar/Navbar.types";
+
+import { Header, Hgroup, Greeting, Message, Button } from "./NavHeader.styled";
 
 const NavHeader = ({ isLogin, user }: NavHeaderProps) => {
   return (
@@ -19,33 +9,33 @@ const NavHeader = ({ isLogin, user }: NavHeaderProps) => {
       {isLogin && user ? (
         <Hgroup>
           <Greeting>
-            <Username size="h1" weight="bold" color="primary">
+            <Text as="strong" size="h1" weight="bold" color="blue200">
               {user.name + " "}
-            </Username>
-            <Typography size="h1" weight="bold" color="black">
+            </Text>
+            <Text as="span" size="h1" weight="bold" color="black">
               님 <br />
               반가워요!
-            </Typography>
+            </Text>
           </Greeting>
-          <Email size="sub2" weight="regular" color="darkest">
+          <Text as="h2" size="sub2" weight="regular" color="gray900">
             {user.email}
-          </Email>
+          </Text>
         </Hgroup>
       ) : (
         <Hgroup>
           <Logo symbol wordmark={false} height={40} />
-          <Message size="body1" color="dark" weight="regular">
+          <Text as="h2" size="body1" color="gray700" weight="regular">
             <strong>로그인</strong>하시면 모이다를 <br />
             편리하게 이용하실 수 있어요!
-          </Message>
+          </Text>
         </Hgroup>
       )}
 
       {/* TODO: Button 컴포넌트 교체 */}
       <Button>
-        <Typography size="sub3" weight="bold" color="white">
+        <Text size="sub3" weight="bold" color="white">
           새로운 모임 만들기
-        </Typography>
+        </Text>
         <Icon name="chevron-right" size={18} color="white" />
       </Button>
     </Header>

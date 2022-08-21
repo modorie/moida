@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 import { Story, Meta } from "@storybook/react";
 
 import Logo from "./Logo";
-import { Typography } from "@/components";
+import { Text } from "@/components";
 
 import type LogoProps from "./Logo.types";
 
@@ -29,23 +28,23 @@ Default.argTypes = {
 
 export const Examples = () => (
   <Layout>
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       워드마크만 있는 경우
-    </Typography>
+    </Text>
     <Logo height={21} />
     <Logo height={42} />
     <Logo height={63} />
     <br />
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       심볼만 있는 경우
-    </Typography>
+    </Text>
     <Logo symbol wordmark={false} height={21} />
     <Logo symbol wordmark={false} height={42} />
     <Logo symbol wordmark={false} height={63} />
     <br />
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       모두 있는 경우
-    </Typography>
+    </Text>
     <Logo symbol height={21} />
     <Logo symbol height={42} />
     <Logo symbol height={63} />

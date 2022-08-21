@@ -1,5 +1,3 @@
-import React from "react";
-
 const Share2 = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 30 30"

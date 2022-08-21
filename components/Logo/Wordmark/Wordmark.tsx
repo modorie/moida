@@ -1,12 +1,10 @@
-import React from "react";
-import { Theme } from "@/foundations";
+import styled from "styled-components";
 
 const Wordmark = ({ ...props }) => (
-  <svg
+  <Svg
     viewBox="0 0 485 160"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    color={Theme.bgColor.primary}
     {...props}
   >
     <path
@@ -33,7 +31,11 @@ const Wordmark = ({ ...props }) => (
       d="M472.41 44.0003C467.53 44.0003 463.72 46.1703 461.74 49.7703C455.19 44.8603 446.94 42.3003 437.43 42.3003C412.65 42.3003 393.97 62.4403 393.97 89.1503C393.97 115.66 412.65 135.65 437.43 135.65C446.076 135.708 454.531 133.107 461.65 128.2C463.65 131.89 467.46 134.12 472.41 134.12C479.71 134.12 484.61 129.28 484.61 122.07V56.0703C484.61 48.8403 479.71 44.0003 472.41 44.0003ZM439.73 114.09C424.48 114.09 419.06 100.56 419.06 88.9803C419.06 77.4003 424.48 63.8603 439.73 63.8603C454.98 63.8603 460.4 77.3903 460.4 88.9803C460.4 101.12 454.97 114.09 439.73 114.09Z"
       fill="currentColor"
     />
-  </svg>
+  </Svg>
 );
 
 export default Wordmark;
+
+const Svg = styled.svg`
+  color: ${({ theme }) => theme.color.blue200};
+`;

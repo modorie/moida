@@ -15,18 +15,18 @@ type BlueColorRange = 100 | 200 | 300 | 400 | 500 | 600 | 700;
 type GreenColorRange = 100 | 200 | 300;
 type CoralColorRange = 100 | 200;
 
-type GrayColorKey = `${BaseColorKey.Gray}${GrayColorRange}`;
+type GrayColorKey = 
+  | `${BaseColorKey.Gray}${GrayColorRange}`
+  | `${BaseColorKey.White}`
+  | `${BaseColorKey.Black}`;
 
 type ColorfulColorKey =
   | `${BaseColorKey.Blue}${BlueColorRange}`
   | `${BaseColorKey.Green}${GreenColorRange}`
-  | `${BaseColorKey.Coral}${CoralColorRange}`
+  | `${BaseColorKey.Coral}${CoralColorRange}`;
 
 export type ColorKey =
   | ColorfulColorKey
   | GrayColorKey
-  | BaseColorKey.White
-  | BaseColorKey.Black;
 
 export type ColorType = Record<ColorKey, string>;
-

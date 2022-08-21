@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import { LineColor } from "../LineColor";
-import { FontWeight, Theme } from "@/foundations";
-
+import Text from "@/components/Text";
 import type { LineName } from "@/components/StationInfo";
+
+import { LineColor } from "../LineColor";
 
 interface LayoutProps {
   text: LineName;
@@ -22,9 +22,6 @@ export const Layout = styled.div<LayoutProps>`
   transform: scale(0.8);
 `;
 
-export const LineNumber = styled.span<LayoutProps>`
+export const LineNumber = styled(Text)<LayoutProps>`
   font-size: ${(props) => (/^\d/.test(props.text) ? 12.5 : 10)}px;
-  font-weight: ${FontWeight.bold};
-  line-height: 130%;
-  color: ${Theme.textColor.white};
 `;

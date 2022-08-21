@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Meta } from "@storybook/react";
 
-import { Typography } from "@/components";
+import { Text } from "@/components";
 
 import Color, { colorList } from "./Color";
 import { ColorKey } from "./Color.types";
@@ -24,12 +24,12 @@ export const PaletteTemplate = () => (
     {colorList.map((colorKey) => (
       <ColorChip key={colorKey}>
         <ColorTile color={colorKey} />
-        <Typography size="body2" weight="bold" color="darkest">
+        <Text size="body2" weight="bold" color="gray900">
           {colorKey}
-        </Typography>
-        <Typography size="cap1" color="lighter">
+        </Text>
+        <Text size="cap1" color="gray500">
           {Color[colorKey]}
-        </Typography>
+        </Text>
       </ColorChip>
     ))}
   </Layout>

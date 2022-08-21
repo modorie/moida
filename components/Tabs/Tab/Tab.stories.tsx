@@ -1,8 +1,6 @@
-import React from "react";
 import { Story, Meta } from "@storybook/react";
 
 import Tab from "./Tab";
-
 import type { TabProps } from "./Tab.types";
 
 export default {

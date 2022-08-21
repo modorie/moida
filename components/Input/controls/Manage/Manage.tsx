@@ -1,12 +1,12 @@
-import React from "react";
+import { Text } from "@/components";
+
 import { Layout } from "./Manage.styled";
-import { Typography } from "@/components";
 
 const Manage = () => (
   <Layout>
-    <Typography size="body2" weight="bold" color="primary">
+    <Text size="body2" weight="bold" color="blue200">
       관리
-    </Typography>
+    </Text>
   </Layout>
 );
 

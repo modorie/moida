@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
-import { Theme } from "@/foundations";
-import { TypoStyle, TypoProps } from "@/components/Typography";
-
 import type HelperProps from "./HelperText.types";
 
-export const Layout = styled.div<HelperProps & TypoProps>`
+export const Layout = styled.div<HelperProps>`
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -14,12 +11,11 @@ export const Layout = styled.div<HelperProps & TypoProps>`
   height: 30px;
   padding: 0 10px;
   border-radius: 4px;
-  border: 1px solid ${({ color }) => Theme.helperBorderColor[color]};
-  background-color: ${({ color }) => Theme.helperBgColor[color]};
-
-  ${TypoStyle}
-  color: ${Theme.textColor.white};
-  white-space: nowrap;
+  border: 1px solid
+    ${({ color, theme }) =>
+      color === "light" ? theme.color.blue400 : theme.color.blue700};
+  background-color: ${({ color, theme }) =>
+    color === "light" ? theme.color.blue200 : theme.color.blue600};
 `;
 
 export const ArrowBox = styled.div`
@@ -35,9 +31,12 @@ export const Arrow = styled.div<HelperProps>`
 
   width: 9px;
   height: 9px;
-  border: 1px solid ${({ color }) => Theme.helperBorderColor[color]};
+  border: 1px solid
+    ${({ color, theme }) =>
+      color === "light" ? theme.color.blue400 : theme.color.blue700};
   border-radius: 3px;
 
-  background-color: ${({ color }) => Theme.helperBgColor[color]};
+  background-color: ${({ color, theme }) =>
+    color === "light" ? theme.color.blue200 : theme.color.blue600};
   transform: rotate(45deg) skew(15deg, 15deg);
 `;

@@ -1,8 +1,6 @@
-import React from "react";
-
-import { Layout } from "./NavBody.styled";
 import { NavItem } from "@/components/Navbar";
 
+import { Layout } from "./NavBody.styled";
 import type { NavBodyProps } from "../Navbar.types";
 
 const NavBody = ({ isLogin, topItemsLogin, topItemsLogout }: NavBodyProps) => {

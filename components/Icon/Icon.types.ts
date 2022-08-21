@@ -1,11 +1,10 @@
 import { IconName } from "./assets";
-import type { textColor } from "@/foundations/Color/Theme";
+import type { ColorKey } from "@/foundations";
 
 interface IconOptions {
   name: IconName;
   size?: number;
-  color?: textColor;
+  color?: ColorKey;
 }
 
-// 확장성 고려
 export default interface IconProps extends IconOptions {}

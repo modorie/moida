@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Meta } from "@storybook/react";
 
-import { Typography } from "@/components";
+import { Text } from "@/components";
 
 export default {
   title: "Foundations/Transition",
@@ -26,7 +26,7 @@ export const TransitionTemplate = () => {
     <Layout>
       <TransitionBox isClicked={isClicked} />
       <Button onClick={onClick}>
-        <Typography>Click Me</Typography>
+        <Text weight="bold">Click Me</Text>
       </Button>
     </Layout>
   );
@@ -58,8 +58,6 @@ const Button = styled.button`
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
   background-color: ${({ theme }) => theme.color.white};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  color: ${({ theme }) => theme.color.black};
   cursor: pointer;
 
   :active {

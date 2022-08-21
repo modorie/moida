@@ -1,10 +1,9 @@
-import React from "react";
 import { Layout } from "./GpsButton.styled";
 import { Icon } from "@/components";
 
 const GpsButton = () => (
   <Layout>
-    <Icon name="gps" color="darkest" />
+    <Icon name="gps" color="gray900" />
   </Layout>
 );
 

@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { Theme, FontWeight, Transition } from "@/foundations";
-import { TypoStyle, TypoProps } from "@/components/Typography";
+import Text, { TextStyle } from "@/components/Text";
 
 interface LayoutProps {
   hasError?: boolean;
@@ -22,12 +21,12 @@ export const Layout = styled.label<LayoutProps>`
   border-radius: 4px;
   box-sizing: border-box;
 
-  border: 1px solid ${Theme.borderColor.light};
-  transition: ${Transition};
+  border: 1px solid ${({ theme }) => theme.color.gray300};
+  transition: ${({ theme }) => theme.transition};
 
   :focus-within,
   :hover {
-    border: 1px solid ${Theme.borderColor.primary};
+    border: 1px solid ${({ theme }) => theme.color.blue200};
     box-shadow: 0px 0px 8px rgba(122, 215, 255, 0.4);
   }
 
@@ -41,10 +40,10 @@ export const TextField = styled.input`
   border: none;
   background-color: transparent;
 
-  ${TypoStyle}
+  ${TextStyle}
 
   ::placeholder {
-    color: ${Theme.textColor.lightest};
+    color: ${({ theme }) => theme.color.gray400};
   }
 
   :focus {
@@ -54,33 +53,30 @@ export const TextField = styled.input`
   ${({ disabled }) => disabled && disabledTextFieldStyle}
 `;
 
-export const Label = styled.span<LabelProps & TypoProps>`
+export const Label = styled(Text)<LabelProps>`
   display: inline-block;
   margin-bottom: 9px;
-  ${TypoStyle}
 
   ${({ required }) => !required && optionalLabelStyle}
 `;
 
-export const ErrorMsg = styled.span`
+export const ErrorMsg = styled(Text)`
   display: block;
   margin-top: 6px;
-  ${TypoStyle}
 `;
 
-export const Description = styled.span`
+export const Description = styled(Text)`
   display: block;
-  margin: -4px 0 12px 0;
-  ${TypoStyle}
+  margin: -4px 0 12px;
 `;
 
 const erroredLayoutStyle = css`
-  border: 1px solid ${Theme.borderColor.warning};
+  border: 1px solid ${({ theme }) => theme.color.coral100};
 `;
 
 const disabledLayoutStyle = css`
-  border: 1px solid ${Theme.borderColor.light};
-  background-color: ${Theme.bgColor.lighter};
+  border: 1px solid ${({ theme }) => theme.color.gray300};
+  background-color: ${({ theme }) => theme.color.gray100};
   pointer-events: none;
 `;
 
@@ -88,13 +84,13 @@ const disabledTextFieldStyle = css`
   background: none;
 
   ::placeholder {
-    color: ${Theme.textColor.lighter};
+    color: ${({ theme }) => theme.color.gray500};
   }
 `;
 
 const optionalLabelStyle = css`
   ::after {
     content: " (선택사항)";
-    font-weight: ${FontWeight.regular};
+    font-weight: ${({ theme }) => theme.fontWeight.regular};
   }
 `;

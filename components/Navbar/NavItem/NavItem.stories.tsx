@@ -1,8 +1,6 @@
-import React from "react";
 import { Story, Meta } from "@storybook/react";
 
 import NavItem from "./NavItem";
-
 import type { NavItemProps } from "./NavItem.types";
 
 export default {

@@ -1,14 +1,16 @@
-import React from "react";
+import { Text } from "@/components";
 
-import { Layout, Text, Mark } from "./MapMark.styled";
+import { Layout, TextBox, Mark } from "./MapMark.styled";
 import type { MapMarkProps } from "./MapMark.types";
 
 const MapMark = ({ children }: MapMarkProps) => (
   <Layout>
     {children && (
-      <Text size="body1" weight="bold" color="white">
-        {children}
-      </Text>
+      <TextBox>
+        <Text size="body1" weight="bold" color="white" whiteSpace="nowrap">
+          {children}
+        </Text>
+      </TextBox>
     )}
     <Mark />
   </Layout>

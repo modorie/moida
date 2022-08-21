@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Overlay, Layout, CloseBox, IconBox } from "./Navbar.styled";
 import { NavHeader, NavBody, NavFooter } from "./";
 import { Icon } from "@/components";

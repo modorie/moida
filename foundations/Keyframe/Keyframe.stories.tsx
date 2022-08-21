@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled, { css } from "styled-components";
 import { Meta } from "@storybook/react";
 
-import { Typography } from "@/components";
+import { Text } from "@/components";
 
 import type { KeyframeKey } from "./Keyframe.types";
 
@@ -22,7 +22,7 @@ interface BoxProps {
 
 export const KeyframeTemplate = () => {
   const [keyframe, setKeyframe] = useState<KeyframeKey | undefined>(
-    "slideInLeft"
+    "slideInLeft",
   );
 
   const onClick = (value: KeyframeKey | undefined) => {
@@ -35,10 +35,10 @@ export const KeyframeTemplate = () => {
       <BoxRange>{keyframe && <TransitionBox keyframe={keyframe} />}</BoxRange>
       <ButtonBox>
         <Button onClick={() => onClick("slideInLeft")}>
-          <Typography>slideInLeft</Typography>
+          <Text weight="bold">slideInLeft</Text>
         </Button>
         <Button onClick={() => onClick("slideInUp")}>
-          <Typography>slideInUp</Typography>
+          <Text weight="bold">slideInUp</Text>
         </Button>
       </ButtonBox>
     </Layout>
@@ -93,8 +93,6 @@ const Button = styled.button`
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
   background-color: ${({ theme }) => theme.color.white};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  color: ${({ theme }) => theme.color.black};
   cursor: pointer;
 
   :active {

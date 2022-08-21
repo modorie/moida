@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-import { Theme, Transition, Keyframe } from "@/foundations";
+import styled, { css } from "styled-components";
 
 export const Overlay = styled.div`
   position: absolute;
@@ -20,9 +18,12 @@ export const Layout = styled.nav`
   width: 300px;
   height: 100vh;
   padding: 20px 30px;
-  background-color: ${Theme.bgColor.white};
+  background-color: ${({ theme }) => theme.color.white};
 
-  animation: ${Keyframe.slideInLeft} ${Transition};
+  animation: ${({ theme }) =>
+    css`
+      ${theme.keyframe.slideInLeft} ${theme.transition}
+    `};
 `;
 
 export const CloseBox = styled.div`
