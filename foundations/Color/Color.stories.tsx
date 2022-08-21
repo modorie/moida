@@ -1,9 +1,10 @@
-import React from "react";
 import styled from "styled-components";
 import { Meta } from "@storybook/react";
 
-import Color, { colorList } from "./Color";
 import { Typography } from "@/components";
+
+import Color, { colorList } from "./Color";
+import { ColorKey } from "./Color.types";
 
 export default {
   title: "Foundations",
@@ -15,19 +16,19 @@ export default {
 } as Meta;
 
 interface PaletteProps {
-  color: string;
+  color: ColorKey;
 }
 
 export const PaletteTemplate = () => (
   <Layout>
-    {colorList.map((paletteKey) => (
-      <ColorChip key={paletteKey}>
-        <ColorTile color={Color[paletteKey]} />
+    {colorList.map((colorKey) => (
+      <ColorChip key={colorKey}>
+        <ColorTile color={colorKey} />
         <Typography size="body2" weight="bold" color="darkest">
-          {paletteKey}
+          {colorKey}
         </Typography>
         <Typography size="cap1" color="lighter">
-          {Color[paletteKey]}
+          {Color[colorKey]}
         </Typography>
       </ColorChip>
     ))}
@@ -56,5 +57,5 @@ const ColorTile = styled.div<PaletteProps>`
   height: 80px;
   margin-bottom: 4px;
   border-radius: 12px;
-  background-color: ${({ color }) => color};
+  background-color: ${({ theme, color }) => theme.color[color]};
 `;
