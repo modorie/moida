@@ -18,11 +18,9 @@ export type TitleKey = typeof TitleList[number];
 
 export type TextKey = typeof TextList[number];
 
-// prettier-ignore
 export type FontSizeKey =
   | TitleKey
   | TextKey;
 
-type FontSizeType = Record<FontSizeKey, number>;
+export type FontSizeType = Record<FontSizeKey, number>;
 
-export default FontSizeType;

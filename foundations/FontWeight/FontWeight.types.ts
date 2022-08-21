@@ -4,6 +4,4 @@ export type FontWeightKey =
   | "medium"
   | "bold";
 
-type FontWeightType = Record<FontWeightKey, number>;
-
-export default FontWeightType;
+export type FontWeightType = Record<FontWeightKey, number>;

@@ -37,11 +37,15 @@ const Layout = styled.div<FontWeightProps>`
 const Name = styled.p`
   width: 150px;
   text-transform: capitalize;
+  margin: 1em 0;
 `;
 
 const Number = styled.p`
   width: 100px;
   text-transform: capitalize;
+  margin: 1em 0;
 `;
 
-const Text = styled.p``;
+const Text = styled.p`
+  margin: 1em 0;
+`;
