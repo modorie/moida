@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { Theme, Transition } from "@/foundations";
-
 export const Layout = styled.li`
   display: flex;
   justify-content: space-between;
@@ -13,16 +11,16 @@ export const Layout = styled.li`
   border-radius: 4px;
 
   list-style: none;
-  transition: ${Transition};
+  transition: ${({ theme }) => theme.transition};
   user-select: none;
   cursor: pointer;
 
   :hover {
-    background-color: ${Theme.bgColor.lighter};
+    background-color: ${({ theme }) => theme.color.gray100};
   }
 
   :active {
-    background-color: ${Theme.bgColor.light};
+    background-color: ${({ theme }) => theme.color.gray100};
   }
 
   svg {

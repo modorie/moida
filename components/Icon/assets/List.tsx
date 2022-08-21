@@ -1,12 +1,7 @@
-import React from "react";
+import type { SvgProps } from "../";
 
-const List = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+const List = (props: SvgProps) => (
+  <svg {...props}>
     <path
       d="M11 21H24"
       stroke="currentColor"

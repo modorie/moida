@@ -1,12 +1,7 @@
-import React from "react";
+import type { SvgProps } from "../";
 
-const Menu = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+const Menu = (props: SvgProps) => (
+  <svg {...props}>
     <path
       d="M7 9H23"
       stroke="currentColor"

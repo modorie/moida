@@ -1,14 +1,14 @@
-import React from "react";
+import { Text } from "@/components";
+import { NavItem } from "@/components/Navbar";
 
 import { Layout, Title, ItemBox, Logout } from "./NavFooter.styled";
-import { NavItem } from "@/components/Navbar";
 
 import type { NavFooterProps } from "@/components/Navbar/Navbar.types";
 
 const NavFooter = ({ isLogin, bottomItems }: NavFooterProps) => {
   return (
     <Layout>
-      <Title size="cap1" weight="regular" color="lighter">
+      <Title size="cap1" weight="regular" color="gray500">
         고객센터
       </Title>
       <ItemBox>
@@ -17,8 +17,10 @@ const NavFooter = ({ isLogin, bottomItems }: NavFooterProps) => {
         ))}
       </ItemBox>
       {isLogin && (
-        <Logout size="body2" weight="bold" color="lighter" href="">
-          로그아웃
+        <Logout href="">
+          <Text size="body2" weight="bold" color="gray500">
+            로그아웃
+          </Text>
         </Logout>
       )}
     </Layout>

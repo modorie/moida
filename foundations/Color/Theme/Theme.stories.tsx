@@ -1,9 +1,10 @@
-import React from "react";
+import { Fragment } from "react";
 import styled from "styled-components";
 import { Meta } from "@storybook/react";
 
-import Theme from "./Theme";
 import { Typography } from "@/components";
+
+import Theme from "./Theme";
 
 export default {
   title: "Foundations/Color",
@@ -36,7 +37,7 @@ const title: { [index: string]: string } = {
 
 export const ThemeTemplate = () =>
   Object.keys(Theme).map((themeType) => (
-    <React.Fragment key={themeType}>
+    <Fragment key={themeType}>
       <TitleBox>
         <Typography size="h2" weight="bold" color="darkest">
           {title[themeType]}
@@ -56,7 +57,7 @@ export const ThemeTemplate = () =>
           </ColorChip>
         ))}
       </Layout>
-    </React.Fragment>
+    </Fragment>
   ));
 
 ThemeTemplate.storyName = "Theme";

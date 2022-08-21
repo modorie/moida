@@ -1,10 +1,9 @@
-import React from "react";
 import styled from "styled-components";
 import { Story, Meta } from "@storybook/react";
 
-import Input from "./Input";
-import { Typography } from "@/components";
+import { Text } from "@/components";
 
+import Input from "./Input";
 import type { InputProps } from "./Input.types";
 
 export default {
@@ -12,7 +11,9 @@ export default {
   component: Input,
 } as Meta;
 
-export const Default: Story<InputProps> = (args) => <Input {...args} />;
+const Template: Story<InputProps> = (args) => <Input {...args} />;
+
+export const Default = Template.bind({});
 
 Default.args = {
   disabled: false,
@@ -28,36 +29,36 @@ Default.args = {
 
 export const Examples = () => (
   <Layout>
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       Input Controls
-    </Typography>
+    </Text>
     <Input />
     <Input control="manage" />
     <Input control="search" />
 
     <br />
 
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       타이틀이 없는 경우
-    </Typography>
+    </Text>
     <Input />
     <Input disabled />
     <Input hasError errorMsg="입력오류문구 영역" />
 
     <br />
 
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       타이틀이 있는 경우
-    </Typography>
+    </Text>
     <Input label="타이틀" />
     <Input label="타이틀" disabled />
     <Input label="타이틀" hasError errorMsg="입력오류문구 영역" />
 
     <br />
 
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       설명문구가 있는 경우
-    </Typography>
+    </Text>
     <Input label="타이틀" description="설명문구" />
     <Input label="타이틀" description="설명문구" disabled />
     <Input
@@ -69,9 +70,9 @@ export const Examples = () => (
 
     <br />
 
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       선택사항인 경우
-    </Typography>
+    </Text>
     <Input label="타이틀" description="설명문구" required={false} />
     <Input label="타이틀" description="설명문구" required={false} disabled />
     <Input

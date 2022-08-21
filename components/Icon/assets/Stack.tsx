@@ -1,12 +1,7 @@
-import React from "react";
+import type { SvgProps } from "../";
 
-const Stack = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+const Stack = (props: SvgProps) => (
+  <svg {...props}>
     <rect
       x="6"
       y="7"

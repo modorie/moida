@@ -1,10 +1,10 @@
-import React from "react";
-import { IconBox } from "./Search.styled";
 import { Icon } from "@/components";
+
+import { IconBox } from "./Search.styled";
 
 const Search = () => (
   <IconBox>
-    <Icon name="search" color="darkest" />
+    <Icon name="search" color="gray900" />
   </IconBox>
 );
 

@@ -10,7 +10,6 @@ export type AvatarColorName =
   | "purple"
   | "gray";
 
-// Avatar.types.ts 파일의 EmojiObj와 함께 any 타입 핸들링 필요
-type AvatarColorType = Record<AvatarColorName, string> | any;
+type AvatarColorType = Record<AvatarColorName, string>;
 
 export default AvatarColorType;

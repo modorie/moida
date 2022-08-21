@@ -1,4 +1,4 @@
-import FontWeightType, { FontWeightKey } from "./FontWeight.types";
+import { FontWeightType, FontWeightKey } from "./FontWeight.types";
 
 const FontWeight: FontWeightType = {
   bold: 700,

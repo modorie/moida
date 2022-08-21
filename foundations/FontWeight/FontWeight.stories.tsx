@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 import { Meta } from "@storybook/react";
 
 import FontWeight, { fontWeightList } from "./FontWeight";
-import { FontSize } from "@/foundations";
+import { FontWeightKey } from "./FontWeight.types";
 
 export default {
   title: "Foundations/Font Weight",
@@ -15,12 +14,12 @@ export default {
 } as Meta;
 
 interface FontWeightProps {
-  fontWeight: number;
+  weight: FontWeightKey;
 }
 
 export const FontWeightTemplate = () =>
   fontWeightList.map((fontWeightKey) => (
-    <Layout fontWeight={FontWeight[fontWeightKey]} key={fontWeightKey}>
+    <Layout weight={fontWeightKey} key={fontWeightKey}>
       <Name>{fontWeightKey}</Name>
       <Number>{FontWeight[fontWeightKey]}</Number>
       <Text>약속은 간편하게 모임은 한방에</Text>
@@ -32,18 +31,22 @@ FontWeightTemplate.storyName = "Font Weight";
 const Layout = styled.div<FontWeightProps>`
   display: flex;
   align-items: center;
-  font-weight: ${({ fontWeight }) => fontWeight};
-  font-size: ${FontSize.h1}px;
+  font-weight: ${({ weight, theme }) => theme.fontWeight[weight]};
+  font-size: ${({ theme }) => theme.fontSize.h1}px;
 `;
 
 const Name = styled.p`
   width: 150px;
   text-transform: capitalize;
+  margin: 1em 0;
 `;
 
 const Number = styled.p`
   width: 100px;
   text-transform: capitalize;
+  margin: 1em 0;
 `;
 
-const Text = styled.p``;
+const Text = styled.p`
+  margin: 1em 0;
+`;

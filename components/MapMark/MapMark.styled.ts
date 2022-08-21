@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-import { TypoStyle } from "@/components/Typography";
-import { Theme } from "@/foundations";
-
 export const Layout = styled.div`
   position: relative;
   width: 45px;
   height: 45px;
 `;
 
-export const Text = styled.div`
+export const TextBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,9 +18,7 @@ export const Text = styled.div`
   padding: 0 16px;
   border-radius: 8px;
 
-  background-color: ${Theme.bgColor.point};
-  ${TypoStyle}
-  white-space: nowrap;
+  background-color: ${({ theme }) => theme.color.blue500};
 
   ::before {
     content: "";
@@ -33,7 +28,7 @@ export const Text = styled.div`
 
     height: 65px;
     width: 0px;
-    border-left: 2px solid ${Theme.bgColor.point};
+    border-left: 2px solid ${({ theme }) => theme.color.blue500};
   }
 `;
 
@@ -45,7 +40,7 @@ export const Mark = styled.div`
   width: 19px;
   height: 19px;
   border-radius: 19px;
-  background-color: ${Theme.bgColor.primary};
+  background-color: ${({ theme }) => theme.color.blue200};
 
   ::after {
     content: "";
@@ -56,7 +51,7 @@ export const Mark = styled.div`
     height: 45px;
     border-radius: 45px;
 
-    background-color: ${Theme.bgColor.primary};
+    background-color: ${({ theme }) => theme.color.blue200};
     opacity: 0.2;
   }
 `;

@@ -1,17 +1,15 @@
-import React from "react";
+import { Text, Icon } from "@/components";
 
 import { Layout } from "./NavItem.styled";
-import { Typography, Icon } from "@/components";
-
 import type { NavItemProps } from "./NavItem.types";
 
 const NavItem = ({ children }: NavItemProps) => {
   return (
     <Layout>
-      <Typography size="sub3" weight="bold" color="darkest">
+      <Text size="sub3" weight="bold" color="gray900">
         {children}
-      </Typography>
-      <Icon name="chevron-right" size={18} color="darkest" />
+      </Text>
+      <Icon name="chevron-right" size={18} color="gray900" />
     </Layout>
   );
 };

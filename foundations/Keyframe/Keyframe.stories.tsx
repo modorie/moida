@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import { useState } from "react";
+import styled, { css } from "styled-components";
 import { Meta } from "@storybook/react";
 
-import Keyframe from "./Keyframe";
-import { Typography } from "@/components";
-import { FontWeight, Theme, Transition } from "@/foundations";
+import { Text } from "@/components";
 
 import type { KeyframeKey } from "./Keyframe.types";
 
@@ -24,7 +22,7 @@ interface BoxProps {
 
 export const KeyframeTemplate = () => {
   const [keyframe, setKeyframe] = useState<KeyframeKey | undefined>(
-    "slideInLeft"
+    "slideInLeft",
   );
 
   const onClick = (value: KeyframeKey | undefined) => {
@@ -37,10 +35,10 @@ export const KeyframeTemplate = () => {
       <BoxRange>{keyframe && <TransitionBox keyframe={keyframe} />}</BoxRange>
       <ButtonBox>
         <Button onClick={() => onClick("slideInLeft")}>
-          <Typography>slideInLeft</Typography>
+          <Text weight="bold">slideInLeft</Text>
         </Button>
         <Button onClick={() => onClick("slideInUp")}>
-          <Typography>slideInUp</Typography>
+          <Text weight="bold">slideInUp</Text>
         </Button>
       </ButtonBox>
     </Layout>
@@ -63,9 +61,9 @@ const BoxRange = styled.div`
 
   width: 400px;
   height: 400px;
-  border: 1px solid ${Theme.borderColor.light};
+  border: 1px solid ${({ theme }) => theme.color.gray300};
   border-radius: 12px;
-  background-color: ${Theme.bgColor.lighter};
+  background-color: ${({ theme }) => theme.color.gray100};
 
   overflow: hidden;
 `;
@@ -74,8 +72,11 @@ const TransitionBox = styled.div<BoxProps>`
   width: 100px;
   height: 100px;
   border-radius: 12px;
-  background-color: ${Theme.bgColor.primary};
-  animation: ${({ keyframe }) => Keyframe[keyframe]} ${Transition};
+  background-color: ${({ theme }) => theme.color.blue200};
+  animation: ${({ keyframe, theme }) =>
+    css`
+      ${theme.keyframe[keyframe]} ${theme.transition}
+    `};
 `;
 
 const ButtonBox = styled.div`
@@ -88,12 +89,10 @@ const Button = styled.button`
   width: 100px;
   height: 42px;
   border-radius: 42px;
-  border: 1px solid ${Theme.borderColor.primary};
+  border: 1px solid ${({ theme }) => theme.color.blue200};
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
-  background-color: ${Theme.bgColor.white};
-  font-weight: ${FontWeight.bold};
-  color: ${Theme.textColor.black};
+  background-color: ${({ theme }) => theme.color.white};
   cursor: pointer;
 
   :active {

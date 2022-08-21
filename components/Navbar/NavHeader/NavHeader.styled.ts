@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
-import { TypoStyle } from "@/components/Typography";
-import { Palette, Theme, FontWeight, Transition } from "@/foundations";
-
 export const Header = styled.div`
-  border-bottom: 1px solid ${Theme.borderColor.lightest};
+  border-bottom: 1px solid ${({ theme }) => theme.color.gray100};
 `;
 
 export const Hgroup = styled.hgroup`
@@ -19,24 +16,11 @@ export const Hgroup = styled.hgroup`
 
 export const Greeting = styled.h1`
   margin: 0 0 3px 0;
-  ${TypoStyle}
-`;
-
-export const Username = styled.span`
-  ${TypoStyle}
-`;
-
-export const Email = styled.h2`
-  margin: 0;
-  ${TypoStyle}
 `;
 
 export const Message = styled.h2`
-  margin: 0;
-  ${TypoStyle}
-
   > strong {
-    font-weight: ${FontWeight.bold};
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
   }
 `;
 
@@ -52,12 +36,12 @@ export const Button = styled.button`
   border-radius: 6px;
   border: none;
 
-  background-color: ${Theme.bgColor.primary};
-  transition: ${Transition};
+  background-color: ${({ theme }) => theme.color.blue200};
+  transition: ${({ theme }) => theme.transition};
   cursor: pointer;
 
   // TODO 버튼 팔레트 추가시 수정 필요
-  :hover {
-    background-color: ${Palette.blue200};
+  :active {
+    background-color: ${({ theme }) => theme.color.blue300};
   }
 `;

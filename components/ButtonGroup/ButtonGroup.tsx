@@ -1,7 +1,7 @@
-import React from "react";
+import { Text } from "@/components";
 
 import { Radio } from "./Radio";
-import { Layout, Label } from "./ButtonGroup.styled";
+import { Layout } from "./ButtonGroup.styled";
 
 import type { ButtonGroupProps } from "./ButtonGroup.types";
 
@@ -9,9 +9,15 @@ const ButtonGroup = ({ name, label, options }: ButtonGroupProps) => {
   return (
     <>
       {label && (
-        <Label color="darker" weight="bold">
+        <Text
+          as="label"
+          color="gray800"
+          weight="bold"
+          size="body2"
+          style={{ display: "block", marginBottom: "9px" }}
+        >
           {label}
-        </Label>
+        </Text>
       )}
       <Layout>
         {options.map(({ id, label, value, defaultChecked }) => (

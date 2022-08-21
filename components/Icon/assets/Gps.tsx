@@ -1,12 +1,7 @@
-import React from "react";
+import type { SvgProps } from "../";
 
-const Gps = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+const Gps = (props: SvgProps) => (
+  <svg {...props}>
     <path
       d="M22.4999 14.9999C22.4999 19.1421 19.1421 22.4999 14.9999 22.4999C10.8578 22.4999 7.49994 19.1421 7.49994 14.9999C7.49994 10.8578 10.8578 7.49994 14.9999 7.49994C19.1421 7.49994 22.4999 10.8578 22.4999 14.9999Z"
       stroke="currentColor"

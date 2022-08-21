@@ -1,12 +1,13 @@
 import { addDecorator } from "@storybook/react";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import GlobalStyle from "../styles/global";
+import ThemeProvider from "../providers/ThemeProvider";
 
 addDecorator((story) => (
-  <>
+  <ThemeProvider>
     <GlobalStyle />
     {story()}
-  </>
+  </ThemeProvider>
 ));
 
 export const parameters = {

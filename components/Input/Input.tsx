@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   Label,
   Layout,
@@ -36,12 +34,12 @@ const Input = ({
   return (
     <div>
       {label && (
-        <Label color="darker" weight="bold" required={required}>
+        <Label color="gray800" weight="bold" size="body2" required={required}>
           {label}
         </Label>
       )}
       {description && (
-        <Description color="lighter" size="cap1" weight="bold">
+        <Description color="gray500" size="cap1" weight="bold">
           {description}
         </Description>
       )}
@@ -55,7 +53,7 @@ const Input = ({
         {control && ControlRender(control)}
       </Layout>
       {hasError && (
-        <ErrorMsg color="warning" size="cap1" weight="bold">
+        <ErrorMsg color="coral100" size="cap1" weight="bold">
           {errorMsg}
         </ErrorMsg>
       )}

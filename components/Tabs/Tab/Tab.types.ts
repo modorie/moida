@@ -1,5 +1,3 @@
-import React from "react";
-
 import { ChildrenProps } from "@/types/ComponentProps";
 
 interface TabOptions {

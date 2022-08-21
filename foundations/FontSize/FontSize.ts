@@ -1,4 +1,4 @@
-import FontSizeType, { FontSizeKey } from "./FontSize.types";
+import { FontSizeType, FontSizeKey } from "./FontSize.types";
 
 const FontSize: FontSizeType = {
   h1: 26,

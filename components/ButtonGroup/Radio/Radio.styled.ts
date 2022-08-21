@@ -1,11 +1,6 @@
 import styled from "styled-components";
-import { Theme, FontWeight, Transition } from "@/foundations";
 
-interface LabelProps {
-  for: string;
-}
-
-export const Label = styled.label<LabelProps>`
+export const Label = styled.label`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,12 +11,12 @@ export const Label = styled.label<LabelProps>`
   border: 1px solid transparent;
   border-radius: 4px;
 
-  color: ${Theme.textColor.lighter};
-  transition: ${Transition} color;
+  color: ${({ theme }) => theme.color.gray500};
+  transition: ${({ theme }) => theme.transition} color;
   cursor: pointer;
 
   :hover {
-    color: ${Theme.textColor.dark};
+    color: ${({ theme }) => theme.color.gray700};
   }
 `;
 
@@ -29,9 +24,9 @@ export const Input = styled.input`
   display: none;
 
   :checked + ${Label} {
-    border: 1px solid ${Theme.borderColor.primary};
-    background-color: ${Theme.bgColor.white};
-    color: ${Theme.textColor.primary};
-    font-weight: ${FontWeight.bold};
+    border: 1px solid ${({ theme }) => theme.color.blue200};
+    background-color: ${({ theme }) => theme.color.white};
+    color: ${({ theme }) => theme.color.blue200};
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
   }
 `;

@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import { Tab } from "./Tab";
-
 import { Layout } from "./Tabs.styled";
-
 import type { TabsProps } from "./Tabs.types";
 
 const Tabs = ({ tabItems }: TabsProps) => {

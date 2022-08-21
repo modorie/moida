@@ -1,7 +1,4 @@
-import styled from "styled-components";
-
-import { Theme, Transition, Keyframe } from "@/foundations";
-import { TypoStyle } from "@/components/Typography";
+import styled, { css } from "styled-components";
 
 export const Overlay = styled.div`
   position: absolute;
@@ -33,18 +30,15 @@ export const Layout = styled.div`
 
   width: 270px;
   height: 160px;
-  padding: 30px;
+  padding: 40px 30px 30px 30px;
   border-radius: 6px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 
-  background-color: ${Theme.bgColor.white};
-  animation: ${Keyframe.slideInUp} ${Transition};
-`;
-
-export const Content = styled.div`
-  padding-top: 10px;
-  ${TypoStyle}
-  white-space: pre-wrap;
+  background-color: ${({ theme }) => theme.color.white};
+  animation: ${({ theme }) =>
+    css`
+      ${theme.keyframe.slideInUp} ${theme.transition}
+    `};
 `;
 
 export const Footer = styled.div`
@@ -55,7 +49,5 @@ export const Footer = styled.div`
 export const Button = styled.button`
   background: none;
   border: none;
-
-  ${TypoStyle}
   cursor: pointer;
 `;

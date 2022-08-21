@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { Theme, FontWeight, Transition } from "@/foundations";
-
 import type { TabProps } from "./Tab.types";
 
 export const Layout = styled.div<TabProps>`
@@ -12,11 +10,18 @@ export const Layout = styled.div<TabProps>`
 
   height: 50px;
   border-bottom: 2px solid
-    ${({ active }) => (active ? Theme.borderColor.primary : "transparent")};
+    ${({ active, theme }) => (active ? theme.color.blue200 : "transparent")};
 
-  color: ${({ active }) => Theme.textColor[active ? "primary" : "lighter"]};
-  font-weight: ${({ active }) => FontWeight[active ? "bold" : "regular"]};
+  color: ${({ active, theme }) =>
+    active ? theme.color.blue200 : theme.color.gray500};
+  font-weight: ${({ active, theme }) =>
+    theme.fontWeight[active ? "bold" : "regular"]};
 
   cursor: pointer;
-  transition: ${Transition};
+  transition: ${({ theme }) => theme.transition};
+
+  :hover {
+    color: ${({ active, theme }) =>
+      active ? theme.color.blue200 : theme.color.gray700};
+  }
 `;

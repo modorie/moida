@@ -1,9 +1,7 @@
-import React from "react";
+import type { LineName } from "@/components/StationInfo";
 
 import { Layout, LineNumber } from "./LineSymbol.styled";
-
 import type { LineType } from "./LineSymbol.types";
-import type { LineName } from "@/components/StationInfo";
 
 const LineSymbol = ({ name = "01호선" }: LineType) => {
   // prettier-ignore
@@ -34,7 +32,9 @@ const LineSymbol = ({ name = "01호선" }: LineType) => {
 
   return (
     <Layout text={name}>
-      <LineNumber text={name}>{lineRender[name]}</LineNumber>
+      <LineNumber text={name} weight="bold" color="white">
+        {lineRender[name]}
+      </LineNumber>
     </Layout>
   );
 };

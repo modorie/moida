@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Layout, MenuBox } from "./Header.styled";
 import { Logo, Icon } from "@/components";
 

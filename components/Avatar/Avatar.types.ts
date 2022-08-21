@@ -1,3 +1,5 @@
+import { AvatarColorName } from "./AvatarColor/AvatarColor.types";
+
 const PinkEmoji = ["🌷", "🌸", "🍣", "🐷", "🐹", "🍑"] as const;
 const RedEmoji = ["🍉", "🍄", "🍎", "🍓", "🍫"] as const;
 const OrangeEmoji = ["🍩", "🐶", "🐻", "🍞", "🍪"] as const;
@@ -22,9 +24,10 @@ export const EmojiList = {
   gray: GrayEmoji,
 };
 
-// AvatarColor.types.ts 파일의 AvatarColorType와 함께 any 타입 핸들링 필요
-export const EmojiObj: any = Object.entries(EmojiList)
-  .map(([key, value]) => Object.fromEntries(value.map((k) => [k, key])))
+export const EmojiObj = Object.entries(EmojiList)
+  .map(([key, value]) =>
+    Object.fromEntries(value.map((k) => [k, key as AvatarColorName])),
+  )
   .reduce((prev, curr) => Object.assign(prev, curr));
 
 type PinkEmojiKey = typeof PinkEmoji[number];
