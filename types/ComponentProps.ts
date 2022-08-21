@@ -15,7 +15,7 @@ export interface LoadingProps {
 }
 
 export interface StandardAttrProps {
-  className?: string | undefined;
+  className?: string;
   id?: string;
   style?: React.CSSProperties;
 }
