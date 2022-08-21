@@ -1,10 +1,17 @@
-import { IconName } from "./assets";
+import { StandardAttrProps } from "@/types/ComponentProps";
 import type { ColorKey } from "@/foundations";
 
-interface IconOptions {
+import { IconName } from "./assets";
+
+export interface IconProps extends StandardAttrProps {
   name: IconName;
   size?: number;
   color?: ColorKey;
 }
 
-export default interface IconProps extends IconOptions {}
+export interface SvgProps extends Omit<IconProps, "name"> {}
+
+export interface StyledSvgProps
+  extends Omit<React.SVGProps<SVGSVGElement>, "color"> {
+  color?: ColorKey;
+}

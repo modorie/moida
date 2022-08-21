@@ -5,7 +5,7 @@ import { Text } from "@/components";
 
 import Icon from "./Icon";
 import { iconList } from "./assets";
-import type IconProps from "./Icon.types";
+import type { IconProps } from "./Icon.types";
 
 export default {
   title: "Components/Icon",

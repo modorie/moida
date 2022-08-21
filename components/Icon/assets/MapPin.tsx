@@ -1,10 +1,7 @@
-const MapPin = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+import type { SvgProps } from "../";
+
+const MapPin = (props: SvgProps) => (
+  <svg {...props}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"

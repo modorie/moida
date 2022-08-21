@@ -1,10 +1,7 @@
-const ChevronRight = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+import type { SvgProps } from "../";
+
+const ChevronRight = (props: SvgProps) => (
+  <svg {...props}>
     <path
       d="M12 8L19.7769 15L12 22"
       stroke="currentColor"

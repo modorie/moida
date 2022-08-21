@@ -1,10 +1,7 @@
-const Share2 = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+import type { SvgProps } from "../";
+
+const Share2 = (props: SvgProps) => (
+  <svg {...props}>
     <path
       d="M6 18V22C6 23.1046 6.89543 24 8 24H22C23.1046 24 24 23.1046 24 22V18"
       stroke="currentColor"

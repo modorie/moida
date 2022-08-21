@@ -1,10 +1,7 @@
-const Share = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+import type { SvgProps } from "../";
+
+const Share = (props: SvgProps) => (
+  <svg {...props}>
     <circle cx="8.5" cy="15" r="2.6" stroke="currentColor" strokeWidth="1.8" />
     <circle cx="20.5" cy="9" r="2.6" stroke="currentColor" strokeWidth="1.8" />
     <circle cx="20.5" cy="21" r="2.6" stroke="currentColor" strokeWidth="1.8" />
