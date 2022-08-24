@@ -7,6 +7,10 @@
     "react-hooks",
     "simple-import-sort"
   ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
