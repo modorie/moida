@@ -3,9 +3,9 @@
   "plugins": [
     "@typescript-eslint",
     "prettier",
-    "react",
-    "react-hooks",
-    "simple-import-sort"
+    "react"
+    // "react-hooks"
+    // "simple-import-sort"
   ],
   "env": {
     "browser": true,
@@ -17,15 +17,14 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:storybook/recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "prettier/@typescript-eslint"
+    "plugin:prettier/recommended"
   ],
   "rules": {
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+    // "react-hooks/rules-of-hooks": "error",
+    // "simple-import-sort/imports": "error",
+    // "simple-import-sort/exports": "error"
   }
 }
