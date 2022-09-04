@@ -1,4 +1,4 @@
-import { Symbol, Spacing, Wordmark } from './'
+import { Spacing, Symbol, Wordmark } from './'
 import type LogoProps from './Logo.types'
 
 const Logo = ({ symbol, wordmark = true, height = 40 }: LogoProps) => {

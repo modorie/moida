@@ -1,7 +1,6 @@
-import { Story, Meta } from '@storybook/react'
+import { Meta, Story } from '@storybook/react'
 
 import ButtonGroup from './ButtonGroup'
-
 import type { ButtonGroupProps } from './ButtonGroup.types'
 
 export default {

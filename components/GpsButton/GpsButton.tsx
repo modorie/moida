@@ -1,5 +1,6 @@
-import { Layout } from './GpsButton.styled'
 import { Icon } from '@/components'
+
+import { Layout } from './GpsButton.styled'
 
 const GpsButton = () => (
   <Layout>

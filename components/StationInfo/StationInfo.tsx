@@ -1,8 +1,8 @@
 import { Text } from '@/components'
 
-import { Layout, SymbolBox, NameBox } from './StationInfo.styled'
-import { LineSymbol } from './LineSymbol'
 import stations from './assets/stations'
+import { LineSymbol } from './LineSymbol'
+import { Layout, NameBox, SymbolBox } from './StationInfo.styled'
 import type StationType from './StationInfo.types'
 
 const StationInfo = ({ name }: StationType) => (

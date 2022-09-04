@@ -1,8 +1,7 @@
 import { Story } from '@storybook/react'
 
-import LineSymbol from './LineSymbol'
 import { lineList } from '../LineColor'
-
+import LineSymbol from './LineSymbol'
 import type LineType from './LineSymbol.types'
 
 export default {

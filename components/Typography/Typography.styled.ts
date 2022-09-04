@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
-import { FontSize, FontWeight, Theme } from '@/foundations'
 
+import { FontSize, FontWeight, Theme } from '@/foundations'
 import { FontSizeKey, TitleList } from '@/foundations/FontSize'
+
 import type TypoProps from './Typography.types'
 
 export const TypoStyle = css<TypoProps>`

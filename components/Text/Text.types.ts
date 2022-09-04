@@ -1,9 +1,9 @@
+import type { ColorKey, FontSizeKey, FontWeightKey } from '@/foundations'
 import type {
   AsProps,
   ChildrenProps,
   StandardAttrProps,
 } from '@/types/ComponentProps'
-import type { FontSizeKey, FontWeightKey, ColorKey } from '@/foundations'
 
 export interface TextProps extends AsProps, ChildrenProps, StandardAttrProps {
   align?:

@@ -1,5 +1,5 @@
+import { Meta, Story } from '@storybook/react'
 import styled from 'styled-components'
-import { Story, Meta } from '@storybook/react'
 
 import { FontSize, fontSizeList, fontWeightList } from '@/foundations'
 import { colorList } from '@/foundations/Color/Color'

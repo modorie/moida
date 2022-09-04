@@ -1,5 +1,5 @@
+import { Meta, Story } from '@storybook/react'
 import styled from 'styled-components'
-import { Story, Meta } from '@storybook/react'
 
 import { Text } from '@/components'
 

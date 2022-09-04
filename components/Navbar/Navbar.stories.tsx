@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { Meta, Story } from '@storybook/react'
 
 import Navbar from './Navbar'
 import type { NavProps } from './Navbar.types'

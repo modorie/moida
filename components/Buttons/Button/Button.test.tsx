@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react'
 
 import { FontWeight, Theme } from '@/foundations'
+
 import Button from './Button'
 import { Primary, Secondary } from './Button.stories'
 

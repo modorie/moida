@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { Meta, Story } from '@storybook/react'
 
 import Tab from './Tab'
 import type { TabProps } from './Tab.types'

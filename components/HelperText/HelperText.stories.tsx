@@ -1,8 +1,7 @@
+import { Meta, Story } from '@storybook/react'
 import styled from 'styled-components'
-import { Story, Meta } from '@storybook/react'
 
 import HelperText from './HelperText'
-
 import type HelperProps from './HelperText.types'
 
 export default {

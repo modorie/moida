@@ -1,10 +1,10 @@
+import { Meta, Story } from '@storybook/react'
 import React from 'react'
-import { Story, Meta } from '@storybook/react'
 import styled from 'styled-components'
 
 import Typography from '@/components/Typography'
-import Button from './Button'
 
+import Button from './Button'
 import type { ButtonProps } from './Button.types'
 
 export default {

@@ -1,6 +1,6 @@
 import { Text } from '@/components'
 
-import { Layout, Arrow, ArrowBox } from './HelperText.styled'
+import { Arrow, ArrowBox, Layout } from './HelperText.styled'
 import type HelperProps from './HelperText.types'
 
 const HelperText = ({ children, color = 'light' }: HelperProps) => (

@@ -1,10 +1,10 @@
+import { Meta, Story } from '@storybook/react'
 import styled from 'styled-components'
-import { Story, Meta } from '@storybook/react'
 
 import { Text } from '@/components'
 
-import Icon from './Icon'
 import { iconList } from './assets'
+import Icon from './Icon'
 import type { IconProps } from './Icon.types'
 
 export default {

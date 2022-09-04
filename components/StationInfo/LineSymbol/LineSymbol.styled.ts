@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import Text from '@/components/Text'
 import type { LineName } from '@/components/StationInfo'
+import Text from '@/components/Text'
 
 import { LineColor } from '../LineColor'
 

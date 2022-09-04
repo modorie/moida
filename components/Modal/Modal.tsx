@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { Text } from '@/components'
 
-import { Overlay, LayoutBox, Layout, Footer, Button } from './Modal.styled'
+import { Button, Footer, Layout, LayoutBox, Overlay } from './Modal.styled'
 import type ModalProps from './Modal.types'
 
 const Modal = ({ children }: ModalProps) => {

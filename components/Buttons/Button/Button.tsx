@@ -1,7 +1,7 @@
 import React from 'react'
-import { Layout } from './Button.styled'
-import LoadingDots from '../LoadingDots'
 
+import LoadingDots from '../LoadingDots'
+import { Layout } from './Button.styled'
 import type { ButtonProps } from './Button.types'
 
 const Button = ({

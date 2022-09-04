@@ -1,12 +1,12 @@
+import { Meta, Story } from '@storybook/react'
 import { useState } from 'react'
 import styled from 'styled-components'
-import { Story, Meta } from '@storybook/react'
+
+import { Navbar } from '@/components'
+import type { NavProps } from '@/components/Navbar/Navbar.types'
 
 import Header from './Header'
-import { Navbar } from '@/components'
-
 import type { HeaderProps } from './Header.types'
-import type { NavProps } from '@/components/Navbar/Navbar.types'
 
 export default {
   title: 'Components/Header',

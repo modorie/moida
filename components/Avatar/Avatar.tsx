@@ -1,9 +1,9 @@
 import { Text } from '@/components'
 
-import HostBadge from './HostBadge'
 import { Layout } from './Avatar.styled'
-import { EmojiObj } from './Avatar.types'
 import type AvatarProps from './Avatar.types'
+import { EmojiObj } from './Avatar.types'
+import HostBadge from './HostBadge'
 
 const Avatar = ({ emoji, isHost }: AvatarProps) => {
   return (

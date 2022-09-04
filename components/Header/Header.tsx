@@ -1,6 +1,6 @@
-import { Layout, MenuBox } from './Header.styled'
-import { Logo, Icon } from '@/components'
+import { Icon, Logo } from '@/components'
 
+import { Layout, MenuBox } from './Header.styled'
 import type { HeaderProps } from './Header.types'
 
 const Header = ({ onClickMenu }: HeaderProps) => {

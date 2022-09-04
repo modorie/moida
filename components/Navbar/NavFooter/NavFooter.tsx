@@ -1,9 +1,8 @@
 import { Text } from '@/components'
 import { NavItem } from '@/components/Navbar'
-
-import { Layout, Title, ItemBox, Logout } from './NavFooter.styled'
-
 import type { NavFooterProps } from '@/components/Navbar/Navbar.types'
+
+import { ItemBox, Layout, Logout, Title } from './NavFooter.styled'
 
 const NavFooter = ({ isLogin, bottomItems }: NavFooterProps) => {
   return (

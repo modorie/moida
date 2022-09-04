@@ -1,7 +1,7 @@
-import { Icon, Text, Logo } from '@/components'
+import { Icon, Logo, Text } from '@/components'
 import type { NavHeaderProps } from '@/components/Navbar/Navbar.types'
 
-import { Header, Hgroup, Greeting, Button } from './NavHeader.styled'
+import { Button, Greeting, Header, Hgroup } from './NavHeader.styled'
 
 const NavHeader = ({ isLogin, user }: NavHeaderProps) => {
   return (

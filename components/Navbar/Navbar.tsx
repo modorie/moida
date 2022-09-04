@@ -1,7 +1,7 @@
-import { Overlay, Layout, CloseBox, IconBox } from './Navbar.styled'
-import { NavHeader, NavBody, NavFooter } from './'
 import { Icon } from '@/components'
 
+import { NavBody, NavFooter, NavHeader } from './'
+import { CloseBox, IconBox, Layout, Overlay } from './Navbar.styled'
 import type { NavProps } from './Navbar.types'
 
 const Navbar = ({

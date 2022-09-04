@@ -1,7 +1,8 @@
 import React from 'react'
-import { Icon } from '@/components'
-import { Layout } from './FloatingButton.styled'
 
+import { Icon } from '@/components'
+
+import { Layout } from './FloatingButton.styled'
 import type { FloatingButtonProps } from './FloatingButton.types'
 
 const FloatingButton = ({ disabled, children }: FloatingButtonProps) => {

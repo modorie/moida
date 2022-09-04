@@ -1,5 +1,5 @@
-import Svg from './Icon.styled'
 import icons from './assets'
+import Svg from './Icon.styled'
 import type { IconProps } from './Icon.types'
 
 const Icon = ({

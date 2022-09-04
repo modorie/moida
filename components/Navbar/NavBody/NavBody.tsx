@@ -1,7 +1,7 @@
 import { NavItem } from '@/components/Navbar'
 
-import { Layout } from './NavBody.styled'
 import type { NavBodyProps } from '../Navbar.types'
+import { Layout } from './NavBody.styled'
 
 const NavBody = ({ items }: NavBodyProps) => {
   return (

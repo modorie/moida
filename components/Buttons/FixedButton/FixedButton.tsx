@@ -1,7 +1,7 @@
 import React from 'react'
-import { Layout } from './FixedButton.styled'
-import LoadingDots from '../LoadingDots'
 
+import LoadingDots from '../LoadingDots'
+import { Layout } from './FixedButton.styled'
 import type { FixedButtonProps } from './FixedButton.types'
 
 const FixedButton = ({

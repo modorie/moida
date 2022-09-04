@@ -1,6 +1,6 @@
 import { Text } from '@/components'
 
-import { Layout, TextBox, Mark } from './MapMark.styled'
+import { Layout, Mark, TextBox } from './MapMark.styled'
 import type { MapMarkProps } from './MapMark.types'
 
 const MapMark = ({ children }: MapMarkProps) => (

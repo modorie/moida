@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components'
 
+import { TypoProps, TypoStyle } from '@/components/Typography'
 import { Theme, Transition } from '@/foundations'
 
 import type { FloatingButtonProps } from './FloatingButton.types'
-import { TypoProps, TypoStyle } from '@/components/Typography'
 
 export const Layout = styled.div<FloatingButtonProps & TypoProps>`
   display: flex;

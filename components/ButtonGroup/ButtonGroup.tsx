@@ -1,9 +1,8 @@
 import { Text } from '@/components'
 
-import { Radio } from './Radio'
 import { Layout } from './ButtonGroup.styled'
-
 import type { ButtonGroupProps } from './ButtonGroup.types'
+import { Radio } from './Radio'
 
 const ButtonGroup = ({ name, label, options }: ButtonGroupProps) => {
   return (

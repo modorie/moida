@@ -1,5 +1,5 @@
-import { StandardAttrProps } from '@/types/ComponentProps'
 import type { ColorKey } from '@/foundations'
+import { StandardAttrProps } from '@/types/ComponentProps'
 
 import { IconName } from './assets'
 

@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import { LineColor } from './LineColor'
-
 import type { LineName } from './StationInfo.types'
 
 interface NameBoxProps {

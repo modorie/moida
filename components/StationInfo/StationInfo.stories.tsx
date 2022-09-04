@@ -1,8 +1,8 @@
+import { Meta, Story } from '@storybook/react'
 import styled from 'styled-components'
-import { Story, Meta } from '@storybook/react'
 
-import StationInfo from './StationInfo'
 import stations from './assets/stations'
+import StationInfo from './StationInfo'
 import type StationType from './StationInfo.types'
 
 export default {

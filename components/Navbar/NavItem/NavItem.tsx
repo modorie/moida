@@ -1,4 +1,4 @@
-import { Text, Icon } from '@/components'
+import { Icon, Text } from '@/components'
 
 import { Layout } from './NavItem.styled'
 import type { NavItemProps } from './NavItem.types'

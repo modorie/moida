@@ -1,9 +1,9 @@
+import { Meta, Story } from '@storybook/react'
 import styled from 'styled-components'
-import { Story, Meta } from '@storybook/react'
 
-import Logo from './Logo'
 import { Text } from '@/components'
 
+import Logo from './Logo'
 import type LogoProps from './Logo.types'
 
 export default {

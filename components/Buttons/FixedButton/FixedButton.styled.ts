@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 
+import { TypoProps, TypoStyle } from '@/components/Typography'
 import { FontWeight, Theme, Transition } from '@/foundations'
 
-import { TypoProps, TypoStyle } from '@/components/Typography'
 import type { FixedButtonProps } from './FixedButton.types'
 
 export const Layout = styled.div<FixedButtonProps & TypoProps>`

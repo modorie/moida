@@ -1,7 +1,6 @@
-import { Label, Layout, TextField, ErrorMsg, Description } from './Input.styled'
 import { Clear, Manage, Search } from './controls'
-
-import type { InputProps, ControlType } from './Input.types'
+import { Description, ErrorMsg, Label, Layout, TextField } from './Input.styled'
+import type { ControlType, InputProps } from './Input.types'
 
 const Input = ({
   label,
