@@ -1,8 +1,8 @@
-import { Overlay, Layout, CloseBox, IconBox } from "./Navbar.styled";
-import { NavHeader, NavBody, NavFooter } from "./";
-import { Icon } from "@/components";
+import { Overlay, Layout, CloseBox, IconBox } from './Navbar.styled'
+import { NavHeader, NavBody, NavFooter } from './'
+import { Icon } from '@/components'
 
-import type { NavProps } from "./Navbar.types";
+import type { NavProps } from './Navbar.types'
 
 const Navbar = ({
   isLogin,
@@ -12,6 +12,8 @@ const Navbar = ({
   bottomItems,
   onClickClose,
 }: NavProps) => {
+  const items = isLogin ? topItemsLogin : topItemsLogout
+
   return (
     <>
       <Overlay onClick={onClickClose} />
@@ -22,15 +24,11 @@ const Navbar = ({
           </IconBox>
         </CloseBox>
         <NavHeader isLogin={isLogin} user={user} />
-        <NavBody
-          isLogin={isLogin}
-          topItemsLogin={topItemsLogin}
-          topItemsLogout={topItemsLogout}
-        />
+        <NavBody items={items} />
         <NavFooter isLogin={isLogin} bottomItems={bottomItems} />
       </Layout>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
