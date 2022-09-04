@@ -1,21 +1,21 @@
-export interface ChildrenProps<Children = React.ReactNode> {
-  children?: Children;
+export interface ChildrenProps {
+  children?: React.ReactNode
 }
 
 export interface AsProps {
-  as?: React.ElementType;
+  as?: React.ElementType
 }
 
 export interface DisableProps {
-  disabled?: boolean;
+  disabled?: boolean
 }
 
 export interface LoadingProps {
-  loading?: boolean;
+  loading?: boolean
 }
 
 export interface StandardAttrProps {
-  className?: string;
-  id?: string;
-  style?: React.CSSProperties;
+  className?: string
+  id?: string
+  style?: React.CSSProperties
 }
