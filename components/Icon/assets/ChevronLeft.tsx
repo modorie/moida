@@ -1,6 +1,6 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
-const ChevronLeft = (props: React.SVGProps<SVGSVGElement>) => (
+const ChevronLeft = (props: SvgProps) => (
   <svg {...props}>
     <path
       d="M18 8L10.2231 15L18 22"
@@ -10,6 +10,6 @@ const ChevronLeft = (props: React.SVGProps<SVGSVGElement>) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+)
 
-export default ChevronLeft;
+export default ChevronLeft
