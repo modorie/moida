@@ -1,13 +1,9 @@
-import { NextComponentType } from "next";
-import { AppContext, AppInitialProps, AppProps } from "next/app";
-import Head from "next/head";
+import { AppProps } from 'next/app'
+import Head from 'next/head'
 
-import GlobalStyle from "@/styles/global";
+import GlobalStyle from '@/styles/global'
 
-const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
-  Component,
-  pageProps,
-}) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
@@ -17,7 +13,7 @@ const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
       <GlobalStyle />
       <Component {...pageProps} />
     </>
-  );
-};
+  )
+}
 
-export default MyApp;
+export default MyApp
