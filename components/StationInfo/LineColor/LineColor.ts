@@ -1,5 +1,5 @@
-import type LineColorType from "./LineColor.types";
-import type { LineName } from "@/components/StationInfo";
+import type LineColorType from './LineColor.types'
+import type { LineName } from '@/components/StationInfo'
 
 // prettier-ignore
 const LineColor: LineColorType = {
@@ -27,6 +27,6 @@ const LineColor: LineColorType = {
   "김포골드": "#A17800"
 };
 
-export const lineList: LineName[] = Object.keys(LineColor) as LineName[];
+export const lineList: LineName[] = Object.keys(LineColor) as LineName[]
 
-export default LineColor;
+export default LineColor

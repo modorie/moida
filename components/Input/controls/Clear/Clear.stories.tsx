@@ -1,15 +1,15 @@
-import { Story, Meta } from "@storybook/react";
+import { Story, Meta } from '@storybook/react'
 
-import Clear from "./Clear";
+import Clear from './Clear'
 
 export default {
-  title: "Components/Input/Controls",
+  title: 'Components/Input/Controls',
   component: Clear,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-} as Meta;
+} as Meta
 
-export const ClearItem: Story = () => <Clear />;
+export const ClearItem: Story = () => <Clear />
 
-ClearItem.storyName = "Clear";
+ClearItem.storyName = 'Clear'

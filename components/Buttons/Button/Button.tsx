@@ -1,11 +1,11 @@
-import React from "react";
-import { Layout } from "./Button.styled";
-import LoadingDots from "../LoadingDots";
+import React from 'react'
+import { Layout } from './Button.styled'
+import LoadingDots from '../LoadingDots'
 
-import type { ButtonProps } from "./Button.types";
+import type { ButtonProps } from './Button.types'
 
 const Button = ({
-  styleVariant = "primary",
+  styleVariant = 'primary',
   disabled,
   loading = false,
   children,
@@ -19,7 +19,7 @@ const Button = ({
     >
       {loading ? <LoadingDots /> : children}
     </Layout>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

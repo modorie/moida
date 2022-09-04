@@ -1,9 +1,9 @@
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import { Layout, SymbolBox, NameBox } from "./StationInfo.styled";
-import { LineSymbol } from "./LineSymbol";
-import stations from "./assets/stations";
-import type StationType from "./StationInfo.types";
+import { Layout, SymbolBox, NameBox } from './StationInfo.styled'
+import { LineSymbol } from './LineSymbol'
+import stations from './assets/stations'
+import type StationType from './StationInfo.types'
 
 const StationInfo = ({ name }: StationType) => (
   <Layout>
@@ -16,6 +16,6 @@ const StationInfo = ({ name }: StationType) => (
       <Text>{name.slice(0, -1)}</Text>
     </NameBox>
   </Layout>
-);
+)
 
-export default StationInfo;
+export default StationInfo

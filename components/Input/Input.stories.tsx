@@ -1,31 +1,31 @@
-import styled from "styled-components";
-import { Story, Meta } from "@storybook/react";
+import styled from 'styled-components'
+import { Story, Meta } from '@storybook/react'
 
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import Input from "./Input";
-import type { InputProps } from "./Input.types";
+import Input from './Input'
+import type { InputProps } from './Input.types'
 
 export default {
-  title: "Components/Input",
+  title: 'Components/Input',
   component: Input,
-} as Meta;
+} as Meta
 
-const Template: Story<InputProps> = (args) => <Input {...args} />;
+const Template: Story<InputProps> = (args) => <Input {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 
 Default.args = {
   disabled: false,
   hasError: false,
   required: true,
   readonly: false,
-  type: "text",
-  label: "",
-  errorMsg: "",
-  description: "",
-  control: "clear",
-};
+  type: 'text',
+  label: '',
+  errorMsg: '',
+  description: '',
+  control: 'clear',
+}
 
 export const Examples = () => (
   <Layout>
@@ -83,10 +83,10 @@ export const Examples = () => (
       errorMsg="입력오류문구 영역"
     />
   </Layout>
-);
+)
 
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-`;
+`

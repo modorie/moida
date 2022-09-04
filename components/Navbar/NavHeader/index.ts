@@ -1,1 +1,1 @@
-export { default } from "./NavHeader";
+export { default } from './NavHeader'

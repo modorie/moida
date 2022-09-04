@@ -1,8 +1,8 @@
-import React from "react";
-import { Icon } from "@/components";
-import { Layout } from "./FloatingButton.styled";
+import React from 'react'
+import { Icon } from '@/components'
+import { Layout } from './FloatingButton.styled'
 
-import type { FloatingButtonProps } from "./FloatingButton.types";
+import type { FloatingButtonProps } from './FloatingButton.types'
 
 const FloatingButton = ({ disabled, children }: FloatingButtonProps) => {
   return (
@@ -10,7 +10,7 @@ const FloatingButton = ({ disabled, children }: FloatingButtonProps) => {
       <Icon name="edit" size={23} color="black" />
       {children}
     </Layout>
-  );
-};
+  )
+}
 
-export default FloatingButton;
+export default FloatingButton

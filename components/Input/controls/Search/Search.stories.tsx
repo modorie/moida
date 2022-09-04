@@ -1,15 +1,15 @@
-import { Story, Meta } from "@storybook/react";
+import { Story, Meta } from '@storybook/react'
 
-import Search from "./Search";
+import Search from './Search'
 
 export default {
-  title: "Components/Input/Controls",
+  title: 'Components/Input/Controls',
   component: Search,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-} as Meta;
+} as Meta
 
-export const SearchItem: Story = (args) => <Search {...args} />;
+export const SearchItem: Story = (args) => <Search {...args} />
 
-SearchItem.storyName = "Search";
+SearchItem.storyName = 'Search'

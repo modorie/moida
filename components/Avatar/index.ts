@@ -1,2 +1,2 @@
-export { default } from "./Avatar";
-export { default as HostBadge } from "./HostBadge";
+export { default } from './Avatar'
+export { default as HostBadge } from './HostBadge'

@@ -1,9 +1,9 @@
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import HostBadge from "./HostBadge";
-import { Layout } from "./Avatar.styled";
-import { EmojiObj } from "./Avatar.types";
-import type AvatarProps from "./Avatar.types";
+import HostBadge from './HostBadge'
+import { Layout } from './Avatar.styled'
+import { EmojiObj } from './Avatar.types'
+import type AvatarProps from './Avatar.types'
 
 const Avatar = ({ emoji, isHost }: AvatarProps) => {
   return (
@@ -11,7 +11,7 @@ const Avatar = ({ emoji, isHost }: AvatarProps) => {
       <Text size="sub1">{emoji}</Text>
       {isHost && <HostBadge />}
     </Layout>
-  );
-};
+  )
+}
 
-export default Avatar;
+export default Avatar

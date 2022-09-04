@@ -1,4 +1,4 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
 const ChevronRight = (props: SvgProps) => (
   <svg {...props}>
@@ -10,6 +10,6 @@ const ChevronRight = (props: SvgProps) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+)
 
-export default ChevronRight;
+export default ChevronRight

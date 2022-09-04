@@ -1,16 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import LineColor, { lineList } from "./LineColor";
+import LineColor, { lineList } from './LineColor'
 
 export default {
-  title: "Components/StationInfo/LineColor",
+  title: 'Components/StationInfo/LineColor',
   component: LineColor,
-};
+}
 
 interface colorProps {
-  color: string;
+  color: string
 }
 
 export const LineColorTemplate = () => (
@@ -27,20 +27,20 @@ export const LineColorTemplate = () => (
       </ColorChip>
     ))}
   </Layout>
-);
+)
 
-LineColorTemplate.storyName = "LineColor";
+LineColorTemplate.storyName = 'LineColor'
 
 LineColorTemplate.parameters = {
   viewport: {
-    defaultViewport: "responsive",
+    defaultViewport: 'responsive',
   },
-};
+}
 
 const Layout = styled.div`
   display: flex;
   flex-wrap: wrap;
-`;
+`
 
 const ColorChip = styled.div`
   display: flex;
@@ -50,7 +50,7 @@ const ColorChip = styled.div`
   width: 100px;
   height: 120px;
   margin: 10px;
-`;
+`
 
 const ColorTile = styled.div<colorProps>`
   width: 80px;
@@ -58,4 +58,4 @@ const ColorTile = styled.div<colorProps>`
   margin-bottom: 4px;
   border-radius: 12px;
   background-color: ${({ color }) => color};
-`;
+`

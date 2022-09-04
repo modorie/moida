@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import type { BadgeProps } from "./Badge.types";
+import type { BadgeProps } from './Badge.types'
 
 export const Layout = styled.div<BadgeProps>`
   display: inline-flex;
@@ -11,7 +11,7 @@ export const Layout = styled.div<BadgeProps>`
   height: 20px;
   border-radius: 20px;
   background-color: ${({ isOngoing, theme }) =>
-    theme.color[isOngoing ? "coral200" : "gray400"]};
+    theme.color[isOngoing ? 'coral200' : 'gray400']};
 
   user-select: none;
-`;
+`

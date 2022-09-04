@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Layout = styled.div`
   position: relative;
@@ -12,7 +12,7 @@ export const Layout = styled.div`
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     display: inline-block;
     position: absolute;
     top: 0;
@@ -51,4 +51,4 @@ export const Layout = styled.div`
       opacity: 1;
     }
   }
-`;
+`

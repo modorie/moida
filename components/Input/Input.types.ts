@@ -1,4 +1,4 @@
-import type { FormProps } from "@/types/FormProps";
+import type { FormProps } from '@/types/FormProps'
 
 // prettier-ignore
 type InputType =
@@ -15,12 +15,12 @@ export type ControlType =
   | "search";
 
 interface InputOptions {
-  type?: InputType;
-  label?: string;
-  errorMsg?: string;
-  description?: string;
-  control?: ControlType;
-  placeholder?: string;
+  type?: InputType
+  label?: string
+  errorMsg?: string
+  description?: string
+  control?: ControlType
+  placeholder?: string
 }
 
 export interface InputProps extends FormProps, InputOptions {}

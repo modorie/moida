@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import type { TabProps } from "./Tab.types";
+import type { TabProps } from './Tab.types'
 
 export const Layout = styled.div<TabProps>`
   display: flex;
@@ -10,12 +10,12 @@ export const Layout = styled.div<TabProps>`
 
   height: 50px;
   border-bottom: 2px solid
-    ${({ active, theme }) => (active ? theme.color.blue200 : "transparent")};
+    ${({ active, theme }) => (active ? theme.color.blue200 : 'transparent')};
 
   color: ${({ active, theme }) =>
     active ? theme.color.blue200 : theme.color.gray500};
   font-weight: ${({ active, theme }) =>
-    theme.fontWeight[active ? "bold" : "regular"]};
+    theme.fontWeight[active ? 'bold' : 'regular']};
 
   cursor: pointer;
   transition: ${({ theme }) => theme.transition};
@@ -24,4 +24,4 @@ export const Layout = styled.div<TabProps>`
     color: ${({ active, theme }) =>
       active ? theme.color.blue200 : theme.color.gray700};
   }
-`;
+`

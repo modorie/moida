@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
-import { Theme, Transition } from "@/foundations";
+import { Theme, Transition } from '@/foundations'
 
-import type { FloatingButtonProps } from "./FloatingButton.types";
-import { TypoProps, TypoStyle } from "@/components/Typography";
+import type { FloatingButtonProps } from './FloatingButton.types'
+import { TypoProps, TypoStyle } from '@/components/Typography'
 
 export const Layout = styled.div<FloatingButtonProps & TypoProps>`
   display: flex;
@@ -40,4 +40,4 @@ export const Layout = styled.div<FloatingButtonProps & TypoProps>`
       }
       pointer-events: none;
     `}
-`;
+`

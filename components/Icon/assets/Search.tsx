@@ -1,4 +1,4 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
 const Search = (props: SvgProps) => (
   <svg {...props}>
@@ -22,6 +22,6 @@ const Search = (props: SvgProps) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+)
 
-export default Search;
+export default Search

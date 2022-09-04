@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Symbol = ({ ...props }) => {
   return (
@@ -17,11 +17,11 @@ const Symbol = ({ ...props }) => {
         fill="white"
       />
     </Svg>
-  );
-};
+  )
+}
 
-export default Symbol;
+export default Symbol
 
 const Svg = styled.svg`
   color: ${({ theme }) => theme.color.blue200};
-`;
+`

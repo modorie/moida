@@ -1,35 +1,29 @@
-import {
-  Label,
-  Layout,
-  TextField,
-  ErrorMsg,
-  Description,
-} from "./Input.styled";
-import { Clear, Manage, Search } from "./controls";
+import { Label, Layout, TextField, ErrorMsg, Description } from './Input.styled'
+import { Clear, Manage, Search } from './controls'
 
-import type { InputProps, ControlType } from "./Input.types";
+import type { InputProps, ControlType } from './Input.types'
 
 const Input = ({
   label,
-  type = "text",
+  type = 'text',
   hasError,
   required = true,
   disabled,
   errorMsg,
   description,
-  placeholder = "Placeholder",
-  control = "clear",
+  placeholder = 'Placeholder',
+  control = 'clear',
 }: InputProps) => {
   const ControlRender = (control: ControlType) => {
     switch (control) {
-      case "clear":
-        return !disabled && <Clear />;
-      case "manage":
-        return <Manage />;
-      case "search":
-        return <Search />;
+      case 'clear':
+        return !disabled && <Clear />
+      case 'manage':
+        return <Manage />
+      case 'search':
+        return <Search />
     }
-  };
+  }
 
   return (
     <div>
@@ -58,7 +52,7 @@ const Input = ({
         </ErrorMsg>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

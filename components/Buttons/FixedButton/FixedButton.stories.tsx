@@ -1,30 +1,30 @@
-import React from "react";
-import { Story, Meta } from "@storybook/react";
-import styled from "styled-components";
+import React from 'react'
+import { Story, Meta } from '@storybook/react'
+import styled from 'styled-components'
 
-import Typography from "@/components/Typography";
-import FixedButton from "./FixedButton";
+import Typography from '@/components/Typography'
+import FixedButton from './FixedButton'
 
-import type { FixedButtonProps } from "./FixedButton.types";
+import type { FixedButtonProps } from './FixedButton.types'
 
 export default {
-  title: "Components/Buttons/FixedButton",
+  title: 'Components/Buttons/FixedButton',
   component: FixedButton,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-} as Meta;
+} as Meta
 
 export const Default: Story<FixedButtonProps> = (args) => (
   <FixedButton {...args} />
-);
+)
 
 Default.args = {
-  children: "text",
-  styleVariant: "primary",
+  children: 'text',
+  styleVariant: 'primary',
   disabled: false,
   loading: false,
-};
+}
 
 export const Examples = () => (
   <Layout>
@@ -50,7 +50,7 @@ export const Examples = () => (
       text
     </FixedButton>
   </Layout>
-);
+)
 
 const Layout = styled.div`
   display: flex;
@@ -65,4 +65,4 @@ const Layout = styled.div`
     display: block;
     padding: 16px;
   }
-`;
+`

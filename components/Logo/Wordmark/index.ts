@@ -1,1 +1,1 @@
-export { default } from "./Wordmark";
+export { default } from './Wordmark'

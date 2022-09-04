@@ -1,4 +1,4 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
 const MapPin = (props: SvgProps) => (
   <svg {...props}>
@@ -9,6 +9,6 @@ const MapPin = (props: SvgProps) => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
-export default MapPin;
+export default MapPin

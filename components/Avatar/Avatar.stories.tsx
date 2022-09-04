@@ -1,23 +1,23 @@
-import { Story, Meta } from "@storybook/react";
-import styled from "styled-components";
+import { Story, Meta } from '@storybook/react'
+import styled from 'styled-components'
 
-import Avatar from "./Avatar";
-import AvatarProps, { EmojiList } from "./Avatar.types";
+import Avatar from './Avatar'
+import AvatarProps, { EmojiList } from './Avatar.types'
 
 export default {
-  title: "Components/Avatar",
+  title: 'Components/Avatar',
   component: Avatar,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-} as Meta;
+} as Meta
 
-export const Default: Story<AvatarProps> = (args) => <Avatar {...args} />;
+export const Default: Story<AvatarProps> = (args) => <Avatar {...args} />
 
 Default.args = {
-  emoji: "🐥",
+  emoji: '🐥',
   isHost: false,
-};
+}
 
 export const Examples = () =>
   Object.values(EmojiList).map((list, idx) => (
@@ -26,10 +26,10 @@ export const Examples = () =>
         <Avatar emoji={emoji} key={emoji} />
       ))}
     </Layout>
-  ));
+  ))
 
 const Layout = styled.div`
   display: flex;
   gap: 4px;
   margin-bottom: 4px;
-`;
+`

@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
@@ -7,7 +7,7 @@ const Home: NextPage = () => {
         Welcome to <a href="#">Next.js!</a>
       </h1>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

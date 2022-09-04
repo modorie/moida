@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -8,7 +8,7 @@ export const Overlay = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
-`;
+`
 
 export const LayoutBox = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ export const LayoutBox = styled.div`
 
   width: 100vw;
   height: 100vh;
-`;
+`
 
 export const Layout = styled.div`
   display: flex;
@@ -39,15 +39,15 @@ export const Layout = styled.div`
     css`
       ${theme.keyframe.slideInUp} ${theme.transition}
     `};
-`;
+`
 
 export const Footer = styled.div`
   display: flex;
   justify-content: flex-end;
-`;
+`
 
 export const Button = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-`;
+`

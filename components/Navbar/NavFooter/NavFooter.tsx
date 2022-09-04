@@ -1,9 +1,9 @@
-import { Text } from "@/components";
-import { NavItem } from "@/components/Navbar";
+import { Text } from '@/components'
+import { NavItem } from '@/components/Navbar'
 
-import { Layout, Title, ItemBox, Logout } from "./NavFooter.styled";
+import { Layout, Title, ItemBox, Logout } from './NavFooter.styled'
 
-import type { NavFooterProps } from "@/components/Navbar/Navbar.types";
+import type { NavFooterProps } from '@/components/Navbar/Navbar.types'
 
 const NavFooter = ({ isLogin, bottomItems }: NavFooterProps) => {
   return (
@@ -12,8 +12,8 @@ const NavFooter = ({ isLogin, bottomItems }: NavFooterProps) => {
         고객센터
       </Title>
       <ItemBox>
-        {bottomItems.map(({ name }) => (
-          <NavItem>{name}</NavItem>
+        {bottomItems.map(({ name, url }) => (
+          <NavItem key={url}>{name}</NavItem>
         ))}
       </ItemBox>
       {isLogin && (
@@ -24,7 +24,7 @@ const NavFooter = ({ isLogin, bottomItems }: NavFooterProps) => {
         </Logout>
       )}
     </Layout>
-  );
-};
+  )
+}
 
-export default NavFooter;
+export default NavFooter

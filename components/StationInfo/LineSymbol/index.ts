@@ -1,1 +1,1 @@
-export { default as LineSymbol } from "./LineSymbol";
+export { default as LineSymbol } from './LineSymbol'

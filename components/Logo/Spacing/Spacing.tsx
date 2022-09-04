@@ -7,6 +7,6 @@ const Spacing = ({ ...props }) => (
   >
     <rect width="62" height="160" />
   </svg>
-);
+)
 
-export default Spacing;
+export default Spacing

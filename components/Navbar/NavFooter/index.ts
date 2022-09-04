@@ -1,1 +1,1 @@
-export { default } from "./NavFooter";
+export { default } from './NavFooter'

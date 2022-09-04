@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Layout = styled.div`
   position: relative;
   width: 45px;
   height: 45px;
-`;
+`
 
 export const TextBox = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ export const TextBox = styled.div`
   background-color: ${({ theme }) => theme.color.blue500};
 
   ::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     z-index: -1;
@@ -30,7 +30,7 @@ export const TextBox = styled.div`
     width: 0px;
     border-left: 2px solid ${({ theme }) => theme.color.blue500};
   }
-`;
+`
 
 export const Mark = styled.div`
   position: absolute;
@@ -43,7 +43,7 @@ export const Mark = styled.div`
   background-color: ${({ theme }) => theme.color.blue200};
 
   ::after {
-    content: "";
+    content: '';
     position: absolute;
     transform: translate(-13px, -13px);
 
@@ -54,4 +54,4 @@ export const Mark = styled.div`
     background-color: ${({ theme }) => theme.color.blue200};
     opacity: 0.2;
   }
-`;
+`

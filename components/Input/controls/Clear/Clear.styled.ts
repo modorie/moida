@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Svg = styled.svg`
   cursor: pointer;
@@ -10,4 +10,4 @@ export const Svg = styled.svg`
   path {
     stroke: ${({ theme }) => theme.color.gray600};
   }
-`;
+`

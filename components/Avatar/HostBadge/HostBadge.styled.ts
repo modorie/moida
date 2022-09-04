@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Svg = styled.svg`
   position: absolute;
@@ -13,4 +13,4 @@ export const Svg = styled.svg`
     fill: ${({ theme }) => theme.color.white};
     stroke: ${({ theme }) => theme.color.white};
   }
-`;
+`

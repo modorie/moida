@@ -1,15 +1,15 @@
-import { Story, Meta } from "@storybook/react";
+import { Story, Meta } from '@storybook/react'
 
-import NavItem from "./NavItem";
-import type { NavItemProps } from "./NavItem.types";
+import NavItem from './NavItem'
+import type { NavItemProps } from './NavItem.types'
 
 export default {
-  title: "Components/Navbar/NavItem",
+  title: 'Components/Navbar/NavItem',
   component: NavItem,
-} as Meta;
+} as Meta
 
-export const Default: Story<NavItemProps> = (args) => <NavItem {...args} />;
+export const Default: Story<NavItemProps> = (args) => <NavItem {...args} />
 
 Default.args = {
-  children: "로그인",
-};
+  children: '로그인',
+}

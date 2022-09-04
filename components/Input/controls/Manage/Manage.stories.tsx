@@ -1,15 +1,15 @@
-import { Story, Meta } from "@storybook/react";
+import { Story, Meta } from '@storybook/react'
 
-import Manage from "./Manage";
+import Manage from './Manage'
 
 export default {
-  title: "Components/Input/Controls",
+  title: 'Components/Input/Controls',
   component: Manage,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-} as Meta;
+} as Meta
 
-export const ManageItem: Story = (args) => <Manage {...args} />;
+export const ManageItem: Story = (args) => <Manage {...args} />
 
-ManageItem.storyName = "Manage";
+ManageItem.storyName = 'Manage'

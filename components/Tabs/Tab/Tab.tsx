@@ -1,7 +1,7 @@
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import { Layout } from "./Tab.styled";
-import type { TabProps } from "./Tab.types";
+import { Layout } from './Tab.styled'
+import type { TabProps } from './Tab.types'
 
 const Tab = ({ children, active, onClick }: TabProps) => (
   <Layout active={active} onClick={onClick}>
@@ -9,6 +9,6 @@ const Tab = ({ children, active, onClick }: TabProps) => (
       {children}
     </Text>
   </Layout>
-);
+)
 
-export default Tab;
+export default Tab

@@ -1,19 +1,19 @@
-import { TextView } from "./Text.styled";
-import type { TextProps } from "./Text.types";
+import { TextView } from './Text.styled'
+import type { TextProps } from './Text.types'
 
 const Text = ({
-  as = "span",
-  align = "inherit",
+  as = 'span',
+  align = 'inherit',
   children,
-  color = "black",
+  color = 'black',
   htmlFor,
   italic,
-  size = "body2",
+  size = 'body2',
   textOverflow,
   underline,
-  userSelect = "auto",
-  weight = "regular",
-  whiteSpace = "pre-line",
+  userSelect = 'auto',
+  weight = 'regular',
+  whiteSpace = 'pre-line',
   id,
   style,
   className,
@@ -38,6 +38,6 @@ const Text = ({
   >
     {children}
   </TextView>
-);
+)
 
-export default Text;
+export default Text

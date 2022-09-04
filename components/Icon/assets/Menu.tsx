@@ -1,4 +1,4 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
 const Menu = (props: SvgProps) => (
   <svg {...props}>
@@ -24,6 +24,6 @@ const Menu = (props: SvgProps) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+)
 
-export default Menu;
+export default Menu

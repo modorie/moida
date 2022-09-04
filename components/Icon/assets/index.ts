@@ -1,17 +1,17 @@
-import ChevronLeft from "./ChevronLeft";
-import ChevronRight from "./ChevronRight";
-import Edit from "./Edit";
-import Gps from "./Gps";
-import List from "./List";
-import MapPin from "./MapPin";
-import Menu from "./Menu";
-import MoreHorizontal from "./MoreHorizontal";
-import MoreVertical from "./MoreVertical";
-import Search from "./Search";
-import Share from "./Share";
-import Share2 from "./Share2";
-import Stack from "./Stack";
-import X from "./X";
+import ChevronLeft from './ChevronLeft'
+import ChevronRight from './ChevronRight'
+import Edit from './Edit'
+import Gps from './Gps'
+import List from './List'
+import MapPin from './MapPin'
+import Menu from './Menu'
+import MoreHorizontal from './MoreHorizontal'
+import MoreVertical from './MoreVertical'
+import Search from './Search'
+import Share from './Share'
+import Share2 from './Share2'
+import Stack from './Stack'
+import X from './X'
 
 // prettier-ignore
 const icons = {
@@ -31,8 +31,8 @@ const icons = {
   "x": X,
 };
 
-export type IconName = keyof typeof icons;
+export type IconName = keyof typeof icons
 
-export const iconList = Object.keys(icons) as IconName[];
+export const iconList = Object.keys(icons) as IconName[]
 
-export default icons;
+export default icons

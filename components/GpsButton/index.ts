@@ -1,1 +1,1 @@
-export { default } from "./GpsButton";
+export { default } from './GpsButton'

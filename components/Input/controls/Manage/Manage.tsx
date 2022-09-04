@@ -1,6 +1,6 @@
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import { Layout } from "./Manage.styled";
+import { Layout } from './Manage.styled'
 
 const Manage = () => (
   <Layout>
@@ -8,6 +8,6 @@ const Manage = () => (
       관리
     </Text>
   </Layout>
-);
+)
 
-export default Manage;
+export default Manage

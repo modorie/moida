@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Wordmark = ({ ...props }) => (
   <Svg
@@ -32,10 +32,10 @@ const Wordmark = ({ ...props }) => (
       fill="currentColor"
     />
   </Svg>
-);
+)
 
-export default Wordmark;
+export default Wordmark
 
 const Svg = styled.svg`
   color: ${({ theme }) => theme.color.blue200};
-`;
+`

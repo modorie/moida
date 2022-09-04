@@ -1,1 +1,1 @@
-export { default } from "./NavBody";
+export { default } from './NavBody'

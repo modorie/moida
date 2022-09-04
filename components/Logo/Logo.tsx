@@ -1,5 +1,5 @@
-import { Symbol, Spacing, Wordmark } from "./";
-import type LogoProps from "./Logo.types";
+import { Symbol, Spacing, Wordmark } from './'
+import type LogoProps from './Logo.types'
 
 const Logo = ({ symbol, wordmark = true, height = 40 }: LogoProps) => {
   return (
@@ -8,7 +8,7 @@ const Logo = ({ symbol, wordmark = true, height = 40 }: LogoProps) => {
       {symbol && wordmark && <Spacing height={height} />}
       {wordmark && <Wordmark height={height} />}
     </div>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

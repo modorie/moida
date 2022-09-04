@@ -1,5 +1,5 @@
 interface BadgeOptions {
-  isOngoing: boolean;
+  isOngoing: boolean
 }
 
 export interface BadgeProps extends BadgeOptions {}

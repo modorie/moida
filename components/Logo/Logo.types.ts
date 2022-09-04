@@ -1,7 +1,7 @@
 interface LogoProps {
-  symbol?: boolean;
-  wordmark?: boolean;
-  height?: number;
+  symbol?: boolean
+  wordmark?: boolean
+  height?: number
 }
 
-export default LogoProps;
+export default LogoProps

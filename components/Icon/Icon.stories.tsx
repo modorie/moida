@@ -1,32 +1,32 @@
-import styled from "styled-components";
-import { Story, Meta } from "@storybook/react";
+import styled from 'styled-components'
+import { Story, Meta } from '@storybook/react'
 
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import Icon from "./Icon";
-import { iconList } from "./assets";
-import type { IconProps } from "./Icon.types";
+import Icon from './Icon'
+import { iconList } from './assets'
+import type { IconProps } from './Icon.types'
 
 export default {
-  title: "Components/Icon",
+  title: 'Components/Icon',
   component: Icon,
-} as Meta;
+} as Meta
 
-export const Default: Story<IconProps> = (args) => <Icon {...args} />;
+export const Default: Story<IconProps> = (args) => <Icon {...args} />
 
 Default.args = {
-  name: "edit",
+  name: 'edit',
   size: 30,
-  color: "gray900",
-};
+  color: 'gray900',
+}
 
 Default.argTypes = {
-  size: { control: { type: "range", min: 30, max: 100, step: 10 } },
-};
+  size: { control: { type: 'range', min: 30, max: 100, step: 10 } },
+}
 
 Default.parameters = {
-  layout: "centered",
-};
+  layout: 'centered',
+}
 
 export const Examples = () => (
   <Layout>
@@ -37,18 +37,18 @@ export const Examples = () => (
       </IconChip>
     ))}
   </Layout>
-);
+)
 
 Examples.parameters = {
   viewport: {
-    defaultViewport: "responsive",
+    defaultViewport: 'responsive',
   },
-};
+}
 
 const Layout = styled.div`
   display: flex;
   flex-wrap: wrap;
-`;
+`
 
 const IconChip = styled.div`
   display: flex;
@@ -58,4 +58,4 @@ const IconChip = styled.div`
 
   width: 100px;
   height: 100px;
-`;
+`
