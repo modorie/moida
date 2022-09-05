@@ -15,6 +15,7 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:storybook/recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended"

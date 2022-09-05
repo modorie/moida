@@ -4,7 +4,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <h1>
-        Welcome to <a href="#">Next.js!</a>
+        Welcome to <a href="./">Next.js!</a>
       </h1>
     </div>
   )
