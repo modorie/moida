@@ -21,15 +21,8 @@ export interface NavFooterProps {
   bottomItems: itemOptions[]
 }
 
-interface NavOptions {
-  onClickClose?: React.MouseEventHandler
-}
-
-export interface NavProps
-  extends NavHeaderProps,
-    NavBodyProps,
-    NavFooterProps,
-    NavOptions {
+export interface NavProps extends NavHeaderProps, NavBodyProps, NavFooterProps {
   topItemsLogin: itemOptions[]
   topItemsLogout: itemOptions[]
+  onClickClose?: React.MouseEventHandler
 }
