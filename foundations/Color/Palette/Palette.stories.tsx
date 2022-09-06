@@ -1,20 +1,21 @@
-import styled from "styled-components";
-import { Meta } from "@storybook/react";
+import { Meta } from '@storybook/react'
+import styled from 'styled-components'
 
-import Palette, { paletteList } from "./Palette";
-import { Typography } from "@/components";
+import { Typography } from '@/components'
+
+import Palette, { paletteList } from './Palette'
 
 export default {
-  title: "Foundations/Color",
+  title: 'Foundations/Color',
   parameters: {
     viewport: {
-      defaultViewport: "responsive",
+      defaultViewport: 'responsive',
     },
   },
-} as Meta;
+} as Meta
 
 interface PaletteProps {
-  color: string;
+  color: string
 }
 
 export const PaletteTemplate = () => (
@@ -31,14 +32,14 @@ export const PaletteTemplate = () => (
       </ColorChip>
     ))}
   </Layout>
-);
+)
 
-PaletteTemplate.storyName = "Palette";
+PaletteTemplate.storyName = 'Palette'
 
 const Layout = styled.div`
   display: flex;
   flex-wrap: wrap;
-`;
+`
 
 const ColorChip = styled.div`
   display: flex;
@@ -48,7 +49,7 @@ const ColorChip = styled.div`
   width: 100px;
   height: 120px;
   margin: 10px;
-`;
+`
 
 const ColorTile = styled.div<PaletteProps>`
   width: 80px;
@@ -56,4 +57,4 @@ const ColorTile = styled.div<PaletteProps>`
   margin-bottom: 4px;
   border-radius: 12px;
   background-color: ${({ color }) => color};
-`;
+`

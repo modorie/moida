@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -36,6 +36,6 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.3;
     font-family: 'Spoqa Han Sans Neo', sans-serif;
   }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

@@ -7,7 +7,7 @@
     "dev": "yarn next-config && start http://localhost:3000 && next dev",
     "build": "yarn next-config && next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx",
+    "lint": "next lint --dir .",
     "lint:css": "stylelint \"**/*.(ts|tsx|css)\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

@@ -1,4 +1,5 @@
 import { keyframes } from 'styled-components'
+
 import type { KeyframeType } from './Keyframe.types'
 
 const Keyframe: KeyframeType = {

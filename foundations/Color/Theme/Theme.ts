@@ -1,5 +1,6 @@
-import { Palette } from "@/foundations";
-import type ThemeType from "./Theme.types";
+import { Palette } from '@/foundations'
+
+import type ThemeType from './Theme.types'
 
 const Theme: ThemeType = {
   bgColor: {
@@ -82,6 +83,6 @@ const Theme: ThemeType = {
     primary: Palette.gray200,
     secondary: Palette.gray300,
   },
-};
+}
 
-export default Theme;
+export default Theme

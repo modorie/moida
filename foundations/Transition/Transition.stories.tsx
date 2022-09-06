@@ -1,6 +1,6 @@
+import { Meta } from '@storybook/react'
 import { useState } from 'react'
 import styled from 'styled-components'
-import { Meta } from '@storybook/react'
 
 import { Text } from '@/components'
 

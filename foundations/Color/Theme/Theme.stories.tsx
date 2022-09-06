@@ -1,39 +1,39 @@
-import { Fragment } from "react";
-import styled from "styled-components";
-import { Meta } from "@storybook/react";
+import { Meta } from '@storybook/react'
+import { Fragment } from 'react'
+import styled from 'styled-components'
 
-import { Typography } from "@/components";
+import { Typography } from '@/components'
 
-import Theme from "./Theme";
+import Theme from './Theme'
 
 export default {
-  title: "Foundations/Color",
+  title: 'Foundations/Color',
   parameters: {
     viewport: {
-      defaultViewport: "responsive",
+      defaultViewport: 'responsive',
     },
   },
-} as Meta;
+} as Meta
 
 interface PaletteProps {
-  color: string;
+  color: string
 }
 
 const title: { [index: string]: string } = {
-  bgColor: "배경",
-  selectColor: "선택",
-  badgeColor: "뱃지",
-  borderColor: "테두리",
-  textColor: "텍스트",
-  helperBgColor: "도움말 배경",
-  helperBorderColor: "도움말 테두리",
-  ButtonBgColor: "버튼 배경",
-  ButtonTextColor: "버튼 텍스트",
-  ButtonActiveBgColor: "버튼 활성화 배경",
-  ButtonActiveTextColor: "버튼 활성화 텍스트",
-  ButtonDisableBgColor: "버튼 비활성화 배경",
-  ButtonDisableBorderColor: "버튼 비활성화 테두리",
-};
+  bgColor: '배경',
+  selectColor: '선택',
+  badgeColor: '뱃지',
+  borderColor: '테두리',
+  textColor: '텍스트',
+  helperBgColor: '도움말 배경',
+  helperBorderColor: '도움말 테두리',
+  ButtonBgColor: '버튼 배경',
+  ButtonTextColor: '버튼 텍스트',
+  ButtonActiveBgColor: '버튼 활성화 배경',
+  ButtonActiveTextColor: '버튼 활성화 텍스트',
+  ButtonDisableBgColor: '버튼 비활성화 배경',
+  ButtonDisableBorderColor: '버튼 비활성화 테두리',
+}
 
 export const ThemeTemplate = () =>
   Object.keys(Theme).map((themeType) => (
@@ -41,7 +41,7 @@ export const ThemeTemplate = () =>
       <TitleBox>
         <Typography size="h2" weight="bold" color="darkest">
           {title[themeType]}
-        </Typography>{" "}
+        </Typography>{' '}
         <Typography color="light">{themeType}</Typography>
       </TitleBox>
       <Layout>
@@ -58,19 +58,19 @@ export const ThemeTemplate = () =>
         ))}
       </Layout>
     </Fragment>
-  ));
+  ))
 
-ThemeTemplate.storyName = "Theme";
+ThemeTemplate.storyName = 'Theme'
 
 const Layout = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
-`;
+`
 
 const TitleBox = styled.div`
   padding-left: 20px;
-`;
+`
 
 const ColorChip = styled.div`
   display: flex;
@@ -80,7 +80,7 @@ const ColorChip = styled.div`
   width: 100px;
   height: 120px;
   margin: 10px;
-`;
+`
 
 const ColorTile = styled.div<PaletteProps>`
   width: 80px;
@@ -88,4 +88,4 @@ const ColorTile = styled.div<PaletteProps>`
   margin-bottom: 4px;
   border-radius: 12px;
   background-color: ${({ color }) => color};
-`;
+`
