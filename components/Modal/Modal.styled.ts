@@ -7,7 +7,7 @@ export const Overlay = styled.div`
 
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(0 0 0 / 0.2);
 `
 
 export const LayoutBox = styled.div`
@@ -30,9 +30,9 @@ export const Layout = styled.div`
 
   width: 270px;
   height: 160px;
-  padding: 40px 30px 30px 30px;
+  padding: 40px 30px 30px;
   border-radius: 6px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgb(0 0 0 / 0.1);
 
   background-color: ${({ theme }) => theme.color.white};
   animation: ${({ theme }) =>

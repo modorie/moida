@@ -15,7 +15,7 @@ export const Hgroup = styled.hgroup`
 `
 
 export const Greeting = styled.h1`
-  margin: 0 0 3px 0;
+  margin: 0 0 3px;
 `
 
 export const Message = styled.h2`
@@ -40,7 +40,7 @@ export const Button = styled.button`
   transition: ${({ theme }) => theme.transition};
   cursor: pointer;
 
-  // TODO 버튼 팔레트 추가시 수정 필요
+  /* TODO 버튼 팔레트 추가시 수정 필요 */
   :active {
     background-color: ${({ theme }) => theme.color.blue300};
   }

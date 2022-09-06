@@ -7,7 +7,7 @@ export const Overlay = styled.div`
 
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(0 0 0 / 0.2);
 `
 
 export const Layout = styled.nav`

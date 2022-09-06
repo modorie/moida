@@ -27,7 +27,7 @@ export const TextBox = styled.div`
     z-index: -1;
 
     height: 65px;
-    width: 0px;
+    width: 0;
     border-left: 2px solid ${({ theme }) => theme.color.blue500};
   }
 `

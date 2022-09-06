@@ -27,7 +27,7 @@ export const Layout = styled.label<LayoutProps>`
   :focus-within,
   :hover {
     border: 1px solid ${({ theme }) => theme.color.blue200};
-    box-shadow: 0px 0px 8px rgba(122, 215, 255, 0.4);
+    box-shadow: 0 0 8px rgb(122 215 255 / 0.4);
   }
 
   ${({ hasError }) => hasError && erroredLayoutStyle}

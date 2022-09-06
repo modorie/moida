@@ -7,11 +7,11 @@ export const Layout = styled.div`
 `
 
 export const Title = styled(Text)`
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
 `
 
 export const ItemBox = styled.ul`
-  margin: 0 0 63px 0;
+  margin: 0 0 63px;
   padding: 0;
 `
 
