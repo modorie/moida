@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Layout = styled.header`
   display: flex;
@@ -14,8 +14,8 @@ export const Layout = styled.header`
     align-items: baseline;
     padding-left: 6px;
   }
-`;
+`
 
 export const MenuBox = styled.div`
   cursor: pointer;
-`;
+`

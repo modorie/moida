@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Layout = styled.div`
   display: flex;
@@ -11,4 +11,4 @@ export const Layout = styled.div`
 
   cursor: pointer;
   user-select: none;
-`;
+`

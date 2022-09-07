@@ -1,5 +1,5 @@
-import type { LineName } from "@/components/StationInfo";
+import type { LineName } from '@/components/StationInfo'
 
-type LineColorType = Record<LineName, string>;
+type LineColorType = Record<LineName, string>
 
-export default LineColorType;
+export default LineColorType

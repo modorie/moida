@@ -1,3 +1,3 @@
-import { ChildrenProps } from "@/types/ComponentProps";
+import { ChildrenProps } from '@/types/ComponentProps'
 
 export interface MapMarkProps extends ChildrenProps {}

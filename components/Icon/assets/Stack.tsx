@@ -1,4 +1,4 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
 const Stack = (props: SvgProps) => (
   <svg {...props}>
@@ -21,6 +21,6 @@ const Stack = (props: SvgProps) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+)
 
-export default Stack;
+export default Stack

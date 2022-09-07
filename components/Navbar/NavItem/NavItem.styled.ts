@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Layout = styled.li`
   display: flex;
@@ -27,4 +27,4 @@ export const Layout = styled.li`
     position: relative;
     right: -5px;
   }
-`;
+`

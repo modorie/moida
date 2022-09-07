@@ -1,11 +1,11 @@
-import React from "react";
-import { Layout } from "./FixedButton.styled";
-import LoadingDots from "../LoadingDots";
+import React from 'react'
 
-import type { FixedButtonProps } from "./FixedButton.types";
+import LoadingDots from '../LoadingDots'
+import { Layout } from './FixedButton.styled'
+import type { FixedButtonProps } from './FixedButton.types'
 
 const FixedButton = ({
-  styleVariant = "primary",
+  styleVariant = 'primary',
   disabled,
   loading = false,
   children,
@@ -19,7 +19,7 @@ const FixedButton = ({
     >
       {loading ? <LoadingDots /> : children}
     </Layout>
-  );
-};
+  )
+}
 
-export default FixedButton;
+export default FixedButton

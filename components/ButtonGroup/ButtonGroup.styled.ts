@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Layout = styled.div`
   display: flex;
   position: relative;
 
   ::before {
-    content: "";
+    content: '';
     position: absolute;
     border: 1px solid ${({ theme }) => theme.color.gray300};
     border-radius: 4px;
@@ -14,4 +14,4 @@ export const Layout = styled.div`
     height: 46px;
     top: 1px;
   }
-`;
+`

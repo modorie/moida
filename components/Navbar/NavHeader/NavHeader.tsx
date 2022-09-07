@@ -1,7 +1,7 @@
-import { Icon, Text, Logo } from "@/components";
-import type { NavHeaderProps } from "@/components/Navbar/Navbar.types";
+import { Icon, Logo, Text } from '@/components'
+import type { NavHeaderProps } from '@/components/Navbar/Navbar.types'
 
-import { Header, Hgroup, Greeting, Message, Button } from "./NavHeader.styled";
+import { Button, Greeting, Header, Hgroup } from './NavHeader.styled'
 
 const NavHeader = ({ isLogin, user }: NavHeaderProps) => {
   return (
@@ -10,7 +10,7 @@ const NavHeader = ({ isLogin, user }: NavHeaderProps) => {
         <Hgroup>
           <Greeting>
             <Text as="strong" size="h1" weight="bold" color="blue200">
-              {user.name + " "}
+              {user.name + ' '}
             </Text>
             <Text as="span" size="h1" weight="bold" color="black">
               님 <br />
@@ -39,7 +39,7 @@ const NavHeader = ({ isLogin, user }: NavHeaderProps) => {
         <Icon name="chevron-right" size={18} color="white" />
       </Button>
     </Header>
-  );
-};
+  )
+}
 
-export default NavHeader;
+export default NavHeader

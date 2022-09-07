@@ -1,7 +1,7 @@
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import { Label, Input } from "./Radio.styled";
-import type { RadioProps } from "./Radio.types";
+import { Input, Label } from './Radio.styled'
+import type { RadioProps } from './Radio.types'
 
 const Radio = ({
   name,
@@ -24,6 +24,6 @@ const Radio = ({
       </Text>
     </Label>
   </>
-);
+)
 
-export default Radio;
+export default Radio

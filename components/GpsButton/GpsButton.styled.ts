@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Layout = styled.div`
   display: flex;
@@ -9,6 +9,6 @@ export const Layout = styled.div`
   height: 48px;
   border-radius: 48px;
 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
   cursor: pointer;
-`;
+`

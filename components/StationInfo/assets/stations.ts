@@ -1,4 +1,4 @@
-import type { LineName } from "../StationInfo.types";
+import type { LineName } from '../StationInfo.types'
 
 // 2022.03.01 updated
 // prettier-ignore
@@ -633,4 +633,4 @@ const stations: { [index: string]: LineName[] } = {
   "테크노파크역": ["인천선"]
 };
 
-export default stations;
+export default stations

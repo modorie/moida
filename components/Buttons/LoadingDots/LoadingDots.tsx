@@ -1,8 +1,9 @@
-import React from "react";
-import { Layout } from "./LoadingDots.styled";
+import React from 'react'
+
+import { Layout } from './LoadingDots.styled'
 
 const LoadingDots = () => {
-  return <Layout />;
-};
+  return <Layout />
+}
 
-export default LoadingDots;
+export default LoadingDots

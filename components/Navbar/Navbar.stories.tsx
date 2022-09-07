@@ -1,53 +1,53 @@
-import { Story, Meta } from "@storybook/react";
+import { Meta, Story } from '@storybook/react'
 
-import Navbar from "./Navbar";
-import type { NavProps } from "./Navbar.types";
+import Navbar from './Navbar'
+import type { NavProps } from './Navbar.types'
 
 export default {
-  title: "Components/Navbar",
+  title: 'Components/Navbar',
   component: Navbar,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-} as Meta;
+} as Meta
 
-export const Default: Story<NavProps> = (args) => <Navbar {...args} />;
+export const Default: Story<NavProps> = (args) => <Navbar {...args} />
 
 Default.args = {
   isLogin: false,
   user: {
-    id: "haram",
-    email: "moida@gmail.com",
-    name: "하람",
+    id: 'haram',
+    email: 'moida@gmail.com',
+    name: '하람',
   },
   topItemsLogin: [
     {
-      name: "모임관리",
-      url: "/manage",
+      name: '모임관리',
+      url: '/manage',
     },
   ],
   topItemsLogout: [
     {
-      name: "로그인",
-      url: "/login",
+      name: '로그인',
+      url: '/login',
     },
     {
-      name: "회원가입",
-      url: "/signup",
+      name: '회원가입',
+      url: '/signup',
     },
   ],
   bottomItems: [
     {
-      name: "이용방법",
-      url: "/how",
+      name: '이용방법',
+      url: '/how',
     },
     {
-      name: "피드백",
-      url: "/feedback",
+      name: '피드백',
+      url: '/feedback',
     },
     {
-      name: "이용약관",
-      url: "/terms",
+      name: '이용약관',
+      url: '/terms',
     },
   ],
-};
+}

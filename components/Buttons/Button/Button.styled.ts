@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
-import { FontWeight, Theme, Transition } from "@/foundations";
+import { TypoProps, TypoStyle } from '@/components/Typography'
+import { FontWeight, Theme, Transition } from '@/foundations'
 
-import type { ButtonProps } from "./Button.types";
-import { TypoProps, TypoStyle } from "@/components/Typography";
+import type { ButtonProps } from './Button.types'
 
 export const Layout = styled.button<ButtonProps & TypoProps>`
   display: flex;
@@ -26,7 +26,7 @@ export const Layout = styled.button<ButtonProps & TypoProps>`
       border: 1px solid ${Theme.borderColor.primary};
       background-color: ${Theme.ButtonBgColor[styleVariant]};
       color: ${Theme.ButtonTextColor[styleVariant]};
-      font-weight: ${styleVariant === "primary"
+      font-weight: ${styleVariant === 'primary'
         ? FontWeight.bold
         : FontWeight.regular};
 
@@ -48,4 +48,4 @@ export const Layout = styled.button<ButtonProps & TypoProps>`
       color: ${Theme.textColor.lightest};
       pointer-events: none;
     `}
-`;
+`

@@ -1,4 +1,4 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
 const List = (props: SvgProps) => (
   <svg {...props}>
@@ -45,6 +45,6 @@ const List = (props: SvgProps) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+)
 
-export default List;
+export default List

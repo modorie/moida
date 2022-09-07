@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Label = styled.label`
   display: flex;
@@ -18,7 +18,7 @@ export const Label = styled.label`
   :hover {
     color: ${({ theme }) => theme.color.gray700};
   }
-`;
+`
 
 export const Input = styled.input`
   display: none;
@@ -29,4 +29,4 @@ export const Input = styled.input`
     color: ${({ theme }) => theme.color.blue200};
     font-weight: ${({ theme }) => theme.fontWeight.bold};
   }
-`;
+`

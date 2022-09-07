@@ -1,30 +1,30 @@
-import styled from "styled-components";
-import { Story, Meta } from "@storybook/react";
+import { Meta, Story } from '@storybook/react'
+import styled from 'styled-components'
 
-import { FontSize } from "@/foundations";
-import { fontSizeList } from "@/foundations/FontSize";
-import { fontWeightList } from "@/foundations/FontWeight";
+import { FontSize } from '@/foundations'
+import { fontSizeList } from '@/foundations/FontSize'
+import { fontWeightList } from '@/foundations/FontWeight'
 
-import Typography from "./Typography";
-import type TypoProps from "./Typography.types";
+import Typography from './Typography'
+import type TypoProps from './Typography.types'
 
 export default {
-  title: "Components/Typography",
+  title: 'Components/Typography',
   component: Typography,
-} as Meta;
+} as Meta
 
-export const Default: Story<TypoProps> = (args) => <Typography {...args} />;
+export const Default: Story<TypoProps> = (args) => <Typography {...args} />
 
 Default.args = {
-  children: "약속은 간편하게 모임은 한방에",
-  size: "body2",
-  weight: "regular",
-  color: "black",
-};
+  children: '약속은 간편하게 모임은 한방에',
+  size: 'body2',
+  weight: 'regular',
+  color: 'black',
+}
 
 Default.parameters = {
-  layout: "centered",
-};
+  layout: 'centered',
+}
 
 export const Examples = () =>
   fontSizeList.map((size) =>
@@ -49,26 +49,26 @@ export const Examples = () =>
           약속은 간편하게 모임은 한방에
         </Typography>
       </Layout>
-    )),
-  );
+    ))
+  )
 
 Examples.parameters = {
   viewport: {
-    defaultViewport: "responsive",
+    defaultViewport: 'responsive',
   },
-};
+}
 
 const Layout = styled.div`
   display: flex;
   align-items: center;
-`;
+`
 
 const Info = styled.p`
   width: 100px;
   text-transform: capitalize;
-`;
+`
 
 const Weight = styled.p`
   width: 150px;
   text-transform: capitalize;
-`;
+`

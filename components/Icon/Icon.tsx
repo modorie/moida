@@ -1,11 +1,11 @@
-import Svg from "./Icon.styled";
-import icons from "./assets";
-import type { IconProps } from "./Icon.types";
+import icons from './assets'
+import Svg from './Icon.styled'
+import type { IconProps } from './Icon.types'
 
 const Icon = ({
   name,
   size = 30,
-  color = "black",
+  color = 'black',
   className,
   style,
   id,
@@ -24,5 +24,5 @@ const Icon = ({
     id={id}
     {...props}
   />
-);
-export default Icon;
+)
+export default Icon

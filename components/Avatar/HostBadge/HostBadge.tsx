@@ -1,4 +1,4 @@
-import { Svg } from "./HostBadge.styled";
+import { Svg } from './HostBadge.styled'
 
 const HostBadge = () => {
   return (
@@ -16,7 +16,7 @@ const HostBadge = () => {
         strokeLinejoin="round"
       />
     </Svg>
-  );
-};
+  )
+}
 
-export default HostBadge;
+export default HostBadge

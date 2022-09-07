@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import { Tab } from "./Tab";
-import { Layout } from "./Tabs.styled";
-import type { TabsProps } from "./Tabs.types";
+import { Tab } from './Tab'
+import { Layout } from './Tabs.styled'
+import type { TabsProps } from './Tabs.types'
 
 const Tabs = ({ tabItems }: TabsProps) => {
-  const [currentTabIndex, setCurrentTabIndex] = useState<number>(0);
+  const [currentTabIndex, setCurrentTabIndex] = useState<number>(0)
 
   const handleClickTab = (tabIndex: number) => {
-    setCurrentTabIndex(tabIndex);
-  };
+    setCurrentTabIndex(tabIndex)
+  }
 
   return (
     <Layout>
@@ -17,12 +17,13 @@ const Tabs = ({ tabItems }: TabsProps) => {
         <Tab
           key={index}
           active={index === currentTabIndex}
-          children={item}
           onClick={() => handleClickTab(index)}
-        />
+        >
+          {item}
+        </Tab>
       ))}
     </Layout>
-  );
-};
+  )
+}
 
-export default Tabs;
+export default Tabs

@@ -1,4 +1,4 @@
-import { Svg } from "./Clear.styled";
+import { Svg } from './Clear.styled'
 
 const Clear = () => (
   <Svg
@@ -22,6 +22,6 @@ const Clear = () => (
       strokeLinejoin="round"
     />
   </Svg>
-);
+)
 
-export default Clear;
+export default Clear

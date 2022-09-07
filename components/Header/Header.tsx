@@ -1,7 +1,7 @@
-import { Layout, MenuBox } from "./Header.styled";
-import { Logo, Icon } from "@/components";
+import { Icon, Logo } from '@/components'
 
-import type { HeaderProps } from "./Header.types";
+import { Layout, MenuBox } from './Header.styled'
+import type { HeaderProps } from './Header.types'
 
 const Header = ({ onClickMenu }: HeaderProps) => {
   return (
@@ -11,7 +11,7 @@ const Header = ({ onClickMenu }: HeaderProps) => {
         <Icon name="menu" color="black" />
       </MenuBox>
     </Layout>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

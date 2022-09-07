@@ -1,13 +1,13 @@
-import { Story, Meta } from "@storybook/react";
+import { Meta, Story } from '@storybook/react'
 
-import GpsButton from "./GpsButton";
+import GpsButton from './GpsButton'
 
 export default {
-  title: "Components/GpsButton",
+  title: 'Components/GpsButton',
   component: GpsButton,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-} as Meta;
+} as Meta
 
-export const Default: Story = () => <GpsButton />;
+export const Default: Story = () => <GpsButton />

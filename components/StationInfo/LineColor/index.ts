@@ -1,2 +1,2 @@
-export { default as LineColor } from "./LineColor";
-export { lineList } from "./LineColor";
+export { default as LineColor } from './LineColor'
+export { lineList } from './LineColor'

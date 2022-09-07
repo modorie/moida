@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -7,8 +7,8 @@ export const Overlay = styled.div`
 
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
-`;
+  background-color: rgb(0 0 0 / 0.2);
+`
 
 export const Layout = styled.nav`
   position: absolute;
@@ -24,7 +24,7 @@ export const Layout = styled.nav`
     css`
       ${theme.keyframe.slideInLeft} ${theme.transition}
     `};
-`;
+`
 
 export const CloseBox = styled.div`
   display: flex;
@@ -33,8 +33,8 @@ export const CloseBox = styled.div`
   right: -11px;
 
   margin-bottom: 66px;
-`;
+`
 
 export const IconBox = styled.div`
   cursor: pointer;
-`;
+`

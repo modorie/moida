@@ -1,5 +1,5 @@
 interface TabsOptions {
-  tabItems: string[];
+  tabItems: string[]
 }
 
 export interface TabsProps extends TabsOptions {}

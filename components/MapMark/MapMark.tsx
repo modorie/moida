@@ -1,7 +1,7 @@
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import { Layout, TextBox, Mark } from "./MapMark.styled";
-import type { MapMarkProps } from "./MapMark.types";
+import { Layout, Mark, TextBox } from './MapMark.styled'
+import type { MapMarkProps } from './MapMark.types'
 
 const MapMark = ({ children }: MapMarkProps) => (
   <Layout>
@@ -14,6 +14,6 @@ const MapMark = ({ children }: MapMarkProps) => (
     )}
     <Mark />
   </Layout>
-);
+)
 
-export default MapMark;
+export default MapMark

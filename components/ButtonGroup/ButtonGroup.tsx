@@ -1,9 +1,8 @@
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import { Radio } from "./Radio";
-import { Layout } from "./ButtonGroup.styled";
-
-import type { ButtonGroupProps } from "./ButtonGroup.types";
+import { Layout } from './ButtonGroup.styled'
+import type { ButtonGroupProps } from './ButtonGroup.types'
+import { Radio } from './Radio'
 
 const ButtonGroup = ({ name, label, options }: ButtonGroupProps) => {
   return (
@@ -14,7 +13,7 @@ const ButtonGroup = ({ name, label, options }: ButtonGroupProps) => {
           color="gray800"
           weight="bold"
           size="body2"
-          style={{ display: "block", marginBottom: "9px" }}
+          style={{ display: 'block', marginBottom: '9px' }}
         >
           {label}
         </Text>
@@ -32,7 +31,7 @@ const ButtonGroup = ({ name, label, options }: ButtonGroupProps) => {
         ))}
       </Layout>
     </>
-  );
-};
+  )
+}
 
-export default ButtonGroup;
+export default ButtonGroup

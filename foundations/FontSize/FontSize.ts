@@ -1,4 +1,4 @@
-import { FontSizeType, FontSizeKey } from "./FontSize.types";
+import { FontSizeKey, FontSizeType } from './FontSize.types'
 
 const FontSize: FontSizeType = {
   h1: 26,
@@ -11,10 +11,10 @@ const FontSize: FontSizeType = {
   body3: 13,
   cap1: 12,
   cap2: 10,
-};
+}
 
 export const fontSizeList: FontSizeKey[] = Object.keys(
   FontSize
-) as FontSizeKey[];
+) as FontSizeKey[]
 
-export default FontSize;
+export default FontSize

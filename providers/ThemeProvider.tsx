@@ -1,12 +1,12 @@
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 
-import Theme from "@/styles/theme";
-import type { ChildrenProps } from "@/types/ComponentProps";
+import Theme from '@/styles/theme'
+import type { ChildrenProps } from '@/types/ComponentProps'
 
 export interface ThemeProviderProps extends ChildrenProps {}
 
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  return <StyledThemeProvider theme={Theme}>{children}</StyledThemeProvider>;
-};
+  return <StyledThemeProvider theme={Theme}>{children}</StyledThemeProvider>
+}
 
-export default ThemeProvider;
+export default ThemeProvider

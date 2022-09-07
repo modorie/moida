@@ -1,16 +1,16 @@
-import { NavItem } from "@/components/Navbar";
+import { NavItem } from '@/components/Navbar'
 
-import { Layout } from "./NavBody.styled";
-import type { NavBodyProps } from "../Navbar.types";
+import type { NavBodyProps } from '../Navbar.types'
+import { Layout } from './NavBody.styled'
 
-const NavBody = ({ isLogin, topItemsLogin, topItemsLogout }: NavBodyProps) => {
+const NavBody = ({ items }: NavBodyProps) => {
   return (
     <Layout>
-      {isLogin
-        ? topItemsLogin.map(({ name }) => <NavItem>{name}</NavItem>)
-        : topItemsLogout.map(({ name }) => <NavItem>{name}</NavItem>)}
+      {items.map(({ name, url }) => (
+        <NavItem key={url}>{name}</NavItem>
+      ))}
     </Layout>
-  );
-};
+  )
+}
 
-export default NavBody;
+export default NavBody

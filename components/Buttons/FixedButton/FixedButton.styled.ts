@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
-import { FontWeight, Theme, Transition } from "@/foundations";
+import { TypoProps, TypoStyle } from '@/components/Typography'
+import { FontWeight, Theme, Transition } from '@/foundations'
 
-import { TypoProps, TypoStyle } from "@/components/Typography";
-import type { FixedButtonProps } from "./FixedButton.types";
+import type { FixedButtonProps } from './FixedButton.types'
 
 export const Layout = styled.div<FixedButtonProps & TypoProps>`
   display: flex;
@@ -26,7 +26,7 @@ export const Layout = styled.div<FixedButtonProps & TypoProps>`
       border: 1px solid ${Theme.borderColor.primary};
       background-color: ${Theme.ButtonBgColor[styleVariant]};
       color: ${Theme.ButtonTextColor[styleVariant]};
-      font-weight: ${styleVariant === "primary"
+      font-weight: ${styleVariant === 'primary'
         ? FontWeight.bold
         : FontWeight.regular};
 
@@ -48,11 +48,11 @@ export const Layout = styled.div<FixedButtonProps & TypoProps>`
       color: ${Theme.textColor.lightest};
       pointer-events: none;
     `}
-`;
+`
 
 export const LoadingBar = styled.div`
   width: 10px;
   height: 10px;
   border: 1px solid red;
   border-radius: 50%;
-`;
+`

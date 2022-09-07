@@ -1,30 +1,30 @@
-import styled from "styled-components";
-import { Story, Meta } from "@storybook/react";
+import { Meta, Story } from '@storybook/react'
+import styled from 'styled-components'
 
-import Logo from "./Logo";
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import type LogoProps from "./Logo.types";
+import Logo from './Logo'
+import type LogoProps from './Logo.types'
 
 export default {
-  title: "Components/Logo",
+  title: 'Components/Logo',
   component: Logo,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-} as Meta;
+} as Meta
 
-export const Default: Story<LogoProps> = (args) => <Logo {...args} />;
+export const Default: Story<LogoProps> = (args) => <Logo {...args} />
 
 Default.args = {
   height: 40,
   wordmark: true,
   symbol: false,
-};
+}
 
 Default.argTypes = {
-  height: { control: { type: "range", min: 10, max: 70, step: 10 } },
-};
+  height: { control: { type: 'range', min: 10, max: 70, step: 10 } },
+}
 
 export const Examples = () => (
   <Layout>
@@ -49,10 +49,10 @@ export const Examples = () => (
     <Logo symbol height={42} />
     <Logo symbol height={63} />
   </Layout>
-);
+)
 
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-`;
+`

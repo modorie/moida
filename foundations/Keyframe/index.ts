@@ -1,2 +1,2 @@
-export { default as Keyframe } from "./Keyframe";
-export type { KeyframeType } from "./Keyframe.types";
+export { default as Keyframe } from './Keyframe'
+export type { KeyframeType } from './Keyframe.types'

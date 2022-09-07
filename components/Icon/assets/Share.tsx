@@ -1,4 +1,4 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
 const Share = (props: SvgProps) => (
   <svg {...props}>
@@ -22,6 +22,6 @@ const Share = (props: SvgProps) => (
       strokeWidth="1.8"
     />
   </svg>
-);
+)
 
-export default Share;
+export default Share

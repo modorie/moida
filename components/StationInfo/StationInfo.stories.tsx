@@ -1,24 +1,24 @@
-import styled from "styled-components";
-import { Story, Meta } from "@storybook/react";
+import { Meta, Story } from '@storybook/react'
+import styled from 'styled-components'
 
-import StationInfo from "./StationInfo";
-import stations from "./assets/stations";
-import type StationType from "./StationInfo.types";
+import stations from './assets/stations'
+import StationInfo from './StationInfo'
+import type StationType from './StationInfo.types'
 
 export default {
-  title: "Components/StationInfo",
+  title: 'Components/StationInfo',
   component: StationInfo,
-} as Meta;
+} as Meta
 
-export const Default: Story<StationType> = (args) => <StationInfo {...args} />;
+export const Default: Story<StationType> = (args) => <StationInfo {...args} />
 
 Default.args = {
-  name: "강남역",
-};
+  name: '강남역',
+}
 
 Default.parameters = {
-  layout: "centered",
-};
+  layout: 'centered',
+}
 
 export const Examples = () => (
   <Layout>
@@ -26,16 +26,16 @@ export const Examples = () => (
       <StationInfo name={name} key={name} />
     ))}
   </Layout>
-);
+)
 
 Examples.parameters = {
   viewport: {
-    defaultViewport: "responsive",
+    defaultViewport: 'responsive',
   },
-};
+}
 
 const Layout = styled.div`
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-`;
+`

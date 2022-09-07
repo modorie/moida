@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Header = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.color.gray100};
-`;
+`
 
 export const Hgroup = styled.hgroup`
   display: flex;
@@ -12,17 +12,17 @@ export const Hgroup = styled.hgroup`
   /* TODO: 크로스 브라우징 이슈 체크 */
   gap: 20px;
   height: 112px;
-`;
+`
 
 export const Greeting = styled.h1`
-  margin: 0 0 3px 0;
-`;
+  margin: 0 0 3px;
+`
 
 export const Message = styled.h2`
   > strong {
     font-weight: ${({ theme }) => theme.fontWeight.bold};
   }
-`;
+`
 
 export const Button = styled.button`
   display: flex;
@@ -40,8 +40,8 @@ export const Button = styled.button`
   transition: ${({ theme }) => theme.transition};
   cursor: pointer;
 
-  // TODO 버튼 팔레트 추가시 수정 필요
+  /* TODO 버튼 팔레트 추가시 수정 필요 */
   :active {
     background-color: ${({ theme }) => theme.color.blue300};
   }
-`;
+`

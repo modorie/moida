@@ -15,16 +15,18 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:storybook/recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "prettier/@typescript-eslint"
+    "plugin:prettier/recommended"
   ],
   "rules": {
+    "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-empty-interface": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
   }

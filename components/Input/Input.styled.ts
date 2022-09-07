@@ -1,14 +1,14 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
-import Text, { TextStyle } from "@/components/Text";
+import Text, { TextStyle } from '@/components/Text'
 
 interface LayoutProps {
-  hasError?: boolean;
-  disabled?: boolean;
+  hasError?: boolean
+  disabled?: boolean
 }
 
 interface LabelProps {
-  required?: boolean;
+  required?: boolean
 }
 
 export const Layout = styled.label<LayoutProps>`
@@ -27,12 +27,12 @@ export const Layout = styled.label<LayoutProps>`
   :focus-within,
   :hover {
     border: 1px solid ${({ theme }) => theme.color.blue200};
-    box-shadow: 0px 0px 8px rgba(122, 215, 255, 0.4);
+    box-shadow: 0 0 8px rgb(122 215 255 / 0.4);
   }
 
   ${({ hasError }) => hasError && erroredLayoutStyle}
   ${({ disabled }) => disabled && disabledLayoutStyle}
-`;
+`
 
 export const TextField = styled.input`
   width: 100%;
@@ -51,34 +51,34 @@ export const TextField = styled.input`
   }
 
   ${({ disabled }) => disabled && disabledTextFieldStyle}
-`;
+`
 
 export const Label = styled(Text)<LabelProps>`
   display: inline-block;
   margin-bottom: 9px;
 
   ${({ required }) => !required && optionalLabelStyle}
-`;
+`
 
 export const ErrorMsg = styled(Text)`
   display: block;
   margin-top: 6px;
-`;
+`
 
 export const Description = styled(Text)`
   display: block;
   margin: -4px 0 12px;
-`;
+`
 
 const erroredLayoutStyle = css`
   border: 1px solid ${({ theme }) => theme.color.coral100};
-`;
+`
 
 const disabledLayoutStyle = css`
   border: 1px solid ${({ theme }) => theme.color.gray300};
   background-color: ${({ theme }) => theme.color.gray100};
   pointer-events: none;
-`;
+`
 
 const disabledTextFieldStyle = css`
   background: none;
@@ -86,11 +86,11 @@ const disabledTextFieldStyle = css`
   ::placeholder {
     color: ${({ theme }) => theme.color.gray500};
   }
-`;
+`
 
 const optionalLabelStyle = css`
   ::after {
-    content: " (선택사항)";
+    content: ' (선택사항)';
     font-weight: ${({ theme }) => theme.fontWeight.regular};
   }
-`;
+`

@@ -1,9 +1,9 @@
-import type { LineName } from "@/components/StationInfo";
+import type { LineName } from '@/components/StationInfo'
 
-import { Layout, LineNumber } from "./LineSymbol.styled";
-import type { LineType } from "./LineSymbol.types";
+import { Layout, LineNumber } from './LineSymbol.styled'
+import type { LineType } from './LineSymbol.types'
 
-const LineSymbol = ({ name = "01호선" }: LineType) => {
+const LineSymbol = ({ name = '01호선' }: LineType) => {
   // prettier-ignore
   const lineRender: Record<LineName, string> = {
     "01호선": "1",
@@ -36,7 +36,7 @@ const LineSymbol = ({ name = "01호선" }: LineType) => {
         {lineRender[name]}
       </LineNumber>
     </Layout>
-  );
-};
+  )
+}
 
-export default LineSymbol;
+export default LineSymbol

@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import { AvatarColor } from "./AvatarColor";
-import type { AvatarColorName } from "./AvatarColor/AvatarColor.types";
+import { AvatarColor } from './AvatarColor'
+import type { AvatarColorName } from './AvatarColor/AvatarColor.types'
 
 interface LayoutProps {
-  color: AvatarColorName;
+  color: AvatarColorName
 }
 
 export const Layout = styled.div<LayoutProps>`
@@ -18,4 +18,4 @@ export const Layout = styled.div<LayoutProps>`
   border-radius: 45px;
 
   background-color: ${({ color }) => AvatarColor[color]};
-`;
+`

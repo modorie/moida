@@ -1,4 +1,4 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
 const Edit = (props: SvgProps) => (
   <svg {...props}>
@@ -21,6 +21,6 @@ const Edit = (props: SvgProps) => (
       vectorEffect="non-scaling-stroke"
     />
   </svg>
-);
+)
 
-export default Edit;
+export default Edit

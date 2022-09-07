@@ -1,5 +1,5 @@
 interface HeaderOptions {
-  onClickMenu?: React.MouseEventHandler;
+  onClickMenu?: React.MouseEventHandler
 }
 
 export interface HeaderProps extends HeaderOptions {}

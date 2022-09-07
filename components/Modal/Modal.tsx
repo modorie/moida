@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import { Text } from "@/components";
+import { Text } from '@/components'
 
-import { Overlay, LayoutBox, Layout, Footer, Button } from "./Modal.styled";
-import type ModalProps from "./Modal.types";
+import { Button, Footer, Layout, LayoutBox, Overlay } from './Modal.styled'
+import type ModalProps from './Modal.types'
 
 const Modal = ({ children }: ModalProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
-  const onClickClose = () => setIsModalOpen(false);
+  const [isModalOpen, setIsModalOpen] = useState(true)
+  const onClickClose = () => setIsModalOpen(false)
 
-  if (!isModalOpen) return <></>;
+  if (!isModalOpen) return <></>
   return (
     <>
       <Overlay />
@@ -34,7 +34,7 @@ const Modal = ({ children }: ModalProps) => {
         </Layout>
       </LayoutBox>
     </>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

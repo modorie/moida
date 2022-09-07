@@ -2,12 +2,12 @@ import type {
   ChildrenProps,
   DisableProps,
   LoadingProps,
-} from "@/types/ComponentProps";
+} from '@/types/ComponentProps'
 
-type StyleType = "primary" | "secondary";
+type StyleType = 'primary' | 'secondary'
 
 interface FixedButtonOptions {
-  styleVariant?: StyleType;
+  styleVariant?: StyleType
 }
 
 // prettier-ignore

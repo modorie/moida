@@ -1,4 +1,4 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
 const MoreVertical = (props: SvgProps) => (
   <svg {...props}>
@@ -7,6 +7,6 @@ const MoreVertical = (props: SvgProps) => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
-export default MoreVertical;
+export default MoreVertical

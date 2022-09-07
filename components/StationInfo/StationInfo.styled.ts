@@ -1,11 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import { LineColor } from "./LineColor";
-
-import type { LineName } from "./StationInfo.types";
+import { LineColor } from './LineColor'
+import type { LineName } from './StationInfo.types'
 
 interface NameBoxProps {
-  color: LineName;
+  color: LineName
 }
 
 export const Layout = styled.div`
@@ -14,7 +13,7 @@ export const Layout = styled.div`
   align-items: flex-end;
   position: relative;
   height: 49px;
-`;
+`
 
 export const SymbolBox = styled.div`
   display: flex;
@@ -28,7 +27,7 @@ export const SymbolBox = styled.div`
       margin-left: 0;
     }
   }
-`;
+`
 
 export const NameBox = styled.div<NameBoxProps>`
   display: flex;
@@ -42,4 +41,4 @@ export const NameBox = styled.div<NameBoxProps>`
   border-radius: 44px;
 
   white-space: nowrap;
-`;
+`

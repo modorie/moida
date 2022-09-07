@@ -1,4 +1,4 @@
-import type { SvgProps } from "../";
+import type { SvgProps } from '../'
 
 const Gps = (props: SvgProps) => (
   <svg {...props}>
@@ -37,6 +37,6 @@ const Gps = (props: SvgProps) => (
       strokeWidth="1.4"
     />
   </svg>
-);
+)
 
-export default Gps;
+export default Gps

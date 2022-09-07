@@ -1,17 +1,17 @@
-import { Story, Meta } from "@storybook/react";
+import { Meta, Story } from '@storybook/react'
 
-import MapMark from "./MapMark";
+import MapMark from './MapMark'
 
 export default {
-  title: "Components/MapMark",
+  title: 'Components/MapMark',
   component: MapMark,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-} as Meta;
+} as Meta
 
-export const Default: Story = (args) => <MapMark {...args} />;
+export const Default: Story = (args) => <MapMark {...args} />
 
 Default.args = {
-  children: "중간장소",
-};
+  children: '중간장소',
+}

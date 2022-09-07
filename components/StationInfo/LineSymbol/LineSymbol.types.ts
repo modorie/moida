@@ -1,7 +1,7 @@
-import type { LineName } from "@/components/StationInfo";
+import type { LineName } from '@/components/StationInfo'
 
 export interface LineType {
-  name: LineName;
+  name: LineName
 }
 
-export default LineType;
+export default LineType
