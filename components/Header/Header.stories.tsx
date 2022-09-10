@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react'
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import { Navbar } from '@/components'
+import { Navbar, Portal } from '@/components'
 import type { NavProps } from '@/components/Navbar/Navbar.types'
 
 import Header from './Header'

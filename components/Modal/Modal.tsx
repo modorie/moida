@@ -1,15 +1,9 @@
-import { useState } from 'react'
-
 import { Text } from '@/components'
 
 import { Button, Footer, Layout, LayoutBox, Overlay } from './Modal.styled'
 import type ModalProps from './Modal.types'
 
-const Modal = ({ children }: ModalProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(true)
-  const onClickClose = () => setIsModalOpen(false)
-
-  if (!isModalOpen) return <></>
+const Modal = ({ children, onClickClose }: ModalProps) => {
   return (
     <>
       <Overlay />
