@@ -27,7 +27,9 @@ export const WithNavbar: Story<HeaderProps & NavProps> = (args) => {
   return (
     <Layout>
       <Header onClickMenu={onClickMenu} />
-      {isNavbarOpened && <Navbar onClickClose={onClickClose} {...args} />}
+      <Portal id="navbar-portal">
+        {isNavbarOpened && <Navbar onClickClose={onClickClose} {...args} />}
+      </Portal>
     </Layout>
   )
 }
