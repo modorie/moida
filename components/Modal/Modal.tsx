@@ -1,7 +1,7 @@
 import { Text } from '@/components'
 
 import { Button, Footer, Layout, LayoutBox, Overlay } from './Modal.styled'
-import type ModalProps from './Modal.types'
+import type { ModalProps } from './Modal.types'
 
 const Modal = ({ children, onClickClose }: ModalProps) => {
   return (

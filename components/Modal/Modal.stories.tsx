@@ -1,10 +1,10 @@
+import { Meta, Story } from '@storybook/react'
 import { useState } from 'react'
-import { Story, Meta } from '@storybook/react'
 
 import { Portal } from '@/components'
 
 import Modal from './Modal'
-import type ModalProps from './Modal.types'
+import type { ModalProps } from './Modal.types'
 
 export default {
   title: 'Components/Modal',
