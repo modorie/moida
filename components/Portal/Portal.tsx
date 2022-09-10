@@ -19,7 +19,7 @@ const Portal = ({
     return () => {
       document.body.removeChild(container)
     }
-  }, [])
+  }, [container])
 
   return createPortal(children, container)
 }
