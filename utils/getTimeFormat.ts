@@ -7,7 +7,8 @@
 export const getTimeFormat = (date: Date = new Date()) => ({
   year: date.getFullYear(),
   month: date.getMonth(),
-  day: date.getDate(),
+  date: date.getDate(),
+  day: date.getDay(),
   hour: date.getHours(),
   min: date.getMinutes(),
   sec: date.getSeconds(),
