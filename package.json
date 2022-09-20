@@ -12,6 +12,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --watchAll=false --coverage",
     "prepare": "husky install"
   },
