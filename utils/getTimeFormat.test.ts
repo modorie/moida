@@ -27,4 +27,8 @@ describe('getTimeFormat(date) >', () => {
     expect(getTimeFormat(new Date(2022, 1, 1)).month).toBe(1)
     expect(getTimeFormat(new Date(2022, 12, 1)).month).toBe(0)
   })
+
+  it('match toLocaleDateString >', () => {
+    expect(`${year}. ${month + 1}. ${date}.`).toBe(now.toLocaleDateString())
+  })
 })
