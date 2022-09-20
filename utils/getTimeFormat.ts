@@ -1,10 +1,8 @@
 /**
- * Returns time formats object
- *
- * @param date - ( default = new Date() )
+ * Returns object of time formats
  */
 
-export const getTimeFormat = (date: Date = new Date()) => ({
+export const getTimeFormat = (date: Date) => ({
   year: date.getFullYear(),
   month: date.getMonth(),
   date: date.getDate(),
