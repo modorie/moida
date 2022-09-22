@@ -1,6 +1,6 @@
 import { getTimeFormat } from './getTimeFormat'
 
-interface calendarDTO {
+interface CalendarItem {
   year: number
   month: number
   date: number
@@ -17,7 +17,7 @@ interface calendarDTO {
  * - day - 요일
  */
 
-export const generateCalendar = (dateObj: Date): calendarDTO[] => {
+export const generateCalendar = (dateObj: Date): CalendarItem[] => {
   const { year, month, date } = getTimeFormat(dateObj)
   const prevMonthLastDay = getTimeFormat(new Date(year, month, 0))
   const currentMonthFirstDay = getTimeFormat(new Date(year, month, 1))
