@@ -9,6 +9,14 @@ interface calendarDTO {
   next: boolean
 }
 
+/**
+ * Return array of calendar objects
+ *
+ * - dateObj - Date object
+ * - date - 일
+ * - day - 요일
+ */
+
 export const generateCalendar = (dateObj: Date): calendarDTO[] => {
   const { year, month, date } = getTimeFormat(dateObj)
   const calendar = []
