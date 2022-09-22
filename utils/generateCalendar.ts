@@ -19,37 +19,24 @@ interface calendarDTO {
 
 export const generateCalendar = (dateObj: Date): calendarDTO[] => {
   const { year, month, date } = getTimeFormat(dateObj)
+  const prevMonthLastDay = getTimeFormat(new Date(year, month, 0))
+  const currentMonthFirstDay = getTimeFormat(new Date(year, month, 1))
+  const currentMonthLastDay = getTimeFormat(new Date(year, month + 1, 0))
+  const nextMonthFirstDay = getTimeFormat(new Date(year, month + 1, 1))
   const calendar = []
 
-  const {
-    month: prevMonthNumber,
-    year: prevMonthYear,
-    date: prevMonthLastDate,
-  } = getTimeFormat(new Date(year, month, 0))
-
-  const { day: currentMonthFirstDayIndex } = getTimeFormat(
-    new Date(year, month, 1)
-  )
-
-  const { date: currentMonthLastDate, day: currentMonthLastDayIndex } =
-    getTimeFormat(new Date(year, month + 1, 0))
-
-  const { month: nextMonthNumber, year: nextMonthYear } = getTimeFormat(
-    new Date(year, month + 1, 1)
-  )
-
-  for (let i = currentMonthFirstDayIndex; i > 0; i--) {
+  for (let i = currentMonthFirstDay.day; i > 0; i--) {
     calendar.push({
-      year: prevMonthYear,
-      month: prevMonthNumber,
-      date: prevMonthLastDate - i + 1,
+      year: prevMonthLastDay.year,
+      month: prevMonthLastDay.month,
+      date: prevMonthLastDay.date - i + 1,
       today: false,
       prev: true,
       next: false,
     })
   }
 
-  for (let i = 1; i <= currentMonthLastDate; i++) {
+  for (let i = 1; i <= currentMonthLastDay.date; i++) {
     calendar.push({
       year,
       month,
@@ -60,10 +47,10 @@ export const generateCalendar = (dateObj: Date): calendarDTO[] => {
     })
   }
 
-  for (let i = 1; i <= 6 - currentMonthLastDayIndex; i++) {
+  for (let i = 1; i <= 6 - currentMonthLastDay.day; i++) {
     calendar.push({
-      year: nextMonthYear,
-      month: nextMonthNumber,
+      year: nextMonthFirstDay.year,
+      month: nextMonthFirstDay.month,
       date: i,
       today: false,
       prev: false,
