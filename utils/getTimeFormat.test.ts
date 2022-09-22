@@ -1,6 +1,6 @@
 import { getTimeFormat } from './getTimeFormat'
 
-describe('getTimeFormat(date) >', () => {
+describe('getTimeFormat(dateObj) >', () => {
   const now = new Date()
   const { year, month, date, day, hour, min, sec, ms, totalMs } =
     getTimeFormat(now)

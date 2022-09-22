@@ -2,14 +2,14 @@
  * Returns object of time formats
  */
 
-export const getTimeFormat = (date: Date) => ({
-  year: date.getFullYear(),
-  month: date.getMonth(),
-  date: date.getDate(),
-  day: date.getDay(),
-  hour: date.getHours(),
-  min: date.getMinutes(),
-  sec: date.getSeconds(),
-  ms: date.getMilliseconds(),
-  totalMs: date.getTime(),
+export const getTimeFormat = (dateObj: Date) => ({
+  year: dateObj.getFullYear(),
+  month: dateObj.getMonth(),
+  date: dateObj.getDate(),
+  day: dateObj.getDay(),
+  hour: dateObj.getHours(),
+  min: dateObj.getMinutes(),
+  sec: dateObj.getSeconds(),
+  ms: dateObj.getMilliseconds(),
+  totalMs: dateObj.getTime(),
 })
