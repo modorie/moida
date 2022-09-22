@@ -1,52 +1,62 @@
 import { getTimeFormat } from './getTimeFormat'
 
-export const generateCalendar = (dateObj: Date) => {
+interface calendarDTO {
+  year: number
+  month: number
+  date: number
+  today: boolean
+  prev: boolean
+  next: boolean
+}
+
+export const generateCalendar = (dateObj: Date): calendarDTO[] => {
   const { year, month, date } = getTimeFormat(dateObj)
   const calendar = []
 
-  const prevMonthLastDay = getTimeFormat(new Date(year, month, 0))
-  const prevMonthFirstDay = getTimeFormat(new Date(year, month - 1, 1))
-  const currentMonthFirstDay = getTimeFormat(new Date(year, month, 1))
-  const currentMonthLastDay = getTimeFormat(new Date(year, month + 1, 0))
-  const nextMonthFirstDay = getTimeFormat(new Date(year, month + 1, 1))
-  const prevMonthDays = prevMonthLastDay.date
-  const thisMonthDays = currentMonthLastDay.date
-  const firstDayIndex = currentMonthFirstDay.day
-  const lastDayIndex = currentMonthLastDay.day
+  const {
+    month: prevMonthNumber,
+    year: prevMonthYear,
+    date: prevMonthLastDate,
+  } = getTimeFormat(new Date(year, month, 0))
 
-  console.log('prevMonthLastDay', prevMonthLastDay)
-  console.log('prevMonthFirstDay', prevMonthFirstDay)
-  console.log('currentMonthFirstDay', currentMonthFirstDay)
-  console.log('currentMonthLastDay', currentMonthLastDay)
-  console.log('nextMonthFirstDay', nextMonthFirstDay)
+  const { day: currentMonthFirstDayIndex } = getTimeFormat(
+    new Date(year, month, 1)
+  )
 
-  for (let i = firstDayIndex; i > 0; i--) {
+  const { date: currentMonthLastDate, day: currentMonthLastDayIndex } =
+    getTimeFormat(new Date(year, month + 1, 0))
+
+  const { month: nextMonthNumber, year: nextMonthYear } = getTimeFormat(
+    new Date(year, month + 1, 1)
+  )
+
+  for (let i = currentMonthFirstDayIndex; i > 0; i--) {
     calendar.push({
-      date: prevMonthDays - i + 1,
-      month: prevMonthFirstDay.month,
-      year: prevMonthFirstDay.year,
+      year: prevMonthYear,
+      month: prevMonthNumber,
+      date: prevMonthLastDate - i + 1,
       today: false,
       prev: true,
       next: false,
     })
   }
 
-  for (let i = 1; i <= thisMonthDays; i++) {
+  for (let i = 1; i <= currentMonthLastDate; i++) {
     calendar.push({
-      date: i,
-      month,
       year,
+      month,
+      date: i,
       today: i === date,
       prev: false,
       next: false,
     })
   }
 
-  for (let i = 1; i <= 6 - lastDayIndex; i++) {
+  for (let i = 1; i <= 6 - currentMonthLastDayIndex; i++) {
     calendar.push({
+      year: nextMonthYear,
+      month: nextMonthNumber,
       date: i,
-      month: nextMonthFirstDay.month,
-      year: nextMonthFirstDay.year,
       today: false,
       prev: false,
       next: true,
