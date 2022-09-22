@@ -1,4 +1,5 @@
 import path from 'path'
+import { Configuration } from 'webpack'
 
 module.exports = {
   stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
@@ -16,8 +17,14 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  webpackFinal: async (config) => {
-    config.resolve.alias['@'] = path.resolve(__dirname, '../')
+  webpackFinal: async (config: Configuration) => {
+    if (config.resolve?.alias) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@': path.resolve(__dirname, '../'),
+      }
+    }
+
     return config
   },
 }
