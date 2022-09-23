@@ -1,4 +1,5 @@
-import { DateObj } from './getTimeFormat'
+import type { DateObj } from './getTimeFormat'
+import { range } from './range'
 
 interface TimeTableItem {
   year: number
@@ -32,28 +33,28 @@ export const generateTimeTable = (
   totalStartTime: TimeObj,
   totalEndTime: TimeObj
 ): TimeTableItem[] => {
-  const timeTable = []
+  const timeTable: TimeTableItem[] = []
 
-  for (let i = 0; i < selectedDates.length; i++) {
-    const { year, month, date } = selectedDates[i]
-    const items = []
+  selectedDates.forEach((dateObj) => {
+    const { year, month, date } = dateObj
+    const items: HalfHourItem[] = []
 
-    for (let j = totalStartTime.hour; j < totalEndTime.hour; j++) {
+    range(totalStartTime.hour, totalEndTime.hour).forEach((hour) => {
       items.push(
         {
-          startTime: `${j}:0`,
-          endTime: `${j}:30`,
+          startTime: `${hour}:0`,
+          endTime: `${hour}:30`,
           select: false,
           members: [],
         },
         {
-          startTime: `${j}:30`,
-          endTime: `${j + 1}:0`,
+          startTime: `${hour}:30`,
+          endTime: `${hour + 1}:0`,
           select: false,
           members: [],
         }
       )
-    }
+    })
 
     timeTable.push({
       year,
@@ -63,7 +64,7 @@ export const generateTimeTable = (
       totalEndTime: `${totalEndTime.hour}:${totalEndTime.minute}`,
       items,
     })
-  }
+  })
 
   return timeTable
 }
