@@ -18,8 +18,6 @@ export const getTimeFormat = (dateObj: Date): DateObj => ({
   date: dateObj.getDate(),
   day: dateObj.getDay(),
   hour: dateObj.getHours(),
-  min: dateObj.getMinutes(),
-  sec: dateObj.getSeconds(),
-  ms: dateObj.getMilliseconds(),
-  totalMs: dateObj.getTime(),
+  minute: dateObj.getMinutes(),
+  second: dateObj.getSeconds(),
 })
