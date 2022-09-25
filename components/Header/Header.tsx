@@ -3,9 +3,9 @@ import { Icon, Logo } from '@/components'
 import { Layout, MenuBox } from './Header.styled'
 import type { HeaderProps } from './Header.types'
 
-const Header = ({ onClickMenu }: HeaderProps) => {
+const Header = ({ onClickMenu, id, className, style }: HeaderProps) => {
   return (
-    <Layout>
+    <Layout id={id} className={className} style={style}>
       <Logo height={21} />
       <MenuBox onClick={onClickMenu}>
         <Icon name="menu" color="black" />

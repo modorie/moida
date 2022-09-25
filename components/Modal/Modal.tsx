@@ -3,12 +3,18 @@ import { Text } from '@/components'
 import { Button, Footer, Layout, LayoutBox, Overlay } from './Modal.styled'
 import type { ModalProps } from './Modal.types'
 
-const Modal = ({ children, onClickClose }: ModalProps) => {
+const Modal = ({
+  children,
+  onClickClose,
+  id,
+  className,
+  style,
+}: ModalProps) => {
   return (
     <>
       <Overlay />
       <LayoutBox>
-        <Layout>
+        <Layout id={id} className={className} style={style}>
           <Text
             as="div"
             size="sub3"

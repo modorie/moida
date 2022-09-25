@@ -9,6 +9,9 @@ const FixedButton = ({
   disabled,
   loading = false,
   children,
+  id,
+  className,
+  style,
 }: FixedButtonProps) => {
   return (
     <Layout
@@ -16,6 +19,9 @@ const FixedButton = ({
       styleVariant={styleVariant}
       disabled={disabled}
       loading={loading}
+      id={id}
+      className={className}
+      style={style}
     >
       {loading ? <LoadingDots /> : children}
     </Layout>
