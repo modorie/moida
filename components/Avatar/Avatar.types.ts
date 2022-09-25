@@ -1,3 +1,5 @@
+import { StandardAttrProps } from '@/types/ComponentProps'
+
 import { AvatarColorName } from './AvatarColor/AvatarColor.types'
 
 const PinkEmoji = ['🌷', '🌸', '🍣', '🐷', '🐹', '🍑'] as const
@@ -53,9 +55,7 @@ export type EmojiKey =
   | PurpleEmojiKey
   | GrayEmojiKey
 
-interface AvatarOptions {
+export default interface AvatarProps extends StandardAttrProps {
   emoji: EmojiKey
   isHost?: boolean
 }
-
-export default interface AvatarProps extends AvatarOptions {}

@@ -1,9 +1,9 @@
+import { StandardAttrProps } from '@/types/ComponentProps'
+
 import type { RadioProps } from './Radio/Radio.types'
 
-interface ButtonGroupOptions {
+export interface ButtonGroupProps extends StandardAttrProps {
   label?: string
   name: string
   options: RadioProps[]
 }
-
-export interface ButtonGroupProps extends ButtonGroupOptions {}

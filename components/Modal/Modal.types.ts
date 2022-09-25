@@ -1,5 +1,5 @@
-import { ChildrenProps } from '@/types/ComponentProps'
+import { ChildrenProps, StandardAttrProps } from '@/types/ComponentProps'
 
-export interface ModalProps extends ChildrenProps {
+export interface ModalProps extends ChildrenProps, StandardAttrProps {
   onClickClose?: () => void
 }

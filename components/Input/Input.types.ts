@@ -1,3 +1,4 @@
+import type { StandardAttrProps } from '@/types/ComponentProps'
 import type { FormProps } from '@/types/FormProps'
 
 // prettier-ignore
@@ -14,7 +15,7 @@ export type ControlType =
   | "manage"
   | "search";
 
-interface InputOptions {
+export interface InputProps extends FormProps, StandardAttrProps {
   type?: InputType
   label?: string
   errorMsg?: string
@@ -22,5 +23,3 @@ interface InputOptions {
   control?: ControlType
   placeholder?: string
 }
-
-export interface InputProps extends FormProps, InputOptions {}

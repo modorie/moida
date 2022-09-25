@@ -1,5 +1,5 @@
-interface BadgeOptions {
+import { StandardAttrProps } from '@/types/ComponentProps'
+
+export interface BadgeProps extends StandardAttrProps {
   isOngoing: boolean
 }
-
-export interface BadgeProps extends BadgeOptions {}
