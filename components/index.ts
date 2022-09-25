@@ -1,6 +1,8 @@
 export { default as Avatar } from './Avatar'
 export { default as Badge } from './Badge'
+export { default as BottomSheet } from './BottomSheet'
 export { default as ButtonGroup } from './ButtonGroup'
+export * from './Buttons'
 export { default as GpsButton } from './GpsButton'
 export { default as Header } from './Header'
 export { default as HelperText } from './HelperText'
