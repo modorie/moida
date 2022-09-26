@@ -10,7 +10,7 @@ export const Overlay = styled.div`
   background-color: rgb(0 0 0 / 0.2);
 `
 
-export const Layout = styled.div<{ height?: number }>`
+export const Layout = styled.div<{ height: number }>`
   position: fixed;
   bottom: 0;
   left: 0;
@@ -20,7 +20,7 @@ export const Layout = styled.div<{ height?: number }>`
   justify-content: space-between;
 
   width: 100vw;
-  height: ${({ height = 300 }) => height + 'px'};
+  height: ${({ height }) => height + 'px'};
   border-radius: 20px 20px 0 0;
   box-shadow: 0 0 20px rgb(0 0 0 / 0.1);
 
