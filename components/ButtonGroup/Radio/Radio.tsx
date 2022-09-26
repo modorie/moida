@@ -9,6 +9,8 @@ const Radio = ({
   label,
   value,
   defaultChecked = false,
+  className,
+  style,
 }: RadioProps) => (
   <>
     <Input
@@ -18,7 +20,7 @@ const Radio = ({
       value={value}
       defaultChecked={defaultChecked}
     />
-    <Label htmlFor={id}>
+    <Label htmlFor={id} className={className} style={style}>
       <Text color="currentColor" weight="inherit">
         {label}
       </Text>

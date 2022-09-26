@@ -1,3 +1,4 @@
+import type { StandardAttrProps } from '@/types/ComponentProps'
 import { UserProps } from '@/types/UserProps'
 
 interface itemOptions {
@@ -21,7 +22,11 @@ export interface NavFooterProps {
   bottomItems: itemOptions[]
 }
 
-export interface NavProps extends NavHeaderProps, NavBodyProps, NavFooterProps {
+export interface NavProps
+  extends NavHeaderProps,
+    NavBodyProps,
+    NavFooterProps,
+    StandardAttrProps {
   topItemsLogin: itemOptions[]
   topItemsLogout: itemOptions[]
   onClickClose?: React.MouseEventHandler

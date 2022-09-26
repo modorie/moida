@@ -1,8 +1,6 @@
-import { ChildrenProps } from '@/types/ComponentProps'
+import { ChildrenProps, StandardAttrProps } from '@/types/ComponentProps'
 
-interface TabOptions {
+export interface TabProps extends ChildrenProps, StandardAttrProps {
   active?: boolean
   onClick?: React.MouseEventHandler
 }
-
-export interface TabProps extends ChildrenProps, TabOptions {}

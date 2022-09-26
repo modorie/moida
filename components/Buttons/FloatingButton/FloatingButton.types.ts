@@ -1,4 +1,10 @@
-import type { ChildrenProps, DisableProps } from '@/types/ComponentProps'
+import type {
+  ChildrenProps,
+  DisableProps,
+  StandardAttrProps,
+} from '@/types/ComponentProps'
 
-// prettier-ignore
-export interface FloatingButtonProps extends ChildrenProps, DisableProps {}
+export interface FloatingButtonProps
+  extends ChildrenProps,
+    DisableProps,
+    StandardAttrProps {}

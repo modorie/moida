@@ -1,3 +1,5 @@
+import { StandardAttrProps } from '@/types/ComponentProps'
+
 export type LineName =
   | '01호선'
   | '02호선'
@@ -22,8 +24,6 @@ export type LineName =
   | '서해선'
   | '김포골드'
 
-interface StationType {
+export default interface StationType extends StandardAttrProps {
   name: string
 }
-
-export default StationType

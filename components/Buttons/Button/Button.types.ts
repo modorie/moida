@@ -2,13 +2,15 @@ import type {
   ChildrenProps,
   DisableProps,
   LoadingProps,
+  StandardAttrProps,
 } from '@/types/ComponentProps'
 
 type StyleType = 'primary' | 'secondary'
 
-interface ButtonOptions {
+export interface ButtonProps
+  extends ChildrenProps,
+    DisableProps,
+    LoadingProps,
+    StandardAttrProps {
   styleVariant?: StyleType
 }
-
-// prettier-ignore
-export interface ButtonProps extends ChildrenProps, DisableProps, LoadingProps, ButtonOptions {}

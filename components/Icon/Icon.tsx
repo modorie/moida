@@ -6,9 +6,9 @@ const Icon = ({
   name,
   size = 30,
   color = 'black',
+  id,
   className,
   style,
-  id,
   ...props
 }: IconProps): React.ReactElement<SVGElement> => (
   <Svg

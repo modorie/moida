@@ -5,9 +5,9 @@ import type AvatarProps from './Avatar.types'
 import { EmojiObj } from './Avatar.types'
 import HostBadge from './HostBadge'
 
-const Avatar = ({ emoji, isHost }: AvatarProps) => {
+const Avatar = ({ emoji, isHost, id, className, style }: AvatarProps) => {
   return (
-    <Layout color={EmojiObj[emoji]}>
+    <Layout color={EmojiObj[emoji]} id={id} className={className} style={style}>
       <Text size="sub1">{emoji}</Text>
       {isHost && <HostBadge />}
     </Layout>

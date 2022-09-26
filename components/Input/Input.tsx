@@ -12,6 +12,9 @@ const Input = ({
   description,
   placeholder = 'Placeholder',
   control = 'clear',
+  id,
+  className,
+  style,
 }: InputProps) => {
   const ControlRender = (control: ControlType) => {
     switch (control) {
@@ -42,6 +45,9 @@ const Input = ({
           type={type}
           disabled={disabled}
           required={required}
+          id={id}
+          className={className}
+          style={style}
         />
         {control && ControlRender(control)}
       </Layout>

@@ -4,7 +4,14 @@ import { Layout } from './ButtonGroup.styled'
 import type { ButtonGroupProps } from './ButtonGroup.types'
 import { Radio } from './Radio'
 
-const ButtonGroup = ({ name, label, options }: ButtonGroupProps) => {
+const ButtonGroup = ({
+  name,
+  label,
+  options,
+  id,
+  className,
+  style,
+}: ButtonGroupProps) => {
   return (
     <>
       {label && (
@@ -18,7 +25,7 @@ const ButtonGroup = ({ name, label, options }: ButtonGroupProps) => {
           {label}
         </Text>
       )}
-      <Layout>
+      <Layout id={id} className={className} style={style}>
         {options.map(({ id, label, value, defaultChecked }) => (
           <Radio
             id={id}

@@ -1,7 +1,5 @@
-import { ChildrenProps } from '@/types/ComponentProps'
+import { ChildrenProps, StandardAttrProps } from '@/types/ComponentProps'
 
-interface HelperOptions {
+export default interface HelperProps extends ChildrenProps, StandardAttrProps {
   color: 'dark' | 'light'
 }
-
-export default interface HelperProps extends ChildrenProps, HelperOptions {}
