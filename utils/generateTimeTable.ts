@@ -33,40 +33,40 @@ export const generateTimeTable = (
   totalStartTime: TimeObj,
   totalEndTime: TimeObj
 ): TimeTableItem[] => {
-  const timeTable: TimeTableItem[] = []
+  const createItems = (hour: number): HalfHourItem[] => [
+    {
+      startTime: `${hour}:0`,
+      endTime: `${hour}:30`,
+      select: false,
+      members: [],
+    },
+    {
+      startTime: `${hour}:30`,
+      endTime: `${hour + 1}:0`,
+      select: false,
+      members: [],
+    },
+  ]
 
-  selectedDates.forEach((dateObj) => {
-    const { year, month, date } = dateObj
+  const items = range(totalStartTime.hour, totalEndTime.hour).reduce(
+    (items, hour) => [...items, ...createItems(hour)],
+    [] as HalfHourItem[]
+  )
 
-    const createItems = (hour: number): HalfHourItem[] => [
+  const timeTable: TimeTableItem[] = selectedDates.reduce(
+    (timeTable, { year, month, date }) => [
+      ...timeTable,
       {
-        startTime: `${hour}:0`,
-        endTime: `${hour}:30`,
-        select: false,
-        members: [],
+        year,
+        month,
+        date,
+        totalStartTime: `${totalStartTime.hour}:${totalStartTime.minute}`,
+        totalEndTime: `${totalEndTime.hour}:${totalEndTime.minute}`,
+        items,
       },
-      {
-        startTime: `${hour}:30`,
-        endTime: `${hour + 1}:0`,
-        select: false,
-        members: [],
-      },
-    ]
-
-    const items = range(totalStartTime.hour, totalEndTime.hour).reduce(
-      (items, hour) => [...items, ...createItems(hour)],
-      [] as HalfHourItem[]
-    )
-
-    timeTable.push({
-      year,
-      month,
-      date,
-      totalStartTime: `${totalStartTime.hour}:${totalStartTime.minute}`,
-      totalEndTime: `${totalEndTime.hour}:${totalEndTime.minute}`,
-      items,
-    })
-  })
+    ],
+    [] as TimeTableItem[]
+  )
 
   return timeTable
 }
