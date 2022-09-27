@@ -48,12 +48,7 @@ export const generateTimeTable = (
     },
   ]
 
-  const items = range(totalStartTime.hour, totalEndTime.hour).reduce(
-    (items, hour) => [...items, ...createItems(hour)],
-    [] as HalfHourItem[]
-  )
-
-  const timeTable: TimeTableItem[] = selectedDates.reduce(
+  return selectedDates.reduce(
     (timeTable, { year, month, date }) => [
       ...timeTable,
       {
@@ -62,11 +57,12 @@ export const generateTimeTable = (
         date,
         totalStartTime: `${totalStartTime.hour}:${totalStartTime.minute}`,
         totalEndTime: `${totalEndTime.hour}:${totalEndTime.minute}`,
-        items,
+        items: range(totalStartTime.hour, totalEndTime.hour).reduce(
+          (items, hour) => [...items, ...createItems(hour)],
+          [] as HalfHourItem[]
+        ),
       },
     ],
     [] as TimeTableItem[]
   )
-
-  return timeTable
 }
