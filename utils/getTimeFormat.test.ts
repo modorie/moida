@@ -2,8 +2,7 @@ import { getTimeFormat } from './getTimeFormat'
 
 describe('getTimeFormat(dateObj) >', () => {
   const now = new Date()
-  const { year, month, date, day, hour, min, sec, ms, totalMs } =
-    getTimeFormat(now)
+  const { year, month, date, day, hour, minute, second } = getTimeFormat(now)
 
   it('return object of time formats >', () => {
     expect(year).toBe(now.getFullYear())
@@ -11,10 +10,8 @@ describe('getTimeFormat(dateObj) >', () => {
     expect(date).toBe(now.getDate())
     expect(day).toBe(now.getDay())
     expect(hour).toBe(now.getHours())
-    expect(min).toBe(now.getMinutes())
-    expect(sec).toBe(now.getSeconds())
-    expect(ms).toBe(now.getMilliseconds())
-    expect(totalMs).toBe(now.getTime())
+    expect(minute).toBe(now.getMinutes())
+    expect(second).toBe(now.getSeconds())
   })
 
   it('return month between 0 and 11 >', () => {
