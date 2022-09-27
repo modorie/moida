@@ -37,7 +37,6 @@ export const generateTimeTable = (
 
   selectedDates.forEach((dateObj) => {
     const { year, month, date } = dateObj
-    const items: HalfHourItem[] = []
 
     const createItems = (hour: number): HalfHourItem[] => [
       {
@@ -54,9 +53,10 @@ export const generateTimeTable = (
       },
     ]
 
-    range(totalStartTime.hour, totalEndTime.hour).forEach((hour) => {
-      items.push(...createItems(hour))
-    })
+    const items = range(totalStartTime.hour, totalEndTime.hour).reduce(
+      (items, hour) => [...items, ...createItems(hour)],
+      [] as HalfHourItem[]
+    )
 
     timeTable.push({
       year,
