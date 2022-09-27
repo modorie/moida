@@ -30,8 +30,8 @@ interface TimeObj {
 
 export const generateTimeTable = (
   selectedDates: DateObj[],
-  totalStartTime: TimeObj,
-  totalEndTime: TimeObj
+  { hour: startHour, minute: startMinute }: TimeObj,
+  { hour: endHour, minute: endMinute }: TimeObj
 ): TimeTableItem[] => {
   const createItems = (hour: number): HalfHourItem[] => [
     {
@@ -55,9 +55,9 @@ export const generateTimeTable = (
         year,
         month,
         date,
-        totalStartTime: `${totalStartTime.hour}:${totalStartTime.minute}`,
-        totalEndTime: `${totalEndTime.hour}:${totalEndTime.minute}`,
-        items: range(totalStartTime.hour, totalEndTime.hour).reduce(
+        totalStartTime: `${startHour}:${startMinute}`,
+        totalEndTime: `${endHour}:${endMinute}`,
+        items: range(startHour, endHour).reduce(
           (items, hour) => [...items, ...createItems(hour)],
           [] as HalfHourItem[]
         ),
