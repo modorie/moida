@@ -39,21 +39,23 @@ export const generateTimeTable = (
     const { year, month, date } = dateObj
     const items: HalfHourItem[] = []
 
+    const createItems = (hour: number): HalfHourItem[] => [
+      {
+        startTime: `${hour}:0`,
+        endTime: `${hour}:30`,
+        select: false,
+        members: [],
+      },
+      {
+        startTime: `${hour}:30`,
+        endTime: `${hour + 1}:0`,
+        select: false,
+        members: [],
+      },
+    ]
+
     range(totalStartTime.hour, totalEndTime.hour).forEach((hour) => {
-      items.push(
-        {
-          startTime: `${hour}:0`,
-          endTime: `${hour}:30`,
-          select: false,
-          members: [],
-        },
-        {
-          startTime: `${hour}:30`,
-          endTime: `${hour + 1}:0`,
-          select: false,
-          members: [],
-        }
-      )
+      items.push(...createItems(hour))
     })
 
     timeTable.push({
