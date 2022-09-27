@@ -25,29 +25,35 @@ export const generateCalendar = (dateObj: Date): CalendarItem[] => {
   const currentMonthLastDay = getTimeFormat(new Date(year, month + 1, 0))
   const nextMonthFirstDay = getTimeFormat(new Date(year, month + 1, 1))
 
-  const prevMonthCalendar = range(currentMonthFirstDay.day, -1, -1).map(
-    (d) => ({
-      year: prevMonthLastDay.year,
-      month: prevMonthLastDay.month,
-      date: prevMonthLastDay.date - d + 1,
-      today: false,
-      prev: true,
-      next: false,
-    })
-  )
+  const prevMonthCalendar: CalendarItem[] = range(
+    currentMonthFirstDay.day,
+    -1,
+    -1
+  ).map((d) => ({
+    year: prevMonthLastDay.year,
+    month: prevMonthLastDay.month,
+    date: prevMonthLastDay.date - d + 1,
+    today: false,
+    prev: true,
+    next: false,
+  }))
 
-  const currentMonthCalendar = range(1, currentMonthLastDay.date + 1).map(
-    (d) => ({
-      year,
-      month,
-      date: d,
-      today: d === date,
-      prev: false,
-      next: false,
-    })
-  )
+  const currentMonthCalendar: CalendarItem[] = range(
+    1,
+    currentMonthLastDay.date + 1
+  ).map((d) => ({
+    year,
+    month,
+    date: d,
+    today: d === date,
+    prev: false,
+    next: false,
+  }))
 
-  const nextMonthCalendar = range(1, 7 - currentMonthLastDay.day).map((d) => ({
+  const nextMonthCalendar: CalendarItem[] = range(
+    1,
+    7 - currentMonthLastDay.day
+  ).map((d) => ({
     year: nextMonthFirstDay.year,
     month: nextMonthFirstDay.month,
     date: d,
