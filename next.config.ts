@@ -8,6 +8,9 @@ const nextConfig = {
       options: {
         publicPath: 'public',
       },
+      env: {
+        PUBLICE_KAKAO_MAP_API_KEY: process.env.PUBLICE_KAKAO_MAP_API_KEY,
+      },
     })
 
     return config
