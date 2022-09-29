@@ -9,7 +9,7 @@ const nextConfig = {
         publicPath: 'public',
       },
       env: {
-        PUBLICE_KAKAO_MAP_API_KEY: process.env.PUBLICE_KAKAO_MAP_API_KEY,
+        PUBLIC_KAKAO_MAP_API_KEY: process.env.PUBLIC_KAKAO_MAP_API_KEY,
       },
     })
 
