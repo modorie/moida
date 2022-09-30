@@ -18,4 +18,5 @@ export const Default: Story<MapProps> = (args) => {
 Default.args = {
   latitude: 33.450701,
   longitude: 126.570667,
+  level: 3,
 }
