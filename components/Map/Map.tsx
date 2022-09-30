@@ -13,15 +13,8 @@ declare global {
 const Map = ({ latitude, longitude }: MapProps) => {
   useEffect(() => {
     const mapScript = document.createElement('script')
-
     mapScript.async = true
-    mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAOMAP_APPKEY}&autoload=false`
-
-    console.log(
-      'process.env.NEXT_PUBLIC_KAKAOMAP_APPKEY',
-      process.env.NEXT_PUBLIC_KAKAOMAP_APPKEY
-    )
-
+    mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_MAP_KEY}&autoload=false`
     document.head.appendChild(mapScript)
 
     const onLoadKakaoMap = () => {
