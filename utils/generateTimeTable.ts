@@ -1,7 +1,7 @@
 import type { DateObj } from './getTimeFormat'
 import { range } from './range'
 
-interface TimeTableItem {
+export interface TimeTableItem {
   year: number
   month: number
   date: number
