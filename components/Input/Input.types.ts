@@ -9,17 +9,16 @@ type InputType =
   | "password"
   | "number";
 
-// prettier-ignore
-export type ControlType =
-  | "clear"
-  | "manage"
-  | "search";
-
-export interface InputProps extends FormProps, StandardAttrProps {
+export interface InputProps
+  extends FormProps,
+    StandardAttrProps,
+    React.InputHTMLAttributes<HTMLInputElement> {
   type?: InputType
   label?: string
-  errorMsg?: string
   description?: string
-  control?: ControlType
   placeholder?: string
+  clearable?: boolean
+  hasError?: boolean
+  errorMsg?: string
+  rightContent?: React.ReactNode
 }
