@@ -1,45 +1,59 @@
 import { render } from '@testing-library/react'
 
-import { Color, FontWeight } from '@/foundations'
+import ThemeProvider from '@/providers/ThemeProvider'
+import Theme from '@/styles/theme'
 
 import Button from './Button'
 import { Primary, Secondary } from './Button.stories'
 
+const renderOptions = {
+  wrapper: ThemeProvider,
+}
+
 describe('Button Test >', () => {
   describe('Primary Button >', () => {
     it('Default >', () => {
-      const { getByRole } = render(<Button {...Primary.args} />)
+      const { getByRole } = render(<Button {...Primary.args} />, renderOptions)
       const primaryButton = getByRole('button')
 
-      expect(primaryButton).toHaveStyle(`color: ${Color.blue200}`)
-      expect(primaryButton).toHaveStyle(`background-color: ${Color.blue200};`)
-      expect(primaryButton).toHaveStyle(`border: 1px solid ${Color.blue200}`)
-      expect(primaryButton).toHaveStyle(`font-weight: ${FontWeight.bold}`)
+      expect(primaryButton).toHaveStyle(`color: ${Theme.color.white}`)
+      expect(primaryButton).toHaveStyle(
+        `background-color: ${Theme.color.blue200};`
+      )
+      expect(primaryButton).toHaveStyle(
+        `border: 1px solid ${Theme.color.blue200}`
+      )
     })
 
     it('Disabled >', () => {
-      const { getByRole } = render(<Button {...Primary.args} disabled={true} />)
+      const { getByRole } = render(
+        <Button {...Primary.args} disabled={true} />,
+        renderOptions
+      )
       const primaryDisabledButton = getByRole('button')
 
-      expect(primaryDisabledButton).toHaveStyle(`color: ${Color.gray400}`)
+      expect(primaryDisabledButton).toHaveStyle(`color: ${Theme.color.gray400}`)
       expect(primaryDisabledButton).toHaveStyle(
-        `background-color: ${Color.gray200}`
+        `background-color: ${Theme.color.gray200}`
       )
       expect(primaryDisabledButton).toHaveStyle(
-        `border: 1px solid ${Color.gray200}`
+        `border: 1px solid ${Theme.color.gray200}`
       )
       expect(primaryDisabledButton).toBeDisabled()
     })
 
     it('Loading >', () => {
-      const { getByRole } = render(<Button {...Primary.args} loading={true} />)
+      const { getByRole } = render(
+        <Button {...Primary.args} loading={true} />,
+        renderOptions
+      )
       const primaryLoadingButton = getByRole('button')
 
       expect(primaryLoadingButton).toHaveStyle(
-        `background-color: ${Color.blue200};`
+        `background-color: ${Theme.color.blue200};`
       )
       expect(primaryLoadingButton).toHaveStyle(
-        `border: 1px solid ${Color.blue200}`
+        `border: 1px solid ${Theme.color.blue200}`
       )
       expect(primaryLoadingButton.firstChild?.nodeName).toBe('DIV')
     })
@@ -47,42 +61,52 @@ describe('Button Test >', () => {
 
   describe('Secondary Button >', () => {
     it('Default >', () => {
-      const { getByRole } = render(<Button {...Secondary.args} />)
+      const { getByRole } = render(
+        <Button {...Secondary.args} />,
+        renderOptions
+      )
       const secondaryButton = getByRole('button')
 
-      expect(secondaryButton).toHaveStyle(`color: ${Color.blue200}`)
-      expect(secondaryButton).toHaveStyle(`background-color: ${Color.white};`)
-      expect(secondaryButton).toHaveStyle(`border: 1px solid ${Color.blue200}`)
-      expect(secondaryButton).toHaveStyle(`font-weight: ${FontWeight.regular}`)
+      expect(secondaryButton).toHaveStyle(`color: ${Theme.color.blue200}`)
+      expect(secondaryButton).toHaveStyle(
+        `background-color: ${Theme.color.white};`
+      )
+      expect(secondaryButton).toHaveStyle(
+        `border: 1px solid ${Theme.color.blue200}`
+      )
     })
 
     it('Disabled >', () => {
       const { getByRole } = render(
-        <Button {...Secondary.args} disabled={true} />
+        <Button {...Secondary.args} disabled={true} />,
+        renderOptions
       )
       const secondaryDisabledButton = getByRole('button')
 
-      expect(secondaryDisabledButton).toHaveStyle(`color: ${Color.gray400}`)
       expect(secondaryDisabledButton).toHaveStyle(
-        `background-color: ${Color.white}`
+        `color: ${Theme.color.gray400}`
       )
       expect(secondaryDisabledButton).toHaveStyle(
-        `border: 1px solid ${Color.gray400}`
+        `background-color: ${Theme.color.white}`
+      )
+      expect(secondaryDisabledButton).toHaveStyle(
+        `border: 1px solid ${Theme.color.gray400}`
       )
       expect(secondaryDisabledButton).toBeDisabled()
     })
 
     it('Loading >', () => {
       const { getByRole } = render(
-        <Button {...Secondary.args} loading={true} />
+        <Button {...Secondary.args} loading={true} />,
+        renderOptions
       )
       const secondaryLoadingButton = getByRole('button')
 
       expect(secondaryLoadingButton).toHaveStyle(
-        `background-color: ${Color.white};`
+        `background-color: ${Theme.color.white};`
       )
       expect(secondaryLoadingButton).toHaveStyle(
-        `border: 1px solid ${Color.blue200}`
+        `border: 1px solid ${Theme.color.blue200}`
       )
       expect(secondaryLoadingButton.firstChild?.nodeName).toBe('DIV')
     })

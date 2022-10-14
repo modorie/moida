@@ -19,7 +19,6 @@ Primary.args = {
   children: 'text',
   styleVariant: 'primary',
   disabled: false,
-  loading: false,
 }
 
 export const Secondary = Template.bind({})
@@ -27,7 +26,6 @@ Secondary.args = {
   children: 'text',
   styleVariant: 'secondary',
   disabled: false,
-  loading: false,
 }
 
 export const Examples = () => (
