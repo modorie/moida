@@ -1,4 +1,5 @@
 export { default as chunk } from './chunk'
+export type { CalendarItem } from './generateCalendar'
 export { default as generateCalendar } from './generateCalendar'
 export { default as generateTimeTable } from './generateTimeTable'
 export type { DateObj } from './getTimeFormat'
