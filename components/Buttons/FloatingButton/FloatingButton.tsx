@@ -1,6 +1,4 @@
-import React from 'react'
-
-import { Icon } from '@/components'
+import { Icon, Text } from '@/components'
 
 import { Layout } from './FloatingButton.styled'
 import type { FloatingButtonProps } from './FloatingButton.types'
@@ -13,17 +11,11 @@ const FloatingButton = ({
   style,
 }: FloatingButtonProps) => {
   return (
-    <Layout
-      size="body2"
-      weight="bold"
-      color="black"
-      disabled={disabled}
-      id={id}
-      className={className}
-      style={style}
-    >
-      <Icon name="edit" size={23} color="black" />
-      {children}
+    <Layout disabled={disabled} id={id} className={className} style={style}>
+      <Icon name="edit" size={23} color="currentColor" />
+      <Text size="body2" weight="bold" color="currentColor" userSelect="none">
+        {children}
+      </Text>
     </Layout>
   )
 }

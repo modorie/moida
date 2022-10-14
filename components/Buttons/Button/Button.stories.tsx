@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react'
 import React from 'react'
 import styled from 'styled-components'
 
-import Typography from '@/components/Typography'
+import { Text } from '@/components'
 
 import Button from './Button'
 import type { ButtonProps } from './Button.types'
@@ -32,9 +32,9 @@ Secondary.args = {
 
 export const Examples = () => (
   <Layout>
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       Primary
-    </Typography>
+    </Text>
 
     <Button>text</Button>
     <Button disabled>text</Button>
@@ -42,9 +42,9 @@ export const Examples = () => (
 
     <br />
 
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       Secondary
-    </Typography>
+    </Text>
 
     <Button styleVariant="secondary">text</Button>
     <Button styleVariant="secondary" disabled>

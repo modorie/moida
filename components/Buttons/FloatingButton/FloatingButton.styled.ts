@@ -1,45 +1,34 @@
 import styled, { css } from 'styled-components'
 
-import { TypoProps, TypoStyle } from '@/components/Typography'
-import { Theme, Transition } from '@/foundations'
-
 import type { FloatingButtonProps } from './FloatingButton.types'
 
-export const Layout = styled.div<FloatingButtonProps & TypoProps>`
+export const Layout = styled.div<FloatingButtonProps>`
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 6px;
 
-  padding: 10px 16px 10px 14px;
+  height: 46px;
+  padding: 0 14px;
   box-shadow: 0 2px 10px rgb(143 178 230 / 0.3);
 
-  border: 1px solid ${Theme.textColor.primary};
+  border: 1px solid ${({ theme }) => theme.color.blue200};
   border-radius: 130px;
 
-  ${TypoStyle}
-
+  transition: ${({ theme }) => theme.transition};
   cursor: pointer;
 
   :hover,
   :active {
-    background-color: ${Theme.bgColor.primary};
-    color: ${Theme.textColor.white};
-
-    path {
-      stroke: ${Theme.textColor.white};
-    }
-    transition: ${Transition};
+    background-color: ${({ theme }) => theme.color.blue200};
+    color: ${({ theme }) => theme.color.white};
   }
 
   ${({ disabled }) =>
     disabled &&
     css`
-      border: 1px solid ${Theme.borderColor.light};
-      color: ${Theme.textColor.light};
-
-      path {
-        stroke: ${Theme.textColor.light};
-      }
+      border: 1px solid ${({ theme }) => theme.color.gray300};
+      color: ${({ theme }) => theme.color.gray500};
       pointer-events: none;
     `}
 `

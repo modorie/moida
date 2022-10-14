@@ -1,11 +1,8 @@
 import styled, { css } from 'styled-components'
 
-import { TypoProps, TypoStyle } from '@/components/Typography'
-import { FontWeight, Theme, Transition } from '@/foundations'
-
 import type { ButtonProps } from './Button.types'
 
-export const Layout = styled.button<ButtonProps & TypoProps>`
+export const Layout = styled.button<ButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,38 +11,46 @@ export const Layout = styled.button<ButtonProps & TypoProps>`
   height: 54px;
   border-radius: 4px;
 
-  ${TypoStyle}
-
+  transition: ${({ theme }) => theme.transition};
+  pointer-events: ${({ loading }) => (loading ? 'none' : 'auto')};
   cursor: pointer;
 
-  user-select: none;
+  ${({ styleVariant = 'primary', theme }) =>
+    styleVariant === 'primary'
+      ? css`
+          border: 1px solid ${theme.color.blue200};
+          background-color: ${theme.color.blue200};
+          color: ${theme.color.white};
 
-  ${({ styleVariant }) =>
-    styleVariant &&
-    css`
-      border: 1px solid ${Theme.borderColor.primary};
-      background-color: ${Theme.ButtonBgColor[styleVariant]};
-      color: ${Theme.ButtonTextColor[styleVariant]};
-      font-weight: ${styleVariant === 'primary'
-        ? FontWeight.bold
-        : FontWeight.regular};
+          :hover,
+          :active {
+            border: 1px solid ${theme.color.blue300};
+            background-color: ${theme.color.blue300};
+          }
 
-      :hover,
-      :active {
-        border: 1px solid ${Theme.borderColor.active};
-        background-color: ${Theme.ButtonActiveBgColor[styleVariant]};
-        color: ${Theme.ButtonActiveTextColor[styleVariant]};
-        transition: ${Transition};
-      }
-    `}
+          :disabled {
+            border: 1px solid ${theme.color.gray200};
+            background-color: ${theme.color.gray200};
+            color: ${theme.color.gray400};
+            pointer-events: none;
+          }
+        `
+      : css`
+          border: 1px solid ${theme.color.blue200};
+          background-color: ${theme.color.white};
+          color: ${theme.color.blue200};
 
-  ${({ styleVariant, disabled }) =>
-    styleVariant &&
-    disabled &&
-    css`
-      border: 1px solid ${Theme.ButtonDisableBorderColor[styleVariant]};
-      background-color: ${Theme.ButtonDisableBgColor[styleVariant]};
-      color: ${Theme.textColor.lightest};
-      pointer-events: none;
-    `}
+          /* stylelint-disable no-duplicate-selectors */
+          :hover,
+          :active {
+            border: 1px solid ${theme.color.blue400};
+            color: ${theme.color.blue400};
+          }
+
+          :disabled {
+            border: 1px solid ${theme.color.gray400};
+            color: ${theme.color.gray400};
+            pointer-events: none;
+          }
+        `}
 `

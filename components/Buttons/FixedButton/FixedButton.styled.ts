@@ -1,11 +1,8 @@
 import styled, { css } from 'styled-components'
 
-import { TypoProps, TypoStyle } from '@/components/Typography'
-import { FontWeight, Theme, Transition } from '@/foundations'
-
 import type { FixedButtonProps } from './FixedButton.types'
 
-export const Layout = styled.div<FixedButtonProps & TypoProps>`
+export const Layout = styled.button<FixedButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,43 +13,46 @@ export const Layout = styled.div<FixedButtonProps & TypoProps>`
   width: 100%;
   height: 70px;
 
-  ${TypoStyle}
-
+  transition: ${({ theme }) => theme.transition};
+  pointer-events: ${({ loading }) => (loading ? 'none' : 'auto')};
   cursor: pointer;
 
-  ${({ styleVariant }) =>
-    styleVariant &&
-    css`
-      border: 1px solid ${Theme.borderColor.primary};
-      background-color: ${Theme.ButtonBgColor[styleVariant]};
-      color: ${Theme.ButtonTextColor[styleVariant]};
-      font-weight: ${styleVariant === 'primary'
-        ? FontWeight.bold
-        : FontWeight.regular};
+  ${({ styleVariant = 'primary', theme }) =>
+    styleVariant === 'primary'
+      ? css`
+          border: 1px solid ${theme.color.blue200};
+          background-color: ${theme.color.blue200};
+          color: ${theme.color.white};
 
-      :hover,
-      :active {
-        border: 1px solid ${Theme.borderColor.active};
-        background-color: ${Theme.ButtonActiveBgColor[styleVariant]};
-        color: ${Theme.ButtonActiveTextColor[styleVariant]};
-        transition: ${Transition};
-      }
-    `}
+          :hover,
+          :active {
+            border: 1px solid ${theme.color.blue300};
+            background-color: ${theme.color.blue300};
+          }
 
-  ${({ styleVariant, disabled }) =>
-    styleVariant &&
-    disabled &&
-    css`
-      border: 1px solid ${Theme.ButtonDisableBorderColor[styleVariant]};
-      background-color: ${Theme.ButtonDisableBgColor[styleVariant]};
-      color: ${Theme.textColor.lightest};
-      pointer-events: none;
-    `}
-`
+          :disabled {
+            border: 1px solid ${theme.color.gray200};
+            background-color: ${theme.color.gray200};
+            color: ${theme.color.gray400};
+            pointer-events: none;
+          }
+        `
+      : css`
+          border: 1px solid ${theme.color.blue200};
+          background-color: ${theme.color.white};
+          color: ${theme.color.blue200};
 
-export const LoadingBar = styled.div`
-  width: 10px;
-  height: 10px;
-  border: 1px solid red;
-  border-radius: 50%;
+          /* stylelint-disable no-duplicate-selectors */
+          :hover,
+          :active {
+            border: 1px solid ${theme.color.blue400};
+            color: ${theme.color.blue400};
+          }
+
+          :disabled {
+            border: 1px solid ${theme.color.gray400};
+            color: ${theme.color.gray400};
+            pointer-events: none;
+          }
+        `}
 `
