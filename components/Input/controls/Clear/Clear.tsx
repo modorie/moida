@@ -1,12 +1,15 @@
+import { OnClickProps } from '@/types/ComponentProps'
+
 import { Svg } from './Clear.styled'
 
-const Clear = () => (
+const Clear = ({ onClick }: OnClickProps) => (
   <Svg
     width="30"
     height="30"
     viewBox="0 0 30 30"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    onClick={onClick}
   >
     <circle cx="15" cy="15" r="10" />
     <path
