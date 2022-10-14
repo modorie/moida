@@ -2,7 +2,7 @@ import { generateCalendar } from './generateCalendar'
 import { getTimeFormat } from './getTimeFormat'
 
 describe('generateCalendar(dateObj) >', () => {
-  it("return today's calendar >", () => {
+  it("should return today's calendar >", () => {
     const now = new Date()
     const calendar = generateCalendar(now)
     const { year, month, date } = getTimeFormat(now)
@@ -19,11 +19,11 @@ describe('generateCalendar(dateObj) >', () => {
     ])
   })
 
-  it("return leap month's calendar >", () => {
+  it("should return leap month's calendar >", () => {
     const leapMonth = new Date('2020-02-29')
     const calendar = generateCalendar(leapMonth)
 
-    expect(calendar.filter((obj) => obj.today === true).at(0)).toEqual({
+    expect(calendar.filter((obj) => obj.today).at(0)).toEqual({
       year: 2020,
       month: 1,
       date: 29,
@@ -49,5 +49,13 @@ describe('generateCalendar(dateObj) >', () => {
       prev: false,
       next: false,
     })
+  })
+
+  it('should return 7*6 or 7*5 calendar >', () => {
+    const calendar = generateCalendar(new Date())
+
+    calendar.some((dateObj) => dateObj.next)
+      ? expect(calendar.length).toBe(42)
+      : expect(calendar.length).toBe(35)
   })
 })
