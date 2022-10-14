@@ -1,20 +1,38 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-import { chunk, generateCalendar, getTimeFormat } from '@/utils'
+import { CalendarItem, chunk, generateCalendar, getTimeFormat } from '@/utils'
 
 import { Layout } from './Calendar.styled'
 import { CalendarProps } from './Calendar.types'
 
 const Calendar = ({ id, className, style }: CalendarProps) => {
   const now = getTimeFormat(new Date())
-  const [date, setDate] = useState({ year: now.year, month: now.month })
-  const calendar = generateCalendar(date.year, date.month)
+  const [date, setDate] = useState<Pick<CalendarItem, 'year' | 'month'>>({
+    year: now.year,
+    month: now.month,
+  })
+  const [calendar, setCalendar] = useState(generateCalendar(date))
+  const [selected, setSelected] = useState<
+    Pick<CalendarItem, 'year' | 'month' | 'date'>[]
+  >([])
+
+  const handleSelect = (day: CalendarItem) => {
+    const ymd = { year: day.year, month: day.month, date: day.date }
+
+    setSelected((prev) =>
+      prev.some((item) => JSON.stringify(item) === JSON.stringify(ymd))
+        ? prev.filter((item) => item.date !== ymd.date)
+        : [...prev, ymd]
+    )
+  }
+
+  useEffect(() => {
+    setCalendar(generateCalendar(date))
+  }, [date])
 
   return (
     <Layout id={id} className={className} style={style}>
-      <button
-        onClick={() => setDate({ year: date.year, month: date.month - 1 })}
-      >
+      <button onClick={() => setDate({ ...date, month: date.month - 1 })}>
         ←
       </button>
 
@@ -22,9 +40,7 @@ const Calendar = ({ id, className, style }: CalendarProps) => {
         {date.year}년 {date.month}월
       </span>
 
-      <button
-        onClick={() => setDate({ year: date.year, month: date.month + 1 })}
-      >
+      <button onClick={() => setDate({ ...date, month: date.month + 1 })}>
         →
       </button>
 
@@ -37,11 +53,21 @@ const Calendar = ({ id, className, style }: CalendarProps) => {
         {chunk(calendar, 7).map((week, index) => (
           <div key={index}>
             {week.map((day) => (
-              <button key={day.date}> {day.date} </button>
+              <button key={day.date} onClick={() => handleSelect(day)}>
+                {' '}
+                {day.date}{' '}
+              </button>
             ))}
           </div>
         ))}
       </div>
+
+      <h3>selected</h3>
+      {selected.map(({ year, month, date }) => (
+        <span key={`${year}-${month}-${date}`}>
+          {year}/{month}/{date},{' '}
+        </span>
+      ))}
     </Layout>
   )
 }
