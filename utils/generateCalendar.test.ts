@@ -2,9 +2,8 @@ import { generateCalendar, getTimeFormat } from '@/utils'
 
 describe('generateCalendar(dateObj) >', () => {
   it("should return today's calendar >", () => {
-    const now = new Date()
-    const calendar = generateCalendar(now)
-    const { year, month, date } = getTimeFormat(now)
+    const { year, month, date } = getTimeFormat(new Date())
+    const calendar = generateCalendar(year, month)
 
     expect(calendar.filter((obj) => obj.today)).toEqual([
       {
@@ -19,15 +18,15 @@ describe('generateCalendar(dateObj) >', () => {
   })
 
   it("should return false if calendar doesn't have today >", () => {
-    const lastYear = new Date('2021-01-01')
-    const calendar = generateCalendar(lastYear)
+    const { year, month } = getTimeFormat(new Date('2021-01-01'))
+    const calendar = generateCalendar(year, month)
 
     expect(calendar.some((obj) => obj.today)).toBe(false)
   })
 
   it("should return leap month's calendar >", () => {
-    const leapMonth = new Date('2020-02-29')
-    const calendar = generateCalendar(leapMonth)
+    const { year, month } = getTimeFormat(new Date('2020-02-29'))
+    const calendar = generateCalendar(year, month)
 
     expect(calendar.at(0)).toEqual({
       year: 2020,
@@ -49,7 +48,8 @@ describe('generateCalendar(dateObj) >', () => {
   })
 
   it('should return 7*6 or 7*5 calendar >', () => {
-    const calendar = generateCalendar(new Date())
+    const { year, month } = getTimeFormat(new Date())
+    const calendar = generateCalendar(year, month)
 
     calendar.some((dateObj) => dateObj.next)
       ? expect(calendar.length).toBe(42)

@@ -17,8 +17,7 @@ interface CalendarItem {
  * - day - 요일
  */
 
-const generateCalendar = (dateObj: Date): CalendarItem[] => {
-  const { year, month } = getTimeFormat(dateObj)
+const generateCalendar = (year: number, month: number): CalendarItem[] => {
   const prevMonthLastDay = getTimeFormat(new Date(year, month, 0))
   const currentMonthFirstDay = getTimeFormat(new Date(year, month, 1))
   const currentMonthLastDay = getTimeFormat(new Date(year, month + 1, 0))
