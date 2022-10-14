@@ -7,7 +7,7 @@ describe('generateCalendar(dateObj) >', () => {
     const calendar = generateCalendar(now)
     const { year, month, date } = getTimeFormat(now)
 
-    expect(calendar.filter((obj) => obj.today === true)).toEqual([
+    expect(calendar.filter((obj) => obj.today)).toEqual([
       {
         year,
         month,
@@ -19,18 +19,16 @@ describe('generateCalendar(dateObj) >', () => {
     ])
   })
 
+  it("should return false if calendar doesn't have today >", () => {
+    const lastYear = new Date('2021-01-01')
+    const calendar = generateCalendar(lastYear)
+
+    expect(calendar.some((obj) => obj.today)).toBe(false)
+  })
+
   it("should return leap month's calendar >", () => {
     const leapMonth = new Date('2020-02-29')
     const calendar = generateCalendar(leapMonth)
-
-    expect(calendar.filter((obj) => obj.today).at(0)).toEqual({
-      year: 2020,
-      month: 1,
-      date: 29,
-      today: true,
-      prev: false,
-      next: false,
-    })
 
     expect(calendar.at(0)).toEqual({
       year: 2020,
@@ -45,7 +43,7 @@ describe('generateCalendar(dateObj) >', () => {
       year: 2020,
       month: 1,
       date: 29,
-      today: true,
+      today: false,
       prev: false,
       next: false,
     })

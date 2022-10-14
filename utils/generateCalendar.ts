@@ -19,21 +19,31 @@ interface CalendarItem {
  */
 
 export const generateCalendar = (dateObj: Date): CalendarItem[] => {
-  const { year, month, date } = getTimeFormat(dateObj)
+  const { year, month } = getTimeFormat(dateObj)
   const prevMonthLastDay = getTimeFormat(new Date(year, month, 0))
   const currentMonthFirstDay = getTimeFormat(new Date(year, month, 1))
   const currentMonthLastDay = getTimeFormat(new Date(year, month + 1, 0))
   const nextMonthFirstDay = getTimeFormat(new Date(year, month + 1, 1))
 
+  const isToday = (year: number, month: number, date: number) => {
+    const today = getTimeFormat(new Date())
+
+    return today.year === year && today.month === month && today.date === date
+  }
+
   const prevMonthCalendar: CalendarItem[] = range(
-    currentMonthFirstDay.day,
-    0,
+    currentMonthFirstDay.day - 1,
+    -1,
     -1
   ).map((d) => ({
     year: prevMonthLastDay.year,
     month: prevMonthLastDay.month,
-    date: prevMonthLastDay.date - d + 1,
-    today: false,
+    date: prevMonthLastDay.date - d,
+    today: isToday(
+      prevMonthLastDay.year,
+      prevMonthLastDay.month,
+      prevMonthLastDay.date - d
+    ),
     prev: true,
     next: false,
   }))
@@ -45,7 +55,7 @@ export const generateCalendar = (dateObj: Date): CalendarItem[] => {
     year,
     month,
     date: d,
-    today: d === date,
+    today: isToday(year, month, d),
     prev: false,
     next: false,
   }))
@@ -57,7 +67,7 @@ export const generateCalendar = (dateObj: Date): CalendarItem[] => {
     year: nextMonthFirstDay.year,
     month: nextMonthFirstDay.month,
     date: d,
-    today: false,
+    today: isToday(nextMonthFirstDay.year, nextMonthFirstDay.month, d),
     prev: false,
     next: true,
   }))
