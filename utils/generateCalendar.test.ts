@@ -1,5 +1,4 @@
-import { generateCalendar } from './generateCalendar'
-import { getTimeFormat } from './getTimeFormat'
+import { generateCalendar, getTimeFormat } from '@/utils'
 
 describe('generateCalendar(dateObj) >', () => {
   it("should return today's calendar >", () => {

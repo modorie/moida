@@ -1,4 +1,4 @@
-import { chunk } from './chunk'
+import { chunk } from '@/utils'
 
 describe('chunk >', () => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]

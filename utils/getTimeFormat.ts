@@ -12,7 +12,7 @@ export interface DateObj {
  * Returns object of time formats
  */
 
-export const getTimeFormat = (dateObj: Date): DateObj => ({
+const getTimeFormat = (dateObj: Date): DateObj => ({
   year: dateObj.getFullYear(),
   month: dateObj.getMonth(),
   date: dateObj.getDate(),
@@ -21,3 +21,5 @@ export const getTimeFormat = (dateObj: Date): DateObj => ({
   minute: dateObj.getMinutes(),
   second: dateObj.getSeconds(),
 })
+
+export default getTimeFormat

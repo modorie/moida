@@ -1,5 +1,4 @@
-import { getTimeFormat } from './getTimeFormat'
-import { range } from './range'
+import { getTimeFormat, range } from '@/utils'
 
 interface CalendarItem {
   year: number
@@ -18,7 +17,7 @@ interface CalendarItem {
  * - day - 요일
  */
 
-export const generateCalendar = (dateObj: Date): CalendarItem[] => {
+const generateCalendar = (dateObj: Date): CalendarItem[] => {
   const { year, month } = getTimeFormat(dateObj)
   const prevMonthLastDay = getTimeFormat(new Date(year, month, 0))
   const currentMonthFirstDay = getTimeFormat(new Date(year, month, 1))
@@ -74,3 +73,5 @@ export const generateCalendar = (dateObj: Date): CalendarItem[] => {
 
   return [...prevMonthCalendar, ...currentMonthCalendar, ...nextMonthCalendar]
 }
+
+export default generateCalendar

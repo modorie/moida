@@ -1,4 +1,4 @@
-import { range } from './range'
+import { range } from '@/utils'
 
 describe('range >', () => {
   it('should return range list', () => {

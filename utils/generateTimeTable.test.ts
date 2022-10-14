@@ -1,5 +1,4 @@
-import { generateTimeTable } from './generateTimeTable'
-import { getTimeFormat } from './getTimeFormat'
+import { generateTimeTable, getTimeFormat } from '@/utils'
 
 describe('generateTimeTable(dateObj, startTime, endTime) >', () => {
   it('return time table >', () => {
