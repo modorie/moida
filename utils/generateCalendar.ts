@@ -27,7 +27,7 @@ export const generateCalendar = (dateObj: Date): CalendarItem[] => {
 
   const prevMonthCalendar: CalendarItem[] = range(
     currentMonthFirstDay.day,
-    -1,
+    0,
     -1
   ).map((d) => ({
     year: prevMonthLastDay.year,
