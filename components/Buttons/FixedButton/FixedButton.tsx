@@ -1,4 +1,4 @@
-import React from 'react'
+import { Text } from '@/components'
 
 import LoadingDots from '../LoadingDots'
 import { Layout } from './FixedButton.styled'
@@ -15,7 +15,6 @@ const FixedButton = ({
 }: FixedButtonProps) => {
   return (
     <Layout
-      size="sub2"
       styleVariant={styleVariant}
       disabled={disabled}
       loading={loading}
@@ -23,7 +22,17 @@ const FixedButton = ({
       className={className}
       style={style}
     >
-      {loading ? <LoadingDots /> : children}
+      {loading ? (
+        <LoadingDots color="currentColor" />
+      ) : (
+        <Text
+          size="sub2"
+          weight={styleVariant === 'primary' ? 'bold' : 'regular'}
+          color="currentColor"
+        >
+          {children}
+        </Text>
+      )}
     </Layout>
   )
 }

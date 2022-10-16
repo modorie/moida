@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react'
 import React from 'react'
 import styled from 'styled-components'
 
-import Typography from '@/components/Typography'
+import { Text } from '@/components'
 
 import FixedButton from './FixedButton'
 import type { FixedButtonProps } from './FixedButton.types'
@@ -28,9 +28,9 @@ Default.args = {
 
 export const Examples = () => (
   <Layout>
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       Primary
-    </Typography>
+    </Text>
 
     <FixedButton>text</FixedButton>
     <FixedButton disabled>text</FixedButton>
@@ -38,9 +38,9 @@ export const Examples = () => (
 
     <br />
 
-    <Typography size="sub1" weight="bold">
+    <Text size="sub1" weight="bold">
       Secondary
-    </Typography>
+    </Text>
 
     <FixedButton styleVariant="secondary">text</FixedButton>
     <FixedButton styleVariant="secondary" disabled>
@@ -57,12 +57,7 @@ const Layout = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  div {
+  button {
     position: relative;
-  }
-
-  span {
-    display: block;
-    padding: 16px;
   }
 `
