@@ -26,23 +26,31 @@ const Calendar = ({ id, className, style }: CalendarProps) => {
     )
   }
 
+  const handleDate = (type: 'prev' | 'next') => {
+    const { year, month } = date
+    const newDate = new Date(year, month - 1, 1)
+
+    newDate.setMonth(newDate.getMonth() + (type === 'prev' ? -1 : 1))
+
+    setDate({
+      year: newDate.getFullYear(),
+      month: newDate.getMonth() + 1,
+    })
+  }
+
   useEffect(() => {
     setCalendar(generateCalendar(date))
   }, [date])
 
   return (
     <Layout id={id} className={className} style={style}>
-      <button onClick={() => setDate({ ...date, month: date.month - 1 })}>
-        ←
-      </button>
+      <button onClick={() => handleDate('prev')}>←</button>
 
       <span>
-        {date.year}년 {date.month}월
+        {date.year}년 {date.month + 1}월
       </span>
 
-      <button onClick={() => setDate({ ...date, month: date.month + 1 })}>
-        →
-      </button>
+      <button onClick={() => handleDate('next')}>→</button>
 
       <div>
         {['일', '월', '화', '수', '목', '금', '토'].map((day) => (
