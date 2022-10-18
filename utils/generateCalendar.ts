@@ -1,12 +1,14 @@
 import { getTimeFormat, range } from '@/utils'
 
 export interface CalendarItem {
+  id: string
   year: number
   month: number
   date: number
   today: boolean
   prev: boolean
   next: boolean
+  selected: boolean
 }
 
 /**
@@ -37,6 +39,7 @@ const generateCalendar = ({
     -1,
     -1
   ).map((d) => ({
+    id: `${prevMonthLastDay.year}-${prevMonthLastDay.month}-${d}`,
     year: prevMonthLastDay.year,
     month: prevMonthLastDay.month,
     date: prevMonthLastDay.date - d,
@@ -47,30 +50,35 @@ const generateCalendar = ({
     ),
     prev: true,
     next: false,
+    selected: false,
   }))
 
   const currentMonthCalendar: CalendarItem[] = range(
     1,
     currentMonthLastDay.date + 1
   ).map((d) => ({
+    id: `${currentMonthFirstDay.year}-${currentMonthFirstDay.month}-${d}`,
     year,
     month,
     date: d,
     today: isToday(year, month, d),
     prev: false,
     next: false,
+    selected: false,
   }))
 
   const nextMonthCalendar: CalendarItem[] = range(
     1,
     7 - currentMonthLastDay.day
   ).map((d) => ({
+    id: `${nextMonthFirstDay.year}-${nextMonthFirstDay.month}-${d}`,
     year: nextMonthFirstDay.year,
     month: nextMonthFirstDay.month,
     date: d,
     today: isToday(nextMonthFirstDay.year, nextMonthFirstDay.month, d),
     prev: false,
     next: true,
+    selected: false,
   }))
 
   return [...prevMonthCalendar, ...currentMonthCalendar, ...nextMonthCalendar]
