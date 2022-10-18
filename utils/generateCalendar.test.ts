@@ -7,12 +7,14 @@ describe('generateCalendar(dateObj) >', () => {
 
     expect(calendar.filter((obj) => obj.today)).toEqual([
       {
+        id: `${year}-${month + 1}-${date}`,
         year,
         month,
         date,
         today: true,
         prev: false,
         next: false,
+        selected: false,
       },
     ])
   })
@@ -29,21 +31,25 @@ describe('generateCalendar(dateObj) >', () => {
     const calendar = generateCalendar(leapMonth)
 
     expect(calendar.at(0)).toEqual({
+      id: '2020-1-26',
       year: 2020,
       month: 0,
       date: 26,
       today: false,
       prev: true,
       next: false,
+      selected: false,
     })
 
     expect(calendar.at(-1)).toEqual({
+      id: '2020-2-29',
       year: 2020,
       month: 1,
       date: 29,
       today: false,
       prev: false,
       next: false,
+      selected: false,
     })
   })
 
