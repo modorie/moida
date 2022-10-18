@@ -6,7 +6,7 @@ import { CalendarProps } from './Calendar.types'
 
 const Calendar = ({ id, className, style }: CalendarProps) => {
   const { month, year, calendar, nextMonth, prevMonth, selected, setSelected } =
-    useCalendar()
+    useCalendar(new Date())
 
   return (
     <Layout id={id} className={className} style={style}>

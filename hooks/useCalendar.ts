@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { generateCalendar } from '@/utils'
 
-const useCalendar = () => {
-  const date = new Date()
+const useCalendar = (date: Date) => {
   const [month, setMonth] = useState(date.getMonth())
   const [year, setYear] = useState(date.getFullYear())
   const [selected, setSelected] = useState<Date[]>([])
@@ -15,30 +14,19 @@ const useCalendar = () => {
 
   const handleSelected = (date: Date) => {
     const isSelected = selected.find((d) => d.getTime() === date.getTime())
-    if (isSelected) {
-      setSelected(selected.filter((d) => d.getTime() !== date.getTime()))
-    } else {
-      setSelected([...selected, date])
-    }
+
+    setSelected((prev) =>
+      isSelected
+        ? prev.filter((d) => d.getTime() !== date.getTime())
+        : [...prev, date]
+    )
   }
 
-  const nextMonth = () => {
-    if (month === 11) {
-      setMonth(0)
-      setYear(year + 1)
-    } else {
-      setMonth(month + 1)
-    }
-  }
+  const nextMonth = () =>
+    month === 11 ? (setMonth(0), setYear(year + 1)) : setMonth(month + 1)
 
-  const prevMonth = () => {
-    if (month === 0) {
-      setMonth(11)
-      setYear(year - 1)
-    } else {
-      setMonth(month - 1)
-    }
-  }
+  const prevMonth = () =>
+    month === 0 ? (setMonth(11), setYear(year - 1)) : setMonth(month - 1)
 
   return {
     month,
