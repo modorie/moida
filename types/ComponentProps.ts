@@ -15,7 +15,7 @@ export interface LoadingProps {
 }
 
 export interface OnClickProps {
-  onClick?: (e: React.MouseEvent) => void
+  onClick?: (e?: React.MouseEvent) => void
 }
 
 export interface StandardAttrProps {
