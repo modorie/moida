@@ -12,9 +12,10 @@ const useCalendar = (date: Date) => {
     setCalendar(generateCalendar({ month, year }))
   }, [month, year])
 
+  // TODO : calendar 내 day의 selected 상태를 변경
   const handleSelected = (day: CalendarItem) =>
     setSelected((prev) =>
-      selected.find((item) => item.id === day.id)?.selected
+      selected.find((item) => item.id === day.id)
         ? prev.filter((d) => d.id !== day.id)
         : [...prev, { ...day, selected: true }]
     )
