@@ -1,12 +1,14 @@
-import { Icon } from '@/components'
+import { Icon, Typography } from '@/components'
 import { useCalendar } from '@/hooks'
 import { chunk } from '@/utils'
 
 import {
   Body,
+  BodyHeader,
+  BodyTable,
+  DateButton,
   Header,
   HeaderButton,
-  HeaderTitle,
   Layout,
 } from './Calendar.styled'
 import { CalendarProps } from './Calendar.types'
@@ -18,36 +20,42 @@ const Calendar = ({ id, className, style }: CalendarProps) => {
   const CalendarHeader = () => (
     <Header>
       <HeaderButton onClick={prevMonth}>
-        <Icon name="chevron-left" size={23} color="black" />
+        <Icon name="chevron-left" size={30} color="black" />
       </HeaderButton>
 
-      <HeaderTitle>
+      <Typography size="sub1" weight="bold">
         {year}년 {month + 1}월
-      </HeaderTitle>
+      </Typography>
 
       <HeaderButton onClick={nextMonth}>
-        <Icon name="chevron-right" size={23} color="black" />
+        <Icon name="chevron-right" size={30} color="black" />
       </HeaderButton>
     </Header>
   )
 
   const CalendarBody = () => (
     <Body>
-      <div>
+      <BodyHeader>
         {['일', '월', '화', '수', '목', '금', '토'].map((day) => (
-          <span key={day}> {day} </span>
+          <Typography key={day} size="cap1">
+            {day}
+          </Typography>
         ))}
-      </div>
+      </BodyHeader>
       <div>
         {chunk(calendar, 7).map((week, index) => (
-          <div key={index}>
+          <BodyTable key={index}>
             {week.map((day) => (
-              <button key={day.date} onClick={() => setSelected(day)}>
+              <DateButton
+                key={day.date}
+                selected={day.selected}
+                onClick={() => setSelected(day)}
+              >
                 {' '}
                 {day.date}{' '}
-              </button>
+              </DateButton>
             ))}
-          </div>
+          </BodyTable>
         ))}
       </div>
     </Body>
