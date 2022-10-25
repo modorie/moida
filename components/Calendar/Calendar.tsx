@@ -5,8 +5,10 @@ import { chunk } from '@/utils'
 import {
   Body,
   BodyHeader,
-  BodyTable,
-  DateButton,
+  CalendarRow,
+  DateBox,
+  DayBox,
+  Divider,
   Header,
   HeaderButton,
   Layout,
@@ -37,25 +39,28 @@ const Calendar = ({ id, className, style }: CalendarProps) => {
     <Body>
       <BodyHeader>
         {['일', '월', '화', '수', '목', '금', '토'].map((day) => (
-          <Typography key={day} size="cap1">
-            {day}
-          </Typography>
+          <DayBox key={day}>
+            <Typography size="cap1">{day}</Typography>
+          </DayBox>
         ))}
       </BodyHeader>
+
+      <Divider />
+
       <div>
         {chunk(calendar, 7).map((week, index) => (
-          <BodyTable key={index}>
+          <CalendarRow key={index}>
             {week.map((day) => (
-              <DateButton
+              <DateBox
                 key={day.date}
                 selected={day.selected}
                 onClick={() => setSelected(day)}
               >
                 {' '}
                 {day.date}{' '}
-              </DateButton>
+              </DateBox>
             ))}
-          </BodyTable>
+          </CalendarRow>
         ))}
       </div>
     </Body>
