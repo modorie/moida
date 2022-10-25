@@ -14,17 +14,21 @@ const useCalendar = (date: Date) => {
   }, [month, year])
 
   const handleSelected = (day: CalendarItem) => {
-    setSelected((prev) =>
-      selected.find((item) => item.id === day.id)
-        ? prev.filter((d) => d.id !== day.id)
-        : [...prev, { ...day, selected: true }]
-    )
-
-    setCalendar((prev) =>
-      prev.map((item) =>
-        item.id === day.id ? { ...item, selected: !item.selected } : item
+    if (day.prev) prevMonth()
+    if (day.next) nextMonth()
+    else {
+      setSelected((prev) =>
+        selected.find((item) => item.id === day.id)
+          ? prev.filter((d) => d.id !== day.id)
+          : [...prev, { ...day, selected: true }]
       )
-    )
+
+      setCalendar((prev) =>
+        prev.map((item) =>
+          item.id === day.id ? { ...item, selected: !item.selected } : item
+        )
+      )
+    }
   }
 
   const nextMonth = () =>
