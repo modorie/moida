@@ -16,7 +16,7 @@ import {
 import { CalendarProps } from './Calendar.types'
 
 const Calendar = ({ id, className, style }: CalendarProps) => {
-  const { month, year, calendar, nextMonth, prevMonth, selected, setSelected } =
+  const { month, year, calendar, nextMonth, prevMonth, setSelected } =
     useCalendar(new Date())
 
   const CalendarHeader = () => (
@@ -54,10 +54,13 @@ const Calendar = ({ id, className, style }: CalendarProps) => {
               <DateBox
                 key={day.date}
                 selected={day.selected}
+                today={day.today}
+                prev={day.prev}
+                next={day.next}
+                firstDay={day.date === 1}
                 onClick={() => setSelected(day)}
               >
-                {' '}
-                {day.date}{' '}
+                {day.date}
               </DateBox>
             ))}
           </CalendarRow>
@@ -70,13 +73,6 @@ const Calendar = ({ id, className, style }: CalendarProps) => {
     <Layout id={id} className={className} style={style}>
       <CalendarHeader />
       <CalendarBody />
-
-      <h3>selected</h3>
-      {selected.map(({ id, year, month, date }) => (
-        <div key={id}>
-          {year}년 {month + 1}월 {date}일
-        </div>
-      ))}
     </Layout>
   )
 }

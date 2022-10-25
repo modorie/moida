@@ -57,7 +57,13 @@ export const DayBox = styled.div`
   height: 30px;
 `
 
-export const DateBox = styled.button<{ selected: boolean }>`
+export const DateBox = styled.button<{
+  selected: boolean
+  today: boolean
+  prev: boolean
+  next: boolean
+  firstDay: boolean
+}>`
   border: none;
 
   width: 30px;
@@ -69,15 +75,19 @@ export const DateBox = styled.button<{ selected: boolean }>`
 
   background: ${({ selected, theme }) =>
     selected ? theme.color.green300 : 'none'};
-  color: ${({ selected, theme }) =>
-    selected ? theme.color.white : theme.color.black};
+
+  /* TODO: CSS 구조 리팩터링 */
+  color: ${({ selected, today, prev, next, theme }) =>
+    selected
+      ? theme.color.white
+      : today
+      ? theme.color.blue500
+      : prev || next
+      ? theme.color.gray500
+      : theme.color.black};
 
   &:hover {
     background: ${({ theme }) => theme.color.green100};
     color: ${({ theme }) => theme.color.gray500};
-  }
-
-  &:disabled {
-    color: ${({ theme }) => theme.color.gray300};
   }
 `
