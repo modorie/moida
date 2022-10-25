@@ -39,9 +39,9 @@ const generateCalendar = ({
     -1,
     -1
   ).map((d) => ({
-    id: `${prevMonthLastDay.year}-${prevMonthLastDay.month + 1}-${
+    id: `${prevMonthLastDay.year}-${prevMonthLastDay.month + 1}-${String(
       prevMonthLastDay.date - d
-    }`,
+    ).padStart(2, '0')}`,
     year: prevMonthLastDay.year,
     month: prevMonthLastDay.month,
     date: prevMonthLastDay.date - d,
@@ -59,7 +59,9 @@ const generateCalendar = ({
     1,
     currentMonthLastDay.date + 1
   ).map((d) => ({
-    id: `${currentMonthFirstDay.year}-${currentMonthFirstDay.month + 1}-${d}`,
+    id: `${currentMonthFirstDay.year}-${
+      currentMonthFirstDay.month + 1
+    }-${String(d).padStart(2, '0')}`,
     year,
     month,
     date: d,
@@ -73,7 +75,9 @@ const generateCalendar = ({
     1,
     7 - currentMonthLastDay.day
   ).map((d) => ({
-    id: `${nextMonthFirstDay.year}-${nextMonthFirstDay.month + 1}-${d}`,
+    id: `${nextMonthFirstDay.year}-${nextMonthFirstDay.month + 1}-${String(
+      d
+    ).padStart(2, '0')}`,
     year: nextMonthFirstDay.year,
     month: nextMonthFirstDay.month,
     date: d,
