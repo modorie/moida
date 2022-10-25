@@ -7,11 +7,22 @@ const useCalendar = (date: Date) => {
   const [year, setYear] = useState(date.getFullYear())
   const [selected, setSelected] = useState<CalendarItem[]>([])
   const [calendar, setCalendar] = useState(generateCalendar({ month, year }))
-  const sortedSelected = selected.sort((a, b) => (a.id > b.id ? 1 : -1))
 
   useEffect(() => {
     setCalendar(generateCalendar({ month, year }))
   }, [month, year])
+
+  useEffect(() => {
+    const selectedId = selected.map((item) => item.id)
+
+    setCalendar((prev) =>
+      prev.map((item) =>
+        selectedId.includes(item.id)
+          ? { ...item, selected: true }
+          : { ...item, selected: false }
+      )
+    )
+  }, [selected, month])
 
   const handleSelected = (day: CalendarItem) => {
     if (day.prev) prevMonth()
@@ -21,12 +32,6 @@ const useCalendar = (date: Date) => {
         selected.find((item) => item.id === day.id)
           ? prev.filter((d) => d.id !== day.id)
           : [...prev, { ...day, selected: true }]
-      )
-
-      setCalendar((prev) =>
-        prev.map((item) =>
-          item.id === day.id ? { ...item, selected: !item.selected } : item
-        )
       )
     }
   }
@@ -43,7 +48,7 @@ const useCalendar = (date: Date) => {
     calendar,
     nextMonth,
     prevMonth,
-    selected: sortedSelected,
+    selected: selected.sort((a, b) => (a.id > b.id ? 1 : -1)),
     setSelected: handleSelected,
   }
 }
