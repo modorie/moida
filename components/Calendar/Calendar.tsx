@@ -21,7 +21,7 @@ const Calendar = ({ id, className, style }: CalendarProps) => {
 
   const CalendarHeader = () => (
     <Header>
-      <HeaderButton onClick={prevMonth}>
+      <HeaderButton onClick={prevMonth} aria-label="Previous month">
         <Icon name="chevron-left" size={30} color="black" />
       </HeaderButton>
 
@@ -29,7 +29,7 @@ const Calendar = ({ id, className, style }: CalendarProps) => {
         {year}년 {month + 1}월
       </Typography>
 
-      <HeaderButton onClick={nextMonth}>
+      <HeaderButton onClick={nextMonth} aria-label="Next month">
         <Icon name="chevron-right" size={30} color="black" />
       </HeaderButton>
     </Header>

@@ -20,6 +20,8 @@ export const HeaderButton = styled.button`
   border: none;
 
   height: 30px;
+
+  cursor: pointer;
 `
 
 export const Body = styled.div`
@@ -76,14 +78,13 @@ export const DateBox = styled.button<{
   background: ${({ selected, theme }) =>
     selected ? theme.color.green300 : 'none'};
 
-  /* TODO: CSS 구조 리팩터링 */
   color: ${({ selected, today, prev, next, theme }) =>
     selected
       ? theme.color.white
       : today
       ? theme.color.blue500
       : prev || next
-      ? theme.color.gray500
+      ? theme.color.gray400
       : theme.color.black};
 
   &:hover {
