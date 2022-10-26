@@ -8,6 +8,12 @@ const useCalendar = (date: Date) => {
   const [selected, setSelected] = useState<CalendarItem[]>([])
   const [calendar, setCalendar] = useState(generateCalendar({ month, year }))
 
+  const nextMonth = () =>
+    month === 11 ? (setMonth(0), setYear(year + 1)) : setMonth(month + 1)
+
+  const prevMonth = () =>
+    month === 0 ? (setMonth(11), setYear(year - 1)) : setMonth(month - 1)
+
   useEffect(() => {
     setCalendar(generateCalendar({ month, year }))
   }, [month, year])
@@ -31,16 +37,10 @@ const useCalendar = (date: Date) => {
       setSelected((prev) =>
         selected.find((item) => item.id === day.id)
           ? prev.filter((d) => d.id !== day.id)
-          : [...prev, { ...day, selected: true }]
+          : [...prev, day]
       )
     }
   }
-
-  const nextMonth = () =>
-    month === 11 ? (setMonth(0), setYear(year + 1)) : setMonth(month + 1)
-
-  const prevMonth = () =>
-    month === 0 ? (setMonth(11), setYear(year - 1)) : setMonth(month - 1)
 
   return {
     month,
@@ -49,7 +49,7 @@ const useCalendar = (date: Date) => {
     nextMonth,
     prevMonth,
     selected: selected.sort((a, b) => (a.id > b.id ? 1 : -1)),
-    setSelected: handleSelected,
+    handleSelected,
   }
 }
 

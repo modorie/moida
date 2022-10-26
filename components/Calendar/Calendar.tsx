@@ -16,7 +16,7 @@ import {
 import { CalendarProps } from './Calendar.types'
 
 const Calendar = ({ id, className, style }: CalendarProps) => {
-  const { month, year, calendar, nextMonth, prevMonth, setSelected } =
+  const { month, year, calendar, nextMonth, prevMonth, handleSelected } =
     useCalendar(new Date())
 
   const CalendarHeader = () => (
@@ -58,7 +58,7 @@ const Calendar = ({ id, className, style }: CalendarProps) => {
                 prev={day.prev}
                 next={day.next}
                 firstDay={day.date === 1}
-                onClick={() => setSelected(day)}
+                onClick={() => handleSelected(day)}
               >
                 {day.date}
               </DateBox>
