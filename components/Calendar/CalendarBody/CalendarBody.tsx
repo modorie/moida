@@ -14,7 +14,6 @@ interface CalendarBodyProps {
   handleSelected: (day: CalendarItem) => void
 }
 
-// REFAC: 부모 타입 재활용
 const CalendarBody = ({ calendar, handleSelected }: CalendarBodyProps) => {
   return (
     <Layout>
@@ -32,7 +31,7 @@ const CalendarBody = ({ calendar, handleSelected }: CalendarBodyProps) => {
         <CalendarRow key={index}>
           {week.map((day) => (
             <DateBox
-              key={day.date}
+              key={day.id}
               selected={day.selected}
               today={day.today}
               prev={day.prev}

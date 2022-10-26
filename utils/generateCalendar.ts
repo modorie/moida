@@ -30,18 +30,22 @@ const generateCalendar = ({
 
   const isToday = (year: number, month: number, date: number) => {
     const today = getTimeFormat(new Date())
-
     return today.year === year && today.month === month && today.date === date
   }
+
+  const yyyymmdd = (year: number, month: number, date: number) =>
+    `${year}-${String(month).padStart(2, '0')}-${String(date).padStart(2, '0')}`
 
   const prevMonthCalendar: CalendarItem[] = range(
     currentMonthFirstDay.day - 1,
     -1,
     -1
   ).map((d) => ({
-    id: `${prevMonthLastDay.year}-${prevMonthLastDay.month + 1}-${String(
+    id: yyyymmdd(
+      prevMonthLastDay.year,
+      prevMonthLastDay.month + 1,
       prevMonthLastDay.date - d
-    ).padStart(2, '0')}`,
+    ),
     year: prevMonthLastDay.year,
     month: prevMonthLastDay.month,
     date: prevMonthLastDay.date - d,
@@ -59,9 +63,7 @@ const generateCalendar = ({
     1,
     currentMonthLastDay.date + 1
   ).map((d) => ({
-    id: `${currentMonthFirstDay.year}-${
-      currentMonthFirstDay.month + 1
-    }-${String(d).padStart(2, '0')}`,
+    id: yyyymmdd(currentMonthFirstDay.year, currentMonthFirstDay.month + 1, d),
     year,
     month,
     date: d,
@@ -75,9 +77,7 @@ const generateCalendar = ({
     1,
     7 - currentMonthLastDay.day
   ).map((d) => ({
-    id: `${nextMonthFirstDay.year}-${nextMonthFirstDay.month + 1}-${String(
-      d
-    ).padStart(2, '0')}`,
+    id: yyyymmdd(nextMonthFirstDay.year, nextMonthFirstDay.month + 1, d),
     year: nextMonthFirstDay.year,
     month: nextMonthFirstDay.month,
     date: d,

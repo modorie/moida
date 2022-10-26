@@ -31,7 +31,7 @@ describe('generateCalendar(dateObj) >', () => {
     const calendar = generateCalendar(leapMonth)
 
     expect(calendar.at(0)).toEqual({
-      id: '2020-1-26',
+      id: '2020-01-26',
       year: 2020,
       month: 0,
       date: 26,
@@ -42,7 +42,7 @@ describe('generateCalendar(dateObj) >', () => {
     })
 
     expect(calendar.at(-1)).toEqual({
-      id: '2020-2-29',
+      id: '2020-02-29',
       year: 2020,
       month: 1,
       date: 29,
