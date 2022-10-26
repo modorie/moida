@@ -33,13 +33,12 @@ const useCalendar = (date: Date) => {
   const handleSelected = (day: CalendarItem) => {
     if (day.prev) prevMonth()
     if (day.next) nextMonth()
-    else {
-      setSelected((prev) =>
-        selected.find((item) => item.id === day.id)
-          ? prev.filter((d) => d.id !== day.id)
-          : [...prev, day]
-      )
-    }
+
+    setSelected((prev) =>
+      selected.find((item) => item.id === day.id)
+        ? prev.filter((d) => d.id !== day.id)
+        : [...prev, day]
+    )
   }
 
   return {
