@@ -1,5 +1,7 @@
 import { generateCalendar, getTimeFormat } from '@/utils'
 
+import { yyyymmdd } from './generateCalendar'
+
 describe('generateCalendar(dateObj) >', () => {
   it("should return today's calendar >", () => {
     const { year, month, date, day } = getTimeFormat(new Date())
@@ -7,7 +9,7 @@ describe('generateCalendar(dateObj) >', () => {
 
     expect(calendar.filter((obj) => obj.today)).toEqual([
       {
-        id: `${year}-${month + 1}-${date}`,
+        id: yyyymmdd(year, month + 1, date),
         year,
         month,
         date,
