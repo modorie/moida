@@ -1,18 +1,17 @@
-import type { DateObj } from './getTimeFormat'
-import { range } from './range'
+import { CalendarItem, range } from '@/utils'
 
 export interface TimeTableItem {
   year: number
   month: number
   date: number
-  totalStartTime: string
-  totalEndTime: string
+  totalStartTime: TimeObj
+  totalEndTime: TimeObj
   items: HalfHourItem[]
 }
 
 interface HalfHourItem {
-  startTime: string
-  endTime: string
+  startTime: TimeObj
+  endTime: TimeObj
   select: boolean
   members: string[]
 }
@@ -28,21 +27,21 @@ interface TimeObj {
  * - selectedDate - DateObj[]
  */
 
-export const generateTimeTable = (
-  selectedDates: DateObj[],
+const generateTimeTable = (
+  selectedDates: CalendarItem[],
   { hour: startHour, minute: startMinute }: TimeObj,
   { hour: endHour, minute: endMinute }: TimeObj
 ): TimeTableItem[] => {
   const createItems = (hour: number): HalfHourItem[] => [
     {
-      startTime: `${hour}:0`,
-      endTime: `${hour}:30`,
+      startTime: { hour, minute: 0 },
+      endTime: { hour, minute: 30 },
       select: false,
       members: [],
     },
     {
-      startTime: `${hour}:30`,
-      endTime: `${hour + 1}:0`,
+      startTime: { hour, minute: 30 },
+      endTime: { hour: hour + 1, minute: 0 },
       select: false,
       members: [],
     },
@@ -55,8 +54,8 @@ export const generateTimeTable = (
         year,
         month,
         date,
-        totalStartTime: `${startHour}:${startMinute}`,
-        totalEndTime: `${endHour}:${endMinute}`,
+        totalStartTime: { hour: startHour, minute: startMinute },
+        totalEndTime: { hour: endHour, minute: endMinute },
         items: range(startHour, endHour).reduce(
           (items, hour) => [...items, ...createItems(hour)],
           [] as HalfHourItem[]
@@ -66,3 +65,5 @@ export const generateTimeTable = (
     [] as TimeTableItem[]
   )
 }
+
+export default generateTimeTable

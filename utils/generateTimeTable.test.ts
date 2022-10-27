@@ -1,46 +1,72 @@
-import { generateTimeTable } from './generateTimeTable'
-import { getTimeFormat } from './getTimeFormat'
+import { generateTimeTable } from '@/utils'
 
 describe('generateTimeTable(dateObj, startTime, endTime) >', () => {
   it('return time table >', () => {
     const timeTable = generateTimeTable(
       [
-        getTimeFormat(new Date('2021-01-01')),
-        getTimeFormat(new Date('2021-01-03')),
-        getTimeFormat(new Date('2021-01-04')),
+        {
+          id: '2022-01-01',
+          year: 2022,
+          month: 0,
+          date: 1,
+          today: false,
+          prev: false,
+          next: false,
+          selected: false,
+        },
+        {
+          id: '2022-01-02',
+          year: 2022,
+          month: 0,
+          date: 2,
+          today: false,
+          prev: false,
+          next: false,
+          selected: false,
+        },
+        {
+          id: '2022-01-03',
+          year: 2022,
+          month: 0,
+          date: 3,
+          today: false,
+          prev: false,
+          next: false,
+          selected: false,
+        },
       ],
       { hour: 10, minute: 0 },
       { hour: 12, minute: 0 }
     )
 
     expect(timeTable.at(0)).toEqual({
-      year: 2021,
+      year: 2022,
       month: 0,
       date: 1,
-      totalStartTime: '10:0',
-      totalEndTime: '12:0',
+      totalStartTime: { hour: 10, minute: 0 },
+      totalEndTime: { hour: 12, minute: 0 },
       items: [
         {
-          startTime: '10:0',
-          endTime: '10:30',
+          startTime: { hour: 10, minute: 0 },
+          endTime: { hour: 10, minute: 30 },
           members: [],
           select: false,
         },
         {
-          startTime: '10:30',
-          endTime: '11:0',
+          startTime: { hour: 10, minute: 30 },
+          endTime: { hour: 11, minute: 0 },
           members: [],
           select: false,
         },
         {
-          startTime: '11:0',
-          endTime: '11:30',
+          startTime: { hour: 11, minute: 0 },
+          endTime: { hour: 11, minute: 30 },
           members: [],
           select: false,
         },
         {
-          startTime: '11:30',
-          endTime: '12:0',
+          startTime: { hour: 11, minute: 30 },
+          endTime: { hour: 12, minute: 0 },
           members: [],
           select: false,
         },
