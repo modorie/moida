@@ -1,3 +1,4 @@
+import { TimeObj } from '@/components/TimeTable/TimeTable.types'
 import { CalendarItem, range } from '@/utils'
 
 export interface TimeTableItem {
@@ -12,13 +13,8 @@ export interface TimeTableItem {
 interface HalfHourItem {
   startTime: TimeObj
   endTime: TimeObj
-  select: boolean
+  selected: boolean
   members: string[]
-}
-
-interface TimeObj {
-  hour: number
-  minute: number
 }
 
 /**
@@ -29,20 +25,20 @@ interface TimeObj {
 
 const generateTimeTable = (
   selectedDates: CalendarItem[],
-  { hour: startHour, minute: startMinute }: TimeObj,
-  { hour: endHour, minute: endMinute }: TimeObj
+  startTime: TimeObj,
+  endTime: TimeObj
 ): TimeTableItem[] => {
   const createItems = (hour: number): HalfHourItem[] => [
     {
       startTime: { hour, minute: 0 },
       endTime: { hour, minute: 30 },
-      select: false,
+      selected: false,
       members: [],
     },
     {
       startTime: { hour, minute: 30 },
       endTime: { hour: hour + 1, minute: 0 },
-      select: false,
+      selected: false,
       members: [],
     },
   ]
@@ -54,9 +50,9 @@ const generateTimeTable = (
         year,
         month,
         date,
-        totalStartTime: { hour: startHour, minute: startMinute },
-        totalEndTime: { hour: endHour, minute: endMinute },
-        items: range(startHour, endHour).reduce(
+        totalStartTime: { hour: startTime.hour, minute: startTime.minute },
+        totalEndTime: { hour: endTime.hour, minute: endTime.minute },
+        items: range(startTime.hour, endTime.hour).reduce(
           (items, hour) => [...items, ...createItems(hour)],
           [] as HalfHourItem[]
         ),

@@ -1,6 +1,13 @@
 import { StandardAttrProps } from '@/types/ComponentProps'
-import { TimeTableItem } from '@/utils/generateTimeTable'
+import { CalendarItem } from '@/utils'
+
+export interface TimeObj {
+  hour: number
+  minute: number
+}
 
 export interface TimeTableProps extends StandardAttrProps {
-  timeTable: TimeTableItem[]
+  selectedDates: CalendarItem[]
+  startTime: TimeObj
+  endTime: TimeObj
 }
