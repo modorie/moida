@@ -1,9 +1,18 @@
+import { FlexCol } from '@/components'
+
 import { TimeTableBodyProps } from '../TimeTable.types'
-import { Layout } from './TimeTableBody.styled'
+import { Divider } from './TimeTableBody.styled'
 
 const TimeTableBody = ({ table }: TimeTableBodyProps) => {
-  console.log(table)
-  return <Layout>body</Layout>
+  const TableCol = (col) => <div>hello</div>
+
+  return (
+    <FlexCol gap={3}>
+      {table.map((col) => (
+        <TableCol col={col} />
+      ))}
+    </FlexCol>
+  )
 }
 
 export default TimeTableBody
