@@ -43,6 +43,7 @@ describe('generateTimeTable(dateObj, startTime, endTime) >', () => {
     )
 
     expect(timeTable.at(0)).toEqual({
+      id: '2022-01-01',
       year: 2022,
       month: 0,
       date: 1,

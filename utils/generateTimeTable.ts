@@ -1,7 +1,8 @@
 import { TimeObj } from '@/components/TimeTable/TimeTable.types'
-import { CalendarItem, range } from '@/utils'
+import { CalendarItem, range, yyyymmdd } from '@/utils'
 
 export interface TimeTableItem {
+  id: string
   year: number
   month: number
   date: number
@@ -47,6 +48,7 @@ const generateTimeTable = (
     (timeTable, { year, month, date }) => [
       ...timeTable,
       {
+        id: yyyymmdd(year, month + 1, date),
         year,
         month,
         date,

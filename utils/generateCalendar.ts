@@ -1,4 +1,4 @@
-import { getTimeFormat, range } from '@/utils'
+import { getTimeFormat, range, yyyymmdd } from '@/utils'
 
 export interface CalendarItem {
   id: string
@@ -20,9 +20,6 @@ export interface CalendarItem {
  * - date - 일
  * - day - 요일 (0: 일 ~ 6: 토)
  */
-
-export const yyyymmdd = (year: number, month: number, date: number) =>
-  `${year}-${String(month).padStart(2, '0')}-${String(date).padStart(2, '0')}`
 
 const generateCalendar = ({
   year,
