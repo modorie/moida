@@ -1,31 +1,64 @@
-import { Clear, Manage, Search } from './controls'
-import { Description, ErrorMsg, Label, Layout, TextField } from './Input.styled'
-import type { ControlType, InputProps } from './Input.types'
+import { forwardRef, useCallback, useRef, useState } from 'react'
 
-const Input = ({
-  label,
-  type = 'text',
-  hasError,
-  required = true,
-  disabled,
-  errorMsg,
-  description,
-  placeholder = 'Placeholder',
-  control = 'clear',
-  id,
-  className,
-  style,
-}: InputProps) => {
-  const ControlRender = (control: ControlType) => {
-    switch (control) {
-      case 'clear':
-        return !disabled && <Clear />
-      case 'manage':
-        return <Manage />
-      case 'search':
-        return <Search />
+import { makeCombineRefs } from '@/utils/makeCombineRefs'
+
+import { Clear } from './controls'
+import { Description, ErrorMsg, Label, Layout, TextField } from './Input.styled'
+import type { InputProps } from './Input.types'
+
+const InputBase = (
+  {
+    label,
+    type = 'text',
+    required = true,
+    disabled,
+    errorMsg,
+    description,
+    placeholder = 'Placeholder',
+    clearable = true,
+    hasError,
+    defaultValue,
+    onChange,
+    rightContent,
+    id,
+    className,
+    style,
+  }: InputProps,
+  forwardedRef: React.ForwardedRef<HTMLInputElement>
+) => {
+  const inputRef = useRef<HTMLInputElement>(null)
+  const combineRefs = makeCombineRefs<HTMLInputElement>(inputRef, forwardedRef)
+  const [hasValue, setHasValue] = useState(!!defaultValue)
+
+  const activeClear = !disabled && clearable
+
+  const onClickClear = useCallback(() => {
+    if (inputRef.current && activeClear) {
+      const setValue = Object?.getOwnPropertyDescriptor(
+        HTMLInputElement.prototype,
+        'value'
+      )?.set
+      const event = new Event('input', { bubbles: true })
+
+      setValue?.call(inputRef.current, '')
+      inputRef.current.dispatchEvent(event)
+      setHasValue(false)
     }
-  }
+  }, [activeClear])
+
+  const handleChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (onChange) {
+        onChange(event)
+      }
+      if (!hasValue && event.target.value) {
+        setHasValue(true)
+      } else if (hasValue && !event.target.value) {
+        setHasValue(false)
+      }
+    },
+    [onChange, hasValue]
+  )
 
   return (
     <div>
@@ -45,11 +78,14 @@ const Input = ({
           type={type}
           disabled={disabled}
           required={required}
+          ref={combineRefs}
+          onChange={handleChange}
           id={id}
           className={className}
           style={style}
         />
-        {control && ControlRender(control)}
+        {activeClear && hasValue && <Clear onClick={onClickClear} />}
+        {rightContent}
       </Layout>
       {hasError && (
         <ErrorMsg color="coral100" size="cap1" weight="bold">
@@ -59,5 +95,7 @@ const Input = ({
     </div>
   )
 }
+
+const Input = forwardRef(InputBase)
 
 export default Input

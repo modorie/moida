@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { Text } from '@/components'
 
+import { Manage, Search } from './controls'
 import Input from './Input'
 import type { InputProps } from './Input.types'
 
@@ -24,7 +25,6 @@ Default.args = {
   label: '',
   errorMsg: '',
   description: '',
-  control: 'clear',
 }
 
 export const Examples = () => (
@@ -33,8 +33,8 @@ export const Examples = () => (
       Input Controls
     </Text>
     <Input />
-    <Input control="manage" />
-    <Input control="search" />
+    <Input clearable={false} rightContent={<Manage />} />
+    <Input rightContent={<Search />} />
 
     <br />
 
