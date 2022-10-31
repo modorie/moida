@@ -63,8 +63,10 @@ export const DateBox = styled.button<{
       ? theme.color.gray400
       : theme.color.black};
 
-  &:hover {
-    background: ${({ theme }) => theme.color.green100};
-    color: ${({ theme }) => theme.color.gray500};
+  :hover {
+    background: ${({ selected, theme }) =>
+      selected ? theme.color.green200 : theme.color.green100};
+    color: ${({ selected, theme }) =>
+      selected ? theme.color.white : theme.color.gray500};
   }
 `
