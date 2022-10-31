@@ -12,17 +12,20 @@ export interface CalendarItem {
 }
 
 /**
- * Return array of calendar objects
+ * 달력 객체를 담은 배열을 반환
  *
- * - dateObj - Date object
+ * 용어 정리
  * - date - 일
- * - day - 요일
+ * - day - 요일 (0: 일요일 ~ 6: 토요일)
  */
 
 const generateCalendar = ({
   year,
   month,
-}: Pick<CalendarItem, 'year' | 'month'>): CalendarItem[] => {
+}: {
+  year: number
+  month: number
+}): CalendarItem[] => {
   const prevMonthLastDay = getTimeFormat(new Date(year, month, 0))
   const currentMonthFirstDay = getTimeFormat(new Date(year, month, 1))
   const currentMonthLastDay = getTimeFormat(new Date(year, month + 1, 0))
