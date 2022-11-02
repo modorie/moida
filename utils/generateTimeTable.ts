@@ -1,5 +1,4 @@
-import type { DateObj } from './getTimeFormat'
-import { range } from './range'
+import { DateObj, range } from '@/utils'
 
 interface TimeTableItem {
   year: number
@@ -28,7 +27,7 @@ interface TimeObj {
  * - selectedDate - DateObj[]
  */
 
-export const generateTimeTable = (
+const generateTimeTable = (
   selectedDates: DateObj[],
   { hour: startHour, minute: startMinute }: TimeObj,
   { hour: endHour, minute: endMinute }: TimeObj
@@ -66,3 +65,5 @@ export const generateTimeTable = (
     [] as TimeTableItem[]
   )
 }
+
+export default generateTimeTable

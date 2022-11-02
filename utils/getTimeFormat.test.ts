@@ -1,4 +1,4 @@
-import { getTimeFormat } from './getTimeFormat'
+import { getTimeFormat } from '@/utils'
 
 describe('getTimeFormat(dateObj) >', () => {
   const now = new Date()
