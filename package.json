@@ -20,7 +20,7 @@
   "dependencies": {
     "@tanstack/react-query": "^4.7.1",
     "file-loader": "^6.2.0",
-    "next": "12.2.5",
+    "next": "15.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "recoil": "^0.7.5",
